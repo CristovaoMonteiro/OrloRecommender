@@ -63,7 +63,6 @@ const STRINGS = {
     'product.material': 'Material',
     'product.season': 'Season',
     'product.palette': 'Palette',
-    'product.colours': 'Also available in',
 
     'reason.collaborative': 'Simulated visitors interested in {product} also looked at this',
     'reason.content': 'Shares {attributes} with {product}',
@@ -210,7 +209,7 @@ const STRINGS = {
     'home.eyebrow': 'Recomendações explicáveis',
     'home.title': 'Uma loja que mostra o seu raciocínio.',
     'home.text':
-      'Abre alguns produtos e vê as sugestões mudarem. Cada sugestão diz porque está ali e quanto contribuiu cada modelo.',
+      'Abre alguns produtos e vê as sugestões a mudar. Cada sugestão diz porque está ali e quanto contribuiu cada modelo.',
     'home.cta': 'Começar a explorar',
     'home.lab': 'Abrir o laboratório',
     'home.forYou': 'Recomendado para ti',
@@ -238,7 +237,7 @@ const STRINGS = {
 
     'product.back': 'Voltar à coleção',
     'product.add': 'Adicionar ao saco',
-    'product.added': 'Adicionado ao saco de demonstração. Registado um sinal mais forte.',
+    'product.added': 'Adicionado ao saco de demonstração. Foi registado um sinal mais forte.',
     'product.demo': 'Só para demonstração: regista um sinal mais forte e não compra nada.',
     'product.similar': 'Também podes gostar',
     'product.look': 'Completa o look',
@@ -249,7 +248,6 @@ const STRINGS = {
     'product.material': 'Material',
     'product.season': 'Estação',
     'product.palette': 'Paleta',
-    'product.colours': 'Também disponível em',
 
     'reason.collaborative': 'Visitantes simulados interessados em {product} também viram isto',
     'reason.content': 'Partilha {attributes} com {product}',
@@ -269,7 +267,7 @@ const STRINGS = {
     'share.label': 'Contribuição de cada modelo para esta sugestão',
 
     'lab.eyebrow': 'Laboratório',
-    'lab.title': 'Muda o modelo e vê a lista mudar.',
+    'lab.title': 'Muda o modelo e vê a lista a mudar.',
     'lab.text':
       'Ajusta os pesos ou começa por um visitante de exemplo. A lista atualiza logo, com o mesmo modelo da loja. A popularidade só serve quem ainda não tem histórico.',
     'lab.visitors': 'Visitantes de exemplo',
@@ -283,7 +281,7 @@ const STRINGS = {
     'lab.content': 'Semelhança',
     'lab.contentHint': 'Estilo, material, estação e paleta em comum',
     'lab.diversity': 'Diversidade',
-    'lab.diversityHint': 'Troca relevância por sugestões mais variadas',
+    'lab.diversityHint': 'Troca alguma relevância por sugestões mais variadas',
     'lab.reset': 'Repor valores afinados',
     'lab.tuned': 'Valores afinados: {collaborative} comportamento, {content} semelhança.',
     'lab.results': 'Sugestões',
@@ -293,20 +291,20 @@ const STRINGS = {
     'eval.eyebrow': 'Avaliação',
     'eval.title': 'Funciona? E como sabemos?',
     'eval.text':
-      'A tarefa: um visitante abre um produto. Prever que outros produtos, diferentes, vê a seguir nessa sessão, a partir do que fez antes.',
+      'A tarefa: um visitante abre um produto. Prever que produtos diferentes vê a seguir nessa sessão, com base no que fez antes.',
     'eval.fact.lists': 'listas de teste',
     'eval.fact.visitors': 'visitantes',
     'eval.fact.events': 'eventos de treino por conjunto',
     'eval.headline':
-      'Em {datasets} conjuntos de dados simulados, o híbrido encontrou cerca de {ratio}× mais do que os visitantes veem a seguir do que os mais vendidos da mesma categoria (entre {min}× e {max}×).',
+      'Em {datasets} conjuntos de dados simulados, o híbrido acertou em cerca de {ratio}× mais produtos vistos a seguir do que a regra dos mais vendidos da mesma categoria (entre {min}× e {max}×).',
     'eval.comparison': 'Como se compara cada abordagem',
     'eval.ranker': 'Abordagem',
     'eval.recall': 'Recall@4',
-    'eval.recallHint': 'Parte dos produtos seguintes encontrada nos quatro mostrados',
+    'eval.recallHint': 'Proporção dos produtos vistos a seguir que aparecem entre os quatro mostrados',
     'eval.ndcg': 'NDCG@10',
     'eval.ndcgHint': 'Qualidade da ordem: um acerto perto do topo vale mais',
     'eval.coverage': 'Cobertura',
-    'eval.coverageHint': 'Parte do catálogo que chega a ser mostrada',
+    'eval.coverageHint': 'Proporção do catálogo que chega a ser mostrada',
     'eval.ranker.random': 'Aleatório',
     'eval.ranker.popularity': 'Popularidade',
     'eval.ranker.same_category': 'Mesma categoria primeiro (regra do Visitor Journey)',
@@ -332,7 +330,7 @@ const STRINGS = {
       'As sugestões deixam de fora outras cores do que já foi visto, porque o mesmo casaco em castanho é uma má sugestão. Como esses produtos nunca são mostrados, estes resultados não os contam como acertos. Se contassem, escondê-los baixaria o NDCG@10 de {with} para {without}.',
     'eval.next': 'Próximo passo: um teste real',
     'eval.nextText':
-      'Os resultados offline não mostram que os visitantes preferem estas sugestões. Assumindo uma taxa de {baseline} de adição ao saco, detetar uma subida de 10% exige cerca de {visitors} visitantes por grupo.',
+      'Os resultados offline não mostram que os visitantes preferem estas sugestões. Partindo de uma taxa de adição ao saco de {baseline}, detetar uma subida de 10% exige cerca de {visitors} visitantes por grupo.',
     'eval.nextLink': 'Ler o plano de experiência',
     'eval.control': 'Teste de controlo',
     'eval.controlText':
@@ -345,7 +343,7 @@ const STRINGS = {
       'Pelo menos uma das quatro sugestões coincidiu com o resto do cesto em {complements} de {cases} cestos, contra {popular} das peças populares de outras categorias.',
     'eval.method': 'Como foi testado',
     'eval.method.1':
-      'Os pesos foram afinados num conjunto de dados. Estes resultados vêm de outros dez, com seeds próprias, avaliados uma vez depois de terminada a afinação.',
+      'Os pesos foram afinados num conjunto de dados. Estes resultados vêm de outros dez, gerados de forma independente e avaliados uma vez depois de terminada a afinação.',
     'eval.method.2':
       'O modelo treina só com eventos anteriores a um único corte, por isso nunca vê o futuro de ninguém.',
     'eval.method.3': 'Os intervalos vêm de um bootstrap que reamostra visitantes inteiros.',

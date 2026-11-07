@@ -142,7 +142,7 @@ const LINES = [
     name: { en: 'Linen Band-Collar Shirt', pt: 'Camisa de Linho de Gola Mandarim' },
     description: {
       en: 'A clean collarless linen shirt for long lunches by the sea.',
-      pt: 'Camisa de linho de linhas limpas, para almoços longos junto ao mar.',
+      pt: 'Camisa de linho de corte simples, para almoços longos junto ao mar.',
     },
   },
 
@@ -161,7 +161,7 @@ const LINES = [
     name: { en: 'Classic Piqué Polo', pt: 'Polo Clássico em Piqué' },
     description: {
       en: 'A timeless piqué polo with a clean placket and a neat regular fit.',
-      pt: 'Polo intemporal em piqué, com carcela limpa e corte regular.',
+      pt: 'Polo intemporal em piqué, com carcela simples e corte regular.',
     },
   },
   {
@@ -212,7 +212,7 @@ const LINES = [
     name: { en: 'Long-Sleeve Rugby Shirt', pt: 'Camisola de Râguebi' },
     description: {
       en: 'A heavyweight jersey with a twill collar, inspired by old club kits.',
-      pt: 'Jersey pesado com gola em sarja, inspirado nos equipamentos antigos dos clubes.',
+      pt: 'Camisola de jersey pesado com gola em sarja, inspirada nos equipamentos antigos dos clubes.',
     },
   },
   {
@@ -383,10 +383,10 @@ const LINES = [
     price: 135,
     sizes: 'trousers',
     colours: ['charcoal', 'navy', 'stone'],
-    name: { en: 'Pleated Wool Trousers', pt: 'Calças de Lã com Pinças' },
+    name: { en: 'Pleated Wool Trousers', pt: 'Calças de Lã com Pinça' },
     description: {
       en: 'Sharp single-pleat trousers in smooth tropical wool with a tapered leg.',
-      pt: 'Calças elegantes com uma pinça, em lã tropical suave e perna afunilada.',
+      pt: 'Calças elegantes com pinça simples, em lã tropical suave e perna afunilada.',
     },
   },
   {
@@ -434,7 +434,7 @@ const LINES = [
     price: 125,
     sizes: 'trousers',
     colours: ['navy', 'charcoal', 'ecru'],
-    name: { en: 'Selvedge Denim Jeans', pt: 'Jeans de Ganga Selvedge' },
+    name: { en: 'Selvedge Denim Jeans', pt: 'Jeans Selvedge' },
     description: {
       en: 'Raw five-pocket jeans woven on vintage looms, made to fade with wear.',
       pt: 'Jeans de cinco bolsos em ganga crua, tecida em teares antigos, feita para desbotar com o uso.',
@@ -541,7 +541,7 @@ const LINES = [
     name: { en: 'Wool Overcoat', pt: 'Sobretudo de Lã' },
     description: {
       en: 'A long, clean overcoat in heavy melton wool for formal winter days.',
-      pt: 'Sobretudo comprido e limpo, em lã melton pesada, para dias formais de inverno.',
+      pt: 'Sobretudo comprido, de linhas simples, em lã melton pesada, para dias formais de inverno.',
     },
   },
   {
@@ -575,7 +575,7 @@ const LINES = [
     name: { en: 'Harrington Jacket', pt: 'Casaco Harrington' },
     description: {
       en: 'A lightweight zip jacket with a tartan lining and a clean collar.',
-      pt: 'Casaco leve com fecho, forro em tartã e gola limpa.',
+      pt: 'Casaco leve com fecho, forro em tartã e gola simples.',
     },
   },
   {
