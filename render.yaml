@@ -1,0 +1,18 @@
+# Render Blueprint: one free Node web service. The model is a static file, so
+# there is no database and no secret to configure.
+services:
+  - type: web
+    name: orlo-recommender
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      # Render sits behind one proxy: needed so rate limiting sees the client, not the proxy.
+      - key: TRUST_PROXY
+        value: 1

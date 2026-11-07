@@ -3,10 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An explainable hybrid product recommender for a fictional menswear store, built on synthetic data."
+    />
     <title>Orlo Recommender</title>
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="/js/pages/home.js"></script>
   </head>
   <body>
-    <h1>Orlo Recommender</h1>
-    <p>Work in progress.</p>
+    <header id="site-header" class="site-header"></header>
+
+    <main id="main">
+      <section class="intro">
+        <div class="container intro__grid">
+          <div>
+            <p class="eyebrow" data-i18n="home.eyebrow"></p>
+            <h1 class="intro__title" data-i18n="home.title"></h1>
+            <p class="intro__text" data-i18n="home.text"></p>
+            <div class="intro__actions">
+              <a class="btn btn--primary" href="#collection" data-i18n="home.cta"></a>
+              <a class="btn btn--secondary" href="/lab" data-i18n="home.lab"></a>
+            </div>
+          </div>
+          <aside class="history" data-history></aside>
+        </div>
+      </section>
+
+      <section class="container section" aria-labelledby="for-you-title">
+        <div class="section__head">
+          <h2 id="for-you-title" class="section__title" data-for-you-title></h2>
+          <p class="muted section__hint" data-for-you-hint></p>
+        </div>
+        <div class="product-grid" data-for-you aria-live="polite"></div>
+      </section>
+
+      <section class="container section" id="collection" aria-labelledby="collection-title">
+        <div class="section__head">
+          <h2 id="collection-title" class="section__title" data-i18n="home.catalogue"></h2>
+          <p class="muted section__hint" data-count></p>
+        </div>
+        <div class="pill-group" data-filters></div>
+        <div class="product-grid" data-catalogue></div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
   </body>
 </html>

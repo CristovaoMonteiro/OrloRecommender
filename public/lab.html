@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab | Orlo Recommender</title>
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="/js/pages/lab.js"></script>
+  </head>
+  <body>
+    <header id="site-header" class="site-header"></header>
+
+    <main id="main" class="container page">
+      <p class="eyebrow" data-i18n="lab.eyebrow"></p>
+      <h1 class="page-title" data-i18n="lab.title"></h1>
+      <p class="page-text" data-i18n="lab.text"></p>
+
+      <div class="lab">
+        <div class="lab__controls">
+          <section>
+            <h2 class="panel-title" data-i18n="lab.visitors"></h2>
+            <div class="pill-group" data-visitors></div>
+          </section>
+          <section class="history" data-history></section>
+          <section>
+            <h2 class="panel-title" data-i18n="lab.weights"></h2>
+            <div data-sliders></div>
+          </section>
+        </div>
+
+        <section class="lab__results" aria-labelledby="results-title">
+          <h2 id="results-title" class="section__title" data-i18n="lab.results"></h2>
+          <p class="form-error" data-status role="status"></p>
+          <div class="product-grid product-grid--lab" data-results aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </body>
+</html>
