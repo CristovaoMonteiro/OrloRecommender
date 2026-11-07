@@ -4,6 +4,10 @@ An explainable hybrid product recommender for Orlo, a fictional premium menswear
 
 It is the companion to [Visitor Journey Dashboard](https://github.com/CristovaoMonteiro/VisitorJourney): same brand and event format, but a separate app with its own larger catalogue. All data is synthetic.
 
+**Live demo:** [orlo-recommender.onrender.com](https://orlo-recommender.onrender.com) · **Lab:** [`/lab`](https://orlo-recommender.onrender.com/lab) · **Evaluation:** [`/evaluation`](https://orlo-recommender.onrender.com/evaluation)
+
+> Hosted on Render's free tier: after 15 minutes without traffic the service sleeps, so the first request can take up to a minute.
+
 ![Product page with explained suggestions](docs/product.png)
 
 ## What you can do
