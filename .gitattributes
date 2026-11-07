@@ -1,0 +1,6 @@
+# Keep LF line endings in the repository and working copy on every OS
+# (matches Prettier's endOfLine and avoids CRLF churn on Windows).
+* text=auto eol=lf
+*.png binary
+*.webp binary
+*.avif binary
