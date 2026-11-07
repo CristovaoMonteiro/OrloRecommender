@@ -8,7 +8,9 @@ const {
   RECENCY_DECAY,
   DEFAULT_WEIGHTS,
   DEFAULT_DIVERSITY,
+  EXCLUDE_SEEN_LINES,
   COLLABORATIVE_CONFIDENCE_VISITORS,
+  UNPROVEN_DISCOUNT,
   MAX_LOOK_PER_CATEGORY,
 } = require('./config');
 
@@ -56,10 +58,12 @@ function strongestSeed(matrix, seeds, candidate) {
   return best;
 }
 
-function createRecommender(model, products) {
+function createRecommender(model, products, options = {}) {
+  const { confidenceVisitors = COLLABORATIVE_CONFIDENCE_VISITORS, unprovenDiscount = UNPROVEN_DISCOUNT } =
+    options;
   const index = new Map(model.productIds.map((id, i) => [id, i]));
   const items = model.productIds.map((id) => products.find((p) => p.id === id));
-  const confidence = model.visitors.map((n) => n / (n + COLLABORATIVE_CONFIDENCE_VISITORS));
+  const confidence = model.visitors.map((n) => Math.min(1, n / confidenceVisitors));
 
   /** Item => weight, newest interaction first. The product on screen counts as strongly as a purchase. */
   function seedsFrom(history, contextProductId) {
@@ -138,6 +142,9 @@ function createRecommender(model, products) {
    * @param {number} [request.k] how many products to return
    * @param {object} [request.weights] { collaborative, content, popularity }
    * @param {number} [request.diversity] MMR trade-off from 0 to 1
+   * @param {boolean} [request.excludeSeenLines] skip other colours of products already seen
+   * @param {boolean} [request.fallback] move weight to content when data is thin; off only to
+   *   measure a model on its own
    */
   function recommend({
     history = [],
@@ -145,9 +152,14 @@ function createRecommender(model, products) {
     k = 4,
     weights = DEFAULT_WEIGHTS,
     diversity = DEFAULT_DIVERSITY,
+    excludeSeenLines = EXCLUDE_SEEN_LINES,
+    fallback = true,
   } = {}) {
     const seeds = seedsFrom(history, contextProductId);
-    const candidates = model.productIds.map((_, i) => i).filter((i) => !seeds.has(i));
+    const seenLines = new Set(excludeSeenLines ? [...seeds.keys()].map((seed) => items[seed].lineId) : []);
+    const candidates = model.productIds
+      .map((_, i) => i)
+      .filter((i) => !seeds.has(i) && !seenLines.has(items[i].lineId));
 
     // No signal about this visitor yet: everyone gets the best sellers.
     if (seeds.size === 0) {
@@ -164,20 +176,23 @@ function createRecommender(model, products) {
     const collaborative = scaleToOne(scoreFromSeeds(model.collaborative, seeds, candidates));
     const content = scaleToOne(scoreFromSeeds(model.content, seeds, candidates));
 
-    // Collaborative scores deserve trust only when both ends have data. The rest of
-    // that weight moves to content, which is how new products stay reachable.
+    // Collaborative scores deserve trust only when both ends have data, and popularity
+    // means little for a product that just launched. The weight they cannot use moves
+    // to content, which keeps new products reachable, at a discount so that an unproven
+    // product does not outrank a proven one that matches equally well.
     const seedTotal = [...seeds.values()].reduce((sum, w) => sum + w, 0);
     const seedConfidence = [...seeds].reduce((sum, [seed, w]) => sum + w * confidence[seed], 0) / seedTotal;
 
     const ranked = candidates
       .map((item) => {
-        const trust = confidence[item] * seedConfidence;
-        const collaborativeWeight = blend.collaborative * trust;
-        const contentWeight = blend.content + blend.collaborative * (1 - trust);
+        const collaborativeWeight = blend.collaborative * (fallback ? confidence[item] * seedConfidence : 1);
+        const popularityWeight = blend.popularity * (fallback ? confidence[item] : 1);
+        const movedWeight = blend.collaborative + blend.popularity - collaborativeWeight - popularityWeight;
+        const contentWeight = blend.content + movedWeight * unprovenDiscount;
         const components = {
           collaborative: collaborativeWeight * collaborative.get(item),
           content: contentWeight * content.get(item),
-          popularity: blend.popularity * model.popularity[item],
+          popularity: popularityWeight * model.popularity[item],
         };
         return {
           item,

@@ -3,3 +3,4 @@ coverage/
 package-lock.json
 data/products.json
 data/generated/
+data/evaluation.json

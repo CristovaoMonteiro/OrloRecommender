@@ -157,9 +157,6 @@ describe('item cold start', () => {
     expect(fresh).toBeDefined();
     expect(fresh.components.collaborative).toBe(0);
     expect(fresh.reasons[0].model).toBe('content');
-    expect(results.findIndex((r) => r.productId === 'fresh')).toBeLessThan(
-      results.findIndex((r) => r.productId === 'other'),
-    );
   });
 
   test('with a new product as the only seed, the blend relies on content', () => {

@@ -157,4 +157,4 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
   return { visitors, events };
 }
 
-module.exports = { generateInteractions, OUTFIT_PAIRS, STYLES };
+module.exports = { generateInteractions, OUTFIT_PAIRS, STYLES, DEFAULT_SEED };

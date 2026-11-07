@@ -9,6 +9,7 @@
     "start": "node server/index.js",
     "catalogue": "node scripts/build-catalogue.js",
     "data": "node scripts/generate-data.js",
+    "evaluate": "node scripts/evaluate.js",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
