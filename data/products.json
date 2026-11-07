@@ -1,0 +1,5813 @@
+[
+  {
+    "id": "p001",
+    "slug": "oxford-shirt-paleblue",
+    "lineId": "oxford-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Oxford Button-Down Shirt",
+      "pt": "Camisa Oxford Button-Down"
+    },
+    "description": {
+      "en": "A wardrobe cornerstone in soft Oxford cotton with a rolled button-down collar.",
+      "pt": "Uma peça essencial em algodão Oxford macio, com gola button-down."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p002",
+    "slug": "oxford-shirt-ecru",
+    "lineId": "oxford-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Oxford Button-Down Shirt",
+      "pt": "Camisa Oxford Button-Down"
+    },
+    "description": {
+      "en": "A wardrobe cornerstone in soft Oxford cotton with a rolled button-down collar.",
+      "pt": "Uma peça essencial em algodão Oxford macio, com gola button-down."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p003",
+    "slug": "oxford-shirt-navy",
+    "lineId": "oxford-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Oxford Button-Down Shirt",
+      "pt": "Camisa Oxford Button-Down"
+    },
+    "description": {
+      "en": "A wardrobe cornerstone in soft Oxford cotton with a rolled button-down collar.",
+      "pt": "Uma peça essencial em algodão Oxford macio, com gola button-down."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p004",
+    "slug": "camp-collar-shirt-sand",
+    "lineId": "camp-collar-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 89,
+    "compareAtPrice": null,
+    "color": {
+      "id": "sand",
+      "hex": "#E8E0CF",
+      "name": {
+        "en": "Sand",
+        "pt": "Areia"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen Camp-Collar Shirt",
+      "pt": "Camisa de Linho de Gola Aberta"
+    },
+    "description": {
+      "en": "An open-collar summer shirt in breathable linen with an easy, boxy cut.",
+      "pt": "Camisa de verão de gola aberta em linho respirável, com corte solto."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "id": "p005",
+    "slug": "camp-collar-shirt-moss",
+    "lineId": "camp-collar-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 89,
+    "compareAtPrice": null,
+    "color": {
+      "id": "moss",
+      "hex": "#6E7B6A",
+      "name": {
+        "en": "Moss",
+        "pt": "Musgo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen Camp-Collar Shirt",
+      "pt": "Camisa de Linho de Gola Aberta"
+    },
+    "description": {
+      "en": "An open-collar summer shirt in breathable linen with an easy, boxy cut.",
+      "pt": "Camisa de verão de gola aberta em linho respirável, com corte solto."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p006",
+    "slug": "camp-collar-shirt-rust",
+    "lineId": "camp-collar-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 67,
+    "compareAtPrice": 89,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen Camp-Collar Shirt",
+      "pt": "Camisa de Linho de Gola Aberta"
+    },
+    "description": {
+      "en": "An open-collar summer shirt in breathable linen with an easy, boxy cut.",
+      "pt": "Camisa de verão de gola aberta em linho respirável, com corte solto."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p007",
+    "slug": "poplin-shirt-paleblue",
+    "lineId": "poplin-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 71,
+    "compareAtPrice": 95,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Poplin Dress Shirt",
+      "pt": "Camisa de Popelina"
+    },
+    "description": {
+      "en": "A crisp, fine poplin shirt with a cutaway collar for suits and formal evenings.",
+      "pt": "Camisa de popelina fina e estruturada, com gola italiana, para fatos e noites formais."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cotton",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p008",
+    "slug": "poplin-shirt-ecru",
+    "lineId": "poplin-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 71,
+    "compareAtPrice": 95,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Poplin Dress Shirt",
+      "pt": "Camisa de Popelina"
+    },
+    "description": {
+      "en": "A crisp, fine poplin shirt with a cutaway collar for suits and formal evenings.",
+      "pt": "Camisa de popelina fina e estruturada, com gola italiana, para fatos e noites formais."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cotton",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p009",
+    "slug": "poplin-shirt-charcoal",
+    "lineId": "poplin-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Poplin Dress Shirt",
+      "pt": "Camisa de Popelina"
+    },
+    "description": {
+      "en": "A crisp, fine poplin shirt with a cutaway collar for suits and formal evenings.",
+      "pt": "Camisa de popelina fina e estruturada, com gola italiana, para fatos e noites formais."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cotton",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p010",
+    "slug": "flannel-overshirt-olive",
+    "lineId": "flannel-overshirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 105,
+    "compareAtPrice": null,
+    "color": {
+      "id": "olive",
+      "hex": "#5B5A3F",
+      "name": {
+        "en": "Olive",
+        "pt": "Azeitona"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Brushed Flannel Overshirt",
+      "pt": "Sobrecamisa de Flanela"
+    },
+    "description": {
+      "en": "A heavy flannel layer with chest pockets, built for cold-weather weekends.",
+      "pt": "Camada pesada de flanela com bolsos no peito, feita para fins de semana frios."
+    },
+    "details": {
+      "en": [
+        "Brushed cotton flannel"
+      ],
+      "pt": [
+        "Flanela de algodão escovada"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "flannel",
+      "season": "cold",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-11T00:00:00.000Z"
+  },
+  {
+    "id": "p011",
+    "slug": "flannel-overshirt-burgundy",
+    "lineId": "flannel-overshirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 105,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Brushed Flannel Overshirt",
+      "pt": "Sobrecamisa de Flanela"
+    },
+    "description": {
+      "en": "A heavy flannel layer with chest pockets, built for cold-weather weekends.",
+      "pt": "Camada pesada de flanela com bolsos no peito, feita para fins de semana frios."
+    },
+    "details": {
+      "en": [
+        "Brushed cotton flannel"
+      ],
+      "pt": [
+        "Flanela de algodão escovada"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "flannel",
+      "season": "cold",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p012",
+    "slug": "flannel-overshirt-chestnut",
+    "lineId": "flannel-overshirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 105,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Brushed Flannel Overshirt",
+      "pt": "Sobrecamisa de Flanela"
+    },
+    "description": {
+      "en": "A heavy flannel layer with chest pockets, built for cold-weather weekends.",
+      "pt": "Camada pesada de flanela com bolsos no peito, feita para fins de semana frios."
+    },
+    "details": {
+      "en": [
+        "Brushed cotton flannel"
+      ],
+      "pt": [
+        "Flanela de algodão escovada"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "flannel",
+      "season": "cold",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p013",
+    "slug": "chambray-shirt-paleblue",
+    "lineId": "chambray-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 64,
+    "compareAtPrice": 85,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Chambray Work Shirt",
+      "pt": "Camisa de Trabalho em Chambray"
+    },
+    "description": {
+      "en": "A rugged workwear shirt in washed chambray that softens with every wear.",
+      "pt": "Camisa robusta de inspiração workwear em chambray lavado, mais macia a cada uso."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p014",
+    "slug": "chambray-shirt-navy",
+    "lineId": "chambray-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 85,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Chambray Work Shirt",
+      "pt": "Camisa de Trabalho em Chambray"
+    },
+    "description": {
+      "en": "A rugged workwear shirt in washed chambray that softens with every wear.",
+      "pt": "Camisa robusta de inspiração workwear em chambray lavado, mais macia a cada uso."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p015",
+    "slug": "chambray-shirt-stone",
+    "lineId": "chambray-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 85,
+    "compareAtPrice": null,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Chambray Work Shirt",
+      "pt": "Camisa de Trabalho em Chambray"
+    },
+    "description": {
+      "en": "A rugged workwear shirt in washed chambray that softens with every wear.",
+      "pt": "Camisa robusta de inspiração workwear em chambray lavado, mais macia a cada uso."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p016",
+    "slug": "band-collar-shirt-ecru",
+    "lineId": "band-collar-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 92,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen Band-Collar Shirt",
+      "pt": "Camisa de Linho de Gola Mao"
+    },
+    "description": {
+      "en": "A clean collarless linen shirt for long lunches by the sea.",
+      "pt": "Camisa de linho de linhas limpas, para almoços longos junto ao mar."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p017",
+    "slug": "band-collar-shirt-paleblue",
+    "lineId": "band-collar-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 69,
+    "compareAtPrice": 92,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen Band-Collar Shirt",
+      "pt": "Camisa de Linho de Gola Mao"
+    },
+    "description": {
+      "en": "A clean collarless linen shirt for long lunches by the sea.",
+      "pt": "Camisa de linho de linhas limpas, para almoços longos junto ao mar."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p018",
+    "slug": "band-collar-shirt-forest",
+    "lineId": "band-collar-shirt",
+    "category": "shirts",
+    "shape": "shirt",
+    "price": 92,
+    "compareAtPrice": null,
+    "color": {
+      "id": "forest",
+      "hex": "#2F4A3C",
+      "name": {
+        "en": "Forest",
+        "pt": "Verde-floresta"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen Band-Collar Shirt",
+      "pt": "Camisa de Linho de Gola Mao"
+    },
+    "description": {
+      "en": "A clean collarless linen shirt for long lunches by the sea.",
+      "pt": "Camisa de linho de linhas limpas, para almoços longos junto ao mar."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 3,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p019",
+    "slug": "pique-polo-navy",
+    "lineId": "pique-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 44,
+    "compareAtPrice": 59,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Classic Piqué Polo",
+      "pt": "Polo Clássico em Piqué"
+    },
+    "description": {
+      "en": "A timeless piqué polo with a clean placket and a neat regular fit.",
+      "pt": "Polo intemporal em piqué, com carcela limpa e corte regular."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "warm",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p020",
+    "slug": "pique-polo-ecru",
+    "lineId": "pique-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 59,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Classic Piqué Polo",
+      "pt": "Polo Clássico em Piqué"
+    },
+    "description": {
+      "en": "A timeless piqué polo with a clean placket and a neat regular fit.",
+      "pt": "Polo intemporal em piqué, com carcela limpa e corte regular."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "warm",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-09-12T00:00:00.000Z"
+  },
+  {
+    "id": "p021",
+    "slug": "pique-polo-forest",
+    "lineId": "pique-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 59,
+    "compareAtPrice": null,
+    "color": {
+      "id": "forest",
+      "hex": "#2F4A3C",
+      "name": {
+        "en": "Forest",
+        "pt": "Verde-floresta"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Classic Piqué Polo",
+      "pt": "Polo Clássico em Piqué"
+    },
+    "description": {
+      "en": "A timeless piqué polo with a clean placket and a neat regular fit.",
+      "pt": "Polo intemporal em piqué, com carcela limpa e corte regular."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "warm",
+      "formality": 3,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p022",
+    "slug": "merino-polo-camel",
+    "lineId": "merino-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Merino Knitted Polo",
+      "pt": "Polo de Malha Merino"
+    },
+    "description": {
+      "en": "A fine-gauge knitted polo that sits comfortably under a blazer.",
+      "pt": "Polo de malha fina que assenta bem por baixo de um blazer."
+    },
+    "details": {
+      "en": [
+        "Extra-fine merino wool"
+      ],
+      "pt": [
+        "Lã merino extrafina"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "merino",
+      "season": "all",
+      "formality": 4,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-11T00:00:00.000Z"
+  },
+  {
+    "id": "p023",
+    "slug": "merino-polo-navy",
+    "lineId": "merino-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Merino Knitted Polo",
+      "pt": "Polo de Malha Merino"
+    },
+    "description": {
+      "en": "A fine-gauge knitted polo that sits comfortably under a blazer.",
+      "pt": "Polo de malha fina que assenta bem por baixo de um blazer."
+    },
+    "details": {
+      "en": [
+        "Extra-fine merino wool"
+      ],
+      "pt": [
+        "Lã merino extrafina"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "merino",
+      "season": "all",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p024",
+    "slug": "merino-polo-charcoal",
+    "lineId": "merino-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Merino Knitted Polo",
+      "pt": "Polo de Malha Merino"
+    },
+    "description": {
+      "en": "A fine-gauge knitted polo that sits comfortably under a blazer.",
+      "pt": "Polo de malha fina que assenta bem por baixo de um blazer."
+    },
+    "details": {
+      "en": [
+        "Extra-fine merino wool"
+      ],
+      "pt": [
+        "Lã merino extrafina"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "merino",
+      "season": "all",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p025",
+    "slug": "terry-polo-ecru",
+    "lineId": "terry-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 49,
+    "compareAtPrice": 65,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Terry Towelling Polo",
+      "pt": "Polo em Tecido Turco"
+    },
+    "description": {
+      "en": "A relaxed resort polo in looped terry, made for the beach club.",
+      "pt": "Polo descontraído em tecido turco, feito para o clube de praia."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "cotton",
+      "season": "warm",
+      "formality": 1,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p026",
+    "slug": "terry-polo-rust",
+    "lineId": "terry-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 65,
+    "compareAtPrice": null,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Terry Towelling Polo",
+      "pt": "Polo em Tecido Turco"
+    },
+    "description": {
+      "en": "A relaxed resort polo in looped terry, made for the beach club.",
+      "pt": "Polo descontraído em tecido turco, feito para o clube de praia."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "cotton",
+      "season": "warm",
+      "formality": 1,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-09-09T00:00:00.000Z"
+  },
+  {
+    "id": "p027",
+    "slug": "terry-polo-paleblue",
+    "lineId": "terry-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 65,
+    "compareAtPrice": null,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Terry Towelling Polo",
+      "pt": "Polo em Tecido Turco"
+    },
+    "description": {
+      "en": "A relaxed resort polo in looped terry, made for the beach club.",
+      "pt": "Polo descontraído em tecido turco, feito para o clube de praia."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "cotton",
+      "season": "warm",
+      "formality": 1,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p028",
+    "slug": "rugby-shirt-forest",
+    "lineId": "rugby-shirt",
+    "category": "polos",
+    "shape": "polo",
+    "price": 85,
+    "compareAtPrice": null,
+    "color": {
+      "id": "forest",
+      "hex": "#2F4A3C",
+      "name": {
+        "en": "Forest",
+        "pt": "Verde-floresta"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Long-Sleeve Rugby Shirt",
+      "pt": "Camisola de Râguebi"
+    },
+    "description": {
+      "en": "A heavyweight jersey with a twill collar, inspired by old club kits.",
+      "pt": "Jersey pesado com gola em sarja, inspirado nos equipamentos antigos dos clubes."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "cold",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p029",
+    "slug": "rugby-shirt-burgundy",
+    "lineId": "rugby-shirt",
+    "category": "polos",
+    "shape": "polo",
+    "price": 85,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Long-Sleeve Rugby Shirt",
+      "pt": "Camisola de Râguebi"
+    },
+    "description": {
+      "en": "A heavyweight jersey with a twill collar, inspired by old club kits.",
+      "pt": "Jersey pesado com gola em sarja, inspirado nos equipamentos antigos dos clubes."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "cold",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p030",
+    "slug": "rugby-shirt-navy",
+    "lineId": "rugby-shirt",
+    "category": "polos",
+    "shape": "polo",
+    "price": 85,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Long-Sleeve Rugby Shirt",
+      "pt": "Camisola de Râguebi"
+    },
+    "description": {
+      "en": "A heavyweight jersey with a twill collar, inspired by old club kits.",
+      "pt": "Jersey pesado com gola em sarja, inspirado nos equipamentos antigos dos clubes."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "cold",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p031",
+    "slug": "johnny-collar-polo-stone",
+    "lineId": "johnny-collar-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Silk-Cotton Johnny-Collar Polo",
+      "pt": "Polo de Gola Johnny em Seda e Algodão"
+    },
+    "description": {
+      "en": "An elegant open-neck polo with a soft sheen for warm evenings.",
+      "pt": "Polo elegante de decote aberto, com brilho suave, para noites quentes."
+    },
+    "details": {
+      "en": [
+        "Silk and cotton blend"
+      ],
+      "pt": [
+        "Mistura de seda e algodão"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "silk",
+      "season": "warm",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p032",
+    "slug": "johnny-collar-polo-navy",
+    "lineId": "johnny-collar-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Silk-Cotton Johnny-Collar Polo",
+      "pt": "Polo de Gola Johnny em Seda e Algodão"
+    },
+    "description": {
+      "en": "An elegant open-neck polo with a soft sheen for warm evenings.",
+      "pt": "Polo elegante de decote aberto, com brilho suave, para noites quentes."
+    },
+    "details": {
+      "en": [
+        "Silk and cotton blend"
+      ],
+      "pt": [
+        "Mistura de seda e algodão"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "silk",
+      "season": "warm",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p033",
+    "slug": "johnny-collar-polo-burgundy",
+    "lineId": "johnny-collar-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Silk-Cotton Johnny-Collar Polo",
+      "pt": "Polo de Gola Johnny em Seda e Algodão"
+    },
+    "description": {
+      "en": "An elegant open-neck polo with a soft sheen for warm evenings.",
+      "pt": "Polo elegante de decote aberto, com brilho suave, para noites quentes."
+    },
+    "details": {
+      "en": [
+        "Silk and cotton blend"
+      ],
+      "pt": [
+        "Mistura de seda e algodão"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "silk",
+      "season": "warm",
+      "formality": 4,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p034",
+    "slug": "zip-polo-charcoal",
+    "lineId": "zip-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 52,
+    "compareAtPrice": 69,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Jersey Zip Polo",
+      "pt": "Polo de Jersey com Fecho"
+    },
+    "description": {
+      "en": "A modern polo with a short zip placket in a smooth, dense jersey.",
+      "pt": "Polo moderno com fecho curto, num jersey suave e denso."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p035",
+    "slug": "zip-polo-moss",
+    "lineId": "zip-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 69,
+    "compareAtPrice": null,
+    "color": {
+      "id": "moss",
+      "hex": "#6E7B6A",
+      "name": {
+        "en": "Moss",
+        "pt": "Musgo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Jersey Zip Polo",
+      "pt": "Polo de Jersey com Fecho"
+    },
+    "description": {
+      "en": "A modern polo with a short zip placket in a smooth, dense jersey.",
+      "pt": "Polo moderno com fecho curto, num jersey suave e denso."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p036",
+    "slug": "zip-polo-ecru",
+    "lineId": "zip-polo",
+    "category": "polos",
+    "shape": "polo",
+    "price": 69,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Jersey Zip Polo",
+      "pt": "Polo de Jersey com Fecho"
+    },
+    "description": {
+      "en": "A modern polo with a short zip placket in a smooth, dense jersey.",
+      "pt": "Polo moderno com fecho curto, num jersey suave e denso."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p037",
+    "slug": "lambswool-crew-moss",
+    "lineId": "lambswool-crew",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "moss",
+      "hex": "#6E7B6A",
+      "name": {
+        "en": "Moss",
+        "pt": "Musgo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Lambswool Crew-Neck Sweater",
+      "pt": "Camisola de Lambswool"
+    },
+    "description": {
+      "en": "A warm Scottish-style crew neck in soft, lightly brushed lambswool.",
+      "pt": "Camisola quente de gola redonda, de estilo escocês, em lambswool macio."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p038",
+    "slug": "lambswool-crew-navy",
+    "lineId": "lambswool-crew",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Lambswool Crew-Neck Sweater",
+      "pt": "Camisola de Lambswool"
+    },
+    "description": {
+      "en": "A warm Scottish-style crew neck in soft, lightly brushed lambswool.",
+      "pt": "Camisola quente de gola redonda, de estilo escocês, em lambswool macio."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p039",
+    "slug": "lambswool-crew-burgundy",
+    "lineId": "lambswool-crew",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Lambswool Crew-Neck Sweater",
+      "pt": "Camisola de Lambswool"
+    },
+    "description": {
+      "en": "A warm Scottish-style crew neck in soft, lightly brushed lambswool.",
+      "pt": "Camisola quente de gola redonda, de estilo escocês, em lambswool macio."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p040",
+    "slug": "cable-cardigan-ecru",
+    "lineId": "cable-cardigan",
+    "category": "knitwear",
+    "shape": "cardigan",
+    "price": 145,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cable-Knit Cardigan",
+      "pt": "Casaco de Malha com Torcidos"
+    },
+    "description": {
+      "en": "A chunky cable-knit cardigan with horn buttons and deep pockets.",
+      "pt": "Casaco de malha grossa com torcidos, botões de corno e bolsos fundos."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p041",
+    "slug": "cable-cardigan-olive",
+    "lineId": "cable-cardigan",
+    "category": "knitwear",
+    "shape": "cardigan",
+    "price": 145,
+    "compareAtPrice": null,
+    "color": {
+      "id": "olive",
+      "hex": "#5B5A3F",
+      "name": {
+        "en": "Olive",
+        "pt": "Azeitona"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cable-Knit Cardigan",
+      "pt": "Casaco de Malha com Torcidos"
+    },
+    "description": {
+      "en": "A chunky cable-knit cardigan with horn buttons and deep pockets.",
+      "pt": "Casaco de malha grossa com torcidos, botões de corno e bolsos fundos."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-12T00:00:00.000Z"
+  },
+  {
+    "id": "p042",
+    "slug": "cable-cardigan-chestnut",
+    "lineId": "cable-cardigan",
+    "category": "knitwear",
+    "shape": "cardigan",
+    "price": 145,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cable-Knit Cardigan",
+      "pt": "Casaco de Malha com Torcidos"
+    },
+    "description": {
+      "en": "A chunky cable-knit cardigan with horn buttons and deep pockets.",
+      "pt": "Casaco de malha grossa com torcidos, botões de corno e bolsos fundos."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p043",
+    "slug": "merino-rollneck-charcoal",
+    "lineId": "merino-rollneck",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 125,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Merino Roll-Neck",
+      "pt": "Camisola de Gola Alta em Merino"
+    },
+    "description": {
+      "en": "A slim roll-neck in fine merino, the winter alternative to a shirt and tie.",
+      "pt": "Gola alta justa em merino fino, a alternativa de inverno à camisa e gravata."
+    },
+    "details": {
+      "en": [
+        "Extra-fine merino wool"
+      ],
+      "pt": [
+        "Lã merino extrafina"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "merino",
+      "season": "cold",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p044",
+    "slug": "merino-rollneck-navy",
+    "lineId": "merino-rollneck",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 125,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Merino Roll-Neck",
+      "pt": "Camisola de Gola Alta em Merino"
+    },
+    "description": {
+      "en": "A slim roll-neck in fine merino, the winter alternative to a shirt and tie.",
+      "pt": "Gola alta justa em merino fino, a alternativa de inverno à camisa e gravata."
+    },
+    "details": {
+      "en": [
+        "Extra-fine merino wool"
+      ],
+      "pt": [
+        "Lã merino extrafina"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "merino",
+      "season": "cold",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p045",
+    "slug": "merino-rollneck-ecru",
+    "lineId": "merino-rollneck",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 94,
+    "compareAtPrice": 125,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Merino Roll-Neck",
+      "pt": "Camisola de Gola Alta em Merino"
+    },
+    "description": {
+      "en": "A slim roll-neck in fine merino, the winter alternative to a shirt and tie.",
+      "pt": "Gola alta justa em merino fino, a alternativa de inverno à camisa e gravata."
+    },
+    "details": {
+      "en": [
+        "Extra-fine merino wool"
+      ],
+      "pt": [
+        "Lã merino extrafina"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "merino",
+      "season": "cold",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p046",
+    "slug": "cashmere-vneck-camel",
+    "lineId": "cashmere-vneck",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 210,
+    "compareAtPrice": null,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cashmere V-Neck Sweater",
+      "pt": "Camisola de Caxemira com Decote em V"
+    },
+    "description": {
+      "en": "A lightweight, luxurious V-neck for layering over a dress shirt.",
+      "pt": "Camisola leve e luxuosa, para vestir sobre uma camisa formal."
+    },
+    "details": {
+      "en": [
+        "Soft cashmere"
+      ],
+      "pt": [
+        "Caxemira macia"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cashmere",
+      "season": "cold",
+      "formality": 4,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p047",
+    "slug": "cashmere-vneck-charcoal",
+    "lineId": "cashmere-vneck",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 210,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cashmere V-Neck Sweater",
+      "pt": "Camisola de Caxemira com Decote em V"
+    },
+    "description": {
+      "en": "A lightweight, luxurious V-neck for layering over a dress shirt.",
+      "pt": "Camisola leve e luxuosa, para vestir sobre uma camisa formal."
+    },
+    "details": {
+      "en": [
+        "Soft cashmere"
+      ],
+      "pt": [
+        "Caxemira macia"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cashmere",
+      "season": "cold",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p048",
+    "slug": "cashmere-vneck-burgundy",
+    "lineId": "cashmere-vneck",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 210,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cashmere V-Neck Sweater",
+      "pt": "Camisola de Caxemira com Decote em V"
+    },
+    "description": {
+      "en": "A lightweight, luxurious V-neck for layering over a dress shirt.",
+      "pt": "Camisola leve e luxuosa, para vestir sobre uma camisa formal."
+    },
+    "details": {
+      "en": [
+        "Soft cashmere"
+      ],
+      "pt": [
+        "Caxemira macia"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cashmere",
+      "season": "cold",
+      "formality": 4,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p049",
+    "slug": "breton-knit-ecru",
+    "lineId": "breton-knit",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 67,
+    "compareAtPrice": 89,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cotton Breton Sweater",
+      "pt": "Camisola Bretã de Algodão"
+    },
+    "description": {
+      "en": "A sturdy sailor-inspired cotton knit with a boat neckline.",
+      "pt": "Malha de algodão resistente, inspirada nos marinheiros, com decote barco."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p050",
+    "slug": "breton-knit-navy",
+    "lineId": "breton-knit",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 89,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cotton Breton Sweater",
+      "pt": "Camisola Bretã de Algodão"
+    },
+    "description": {
+      "en": "A sturdy sailor-inspired cotton knit with a boat neckline.",
+      "pt": "Malha de algodão resistente, inspirada nos marinheiros, com decote barco."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p051",
+    "slug": "breton-knit-rust",
+    "lineId": "breton-knit",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 67,
+    "compareAtPrice": 89,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Cotton Breton Sweater",
+      "pt": "Camisola Bretã de Algodão"
+    },
+    "description": {
+      "en": "A sturdy sailor-inspired cotton knit with a boat neckline.",
+      "pt": "Malha de algodão resistente, inspirada nos marinheiros, com decote barco."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p052",
+    "slug": "shawl-cardigan-charcoal",
+    "lineId": "shawl-cardigan",
+    "category": "knitwear",
+    "shape": "cardigan",
+    "price": 165,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Shawl-Collar Cardigan",
+      "pt": "Casaco de Malha com Gola Xaile"
+    },
+    "description": {
+      "en": "A soft shawl-collar cardigan that doubles as a relaxed indoor jacket.",
+      "pt": "Casaco de malha macio, com gola xaile, que serve de blazer descontraído."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p053",
+    "slug": "shawl-cardigan-camel",
+    "lineId": "shawl-cardigan",
+    "category": "knitwear",
+    "shape": "cardigan",
+    "price": 165,
+    "compareAtPrice": null,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Shawl-Collar Cardigan",
+      "pt": "Casaco de Malha com Gola Xaile"
+    },
+    "description": {
+      "en": "A soft shawl-collar cardigan that doubles as a relaxed indoor jacket.",
+      "pt": "Casaco de malha macio, com gola xaile, que serve de blazer descontraído."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p054",
+    "slug": "shawl-cardigan-forest",
+    "lineId": "shawl-cardigan",
+    "category": "knitwear",
+    "shape": "cardigan",
+    "price": 165,
+    "compareAtPrice": null,
+    "color": {
+      "id": "forest",
+      "hex": "#2F4A3C",
+      "name": {
+        "en": "Forest",
+        "pt": "Verde-floresta"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Shawl-Collar Cardigan",
+      "pt": "Casaco de Malha com Gola Xaile"
+    },
+    "description": {
+      "en": "A soft shawl-collar cardigan that doubles as a relaxed indoor jacket.",
+      "pt": "Casaco de malha macio, com gola xaile, que serve de blazer descontraído."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "wool",
+      "season": "cold",
+      "formality": 3,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p055",
+    "slug": "linen-knit-sand",
+    "lineId": "linen-knit",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "sand",
+      "hex": "#E8E0CF",
+      "name": {
+        "en": "Sand",
+        "pt": "Areia"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen-Cotton Knit Tee",
+      "pt": "T-shirt de Malha em Linho"
+    },
+    "description": {
+      "en": "An airy knitted tee with a dry, cool hand for the hottest days.",
+      "pt": "T-shirt de malha leve, seca e fresca, para os dias mais quentes."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p056",
+    "slug": "linen-knit-paleblue",
+    "lineId": "linen-knit",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen-Cotton Knit Tee",
+      "pt": "T-shirt de Malha em Linho"
+    },
+    "description": {
+      "en": "An airy knitted tee with a dry, cool hand for the hottest days.",
+      "pt": "T-shirt de malha leve, seca e fresca, para os dias mais quentes."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p057",
+    "slug": "linen-knit-moss",
+    "lineId": "linen-knit",
+    "category": "knitwear",
+    "shape": "knit",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "moss",
+      "hex": "#6E7B6A",
+      "name": {
+        "en": "Moss",
+        "pt": "Musgo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Linen-Cotton Knit Tee",
+      "pt": "T-shirt de Malha em Linho"
+    },
+    "description": {
+      "en": "An airy knitted tee with a dry, cool hand for the hottest days.",
+      "pt": "T-shirt de malha leve, seca e fresca, para os dias mais quentes."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p058",
+    "slug": "pleated-wool-trousers-charcoal",
+    "lineId": "pleated-wool-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 135,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Pleated Wool Trousers",
+      "pt": "Calças de Lã com Pinças"
+    },
+    "description": {
+      "en": "Sharp single-pleat trousers in smooth tropical wool with a tapered leg.",
+      "pt": "Calças elegantes com uma pinça, em lã tropical suave e perna afunilada."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p059",
+    "slug": "pleated-wool-trousers-navy",
+    "lineId": "pleated-wool-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 135,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Pleated Wool Trousers",
+      "pt": "Calças de Lã com Pinças"
+    },
+    "description": {
+      "en": "Sharp single-pleat trousers in smooth tropical wool with a tapered leg.",
+      "pt": "Calças elegantes com uma pinça, em lã tropical suave e perna afunilada."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p060",
+    "slug": "pleated-wool-trousers-stone",
+    "lineId": "pleated-wool-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 135,
+    "compareAtPrice": null,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Pleated Wool Trousers",
+      "pt": "Calças de Lã com Pinças"
+    },
+    "description": {
+      "en": "Sharp single-pleat trousers in smooth tropical wool with a tapered leg.",
+      "pt": "Calças elegantes com uma pinça, em lã tropical suave e perna afunilada."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p061",
+    "slug": "garment-dyed-chinos-stone",
+    "lineId": "garment-dyed-chinos",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 64,
+    "compareAtPrice": 85,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Garment-Dyed Chinos",
+      "pt": "Chinos Tingidos em Peça"
+    },
+    "description": {
+      "en": "Everyday chinos with a lived-in colour and a clean, straight leg.",
+      "pt": "Chinos de todos os dias, com cor usada e perna direita."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p062",
+    "slug": "garment-dyed-chinos-navy",
+    "lineId": "garment-dyed-chinos",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 85,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Garment-Dyed Chinos",
+      "pt": "Chinos Tingidos em Peça"
+    },
+    "description": {
+      "en": "Everyday chinos with a lived-in colour and a clean, straight leg.",
+      "pt": "Chinos de todos os dias, com cor usada e perna direita."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "p063",
+    "slug": "garment-dyed-chinos-olive",
+    "lineId": "garment-dyed-chinos",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 64,
+    "compareAtPrice": 85,
+    "color": {
+      "id": "olive",
+      "hex": "#5B5A3F",
+      "name": {
+        "en": "Olive",
+        "pt": "Azeitona"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Garment-Dyed Chinos",
+      "pt": "Chinos Tingidos em Peça"
+    },
+    "description": {
+      "en": "Everyday chinos with a lived-in colour and a clean, straight leg.",
+      "pt": "Chinos de todos os dias, com cor usada e perna direita."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p064",
+    "slug": "linen-drawstring-sand",
+    "lineId": "linen-drawstring",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "sand",
+      "hex": "#E8E0CF",
+      "name": {
+        "en": "Sand",
+        "pt": "Areia"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Linen Drawstring Trousers",
+      "pt": "Calças de Linho com Cordão"
+    },
+    "description": {
+      "en": "Loose linen trousers with an elastic waist for slow summer days.",
+      "pt": "Calças largas de linho com cintura elástica, para dias lentos de verão."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 1,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p065",
+    "slug": "linen-drawstring-ecru",
+    "lineId": "linen-drawstring",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Linen Drawstring Trousers",
+      "pt": "Calças de Linho com Cordão"
+    },
+    "description": {
+      "en": "Loose linen trousers with an elastic waist for slow summer days.",
+      "pt": "Calças largas de linho com cintura elástica, para dias lentos de verão."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 1,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p066",
+    "slug": "linen-drawstring-navy",
+    "lineId": "linen-drawstring",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 95,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Linen Drawstring Trousers",
+      "pt": "Calças de Linho com Cordão"
+    },
+    "description": {
+      "en": "Loose linen trousers with an elastic waist for slow summer days.",
+      "pt": "Calças largas de linho com cintura elástica, para dias lentos de verão."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 1,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-09-25T00:00:00.000Z"
+  },
+  {
+    "id": "p067",
+    "slug": "selvedge-jeans-navy",
+    "lineId": "selvedge-jeans",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 125,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Selvedge Denim Jeans",
+      "pt": "Jeans de Ganga Selvedge"
+    },
+    "description": {
+      "en": "Raw five-pocket jeans woven on vintage looms, made to fade with wear.",
+      "pt": "Jeans de cinco bolsos em ganga crua, tecida em teares antigos, feita para desbotar com o uso."
+    },
+    "details": {
+      "en": [
+        "Japanese selvedge denim"
+      ],
+      "pt": [
+        "Ganga japonesa selvedge"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "denim",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p068",
+    "slug": "selvedge-jeans-charcoal",
+    "lineId": "selvedge-jeans",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 125,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Selvedge Denim Jeans",
+      "pt": "Jeans de Ganga Selvedge"
+    },
+    "description": {
+      "en": "Raw five-pocket jeans woven on vintage looms, made to fade with wear.",
+      "pt": "Jeans de cinco bolsos em ganga crua, tecida em teares antigos, feita para desbotar com o uso."
+    },
+    "details": {
+      "en": [
+        "Japanese selvedge denim"
+      ],
+      "pt": [
+        "Ganga japonesa selvedge"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "denim",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p069",
+    "slug": "selvedge-jeans-ecru",
+    "lineId": "selvedge-jeans",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 125,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Selvedge Denim Jeans",
+      "pt": "Jeans de Ganga Selvedge"
+    },
+    "description": {
+      "en": "Raw five-pocket jeans woven on vintage looms, made to fade with wear.",
+      "pt": "Jeans de cinco bolsos em ganga crua, tecida em teares antigos, feita para desbotar com o uso."
+    },
+    "details": {
+      "en": [
+        "Japanese selvedge denim"
+      ],
+      "pt": [
+        "Ganga japonesa selvedge"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "denim",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p070",
+    "slug": "corduroy-trousers-chestnut",
+    "lineId": "corduroy-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Corduroy Five-Pocket Trousers",
+      "pt": "Calças de Bombazina"
+    },
+    "description": {
+      "en": "Warm wide-wale corduroy with a classic five-pocket construction.",
+      "pt": "Bombazina quente de canelado largo, com construção clássica de cinco bolsos."
+    },
+    "details": {
+      "en": [
+        "Cotton corduroy"
+      ],
+      "pt": [
+        "Bombazina de algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "corduroy",
+      "season": "cold",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p071",
+    "slug": "corduroy-trousers-olive",
+    "lineId": "corduroy-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "olive",
+      "hex": "#5B5A3F",
+      "name": {
+        "en": "Olive",
+        "pt": "Azeitona"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Corduroy Five-Pocket Trousers",
+      "pt": "Calças de Bombazina"
+    },
+    "description": {
+      "en": "Warm wide-wale corduroy with a classic five-pocket construction.",
+      "pt": "Bombazina quente de canelado largo, com construção clássica de cinco bolsos."
+    },
+    "details": {
+      "en": [
+        "Cotton corduroy"
+      ],
+      "pt": [
+        "Bombazina de algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "corduroy",
+      "season": "cold",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p072",
+    "slug": "corduroy-trousers-rust",
+    "lineId": "corduroy-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 110,
+    "compareAtPrice": null,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Corduroy Five-Pocket Trousers",
+      "pt": "Calças de Bombazina"
+    },
+    "description": {
+      "en": "Warm wide-wale corduroy with a classic five-pocket construction.",
+      "pt": "Bombazina quente de canelado largo, com construção clássica de cinco bolsos."
+    },
+    "details": {
+      "en": [
+        "Cotton corduroy"
+      ],
+      "pt": [
+        "Bombazina de algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "corduroy",
+      "season": "cold",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p073",
+    "slug": "flannel-trousers-charcoal",
+    "lineId": "flannel-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 149,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Flat-Front Flannel Trousers",
+      "pt": "Calças de Flanela de Lã"
+    },
+    "description": {
+      "en": "Soft wool flannel trousers with a clean front for winter tailoring.",
+      "pt": "Calças macias de flanela de lã, de frente lisa, para alfaiataria de inverno."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "cold",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "id": "p074",
+    "slug": "flannel-trousers-navy",
+    "lineId": "flannel-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 149,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Flat-Front Flannel Trousers",
+      "pt": "Calças de Flanela de Lã"
+    },
+    "description": {
+      "en": "Soft wool flannel trousers with a clean front for winter tailoring.",
+      "pt": "Calças macias de flanela de lã, de frente lisa, para alfaiataria de inverno."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "cold",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p075",
+    "slug": "flannel-trousers-camel",
+    "lineId": "flannel-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 149,
+    "compareAtPrice": null,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Flat-Front Flannel Trousers",
+      "pt": "Calças de Flanela de Lã"
+    },
+    "description": {
+      "en": "Soft wool flannel trousers with a clean front for winter tailoring.",
+      "pt": "Calças macias de flanela de lã, de frente lisa, para alfaiataria de inverno."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "cold",
+      "formality": 5,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p076",
+    "slug": "travel-trousers-charcoal",
+    "lineId": "travel-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 99,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Stretch-Cotton Travel Trousers",
+      "pt": "Calças de Viagem em Algodão Elástico"
+    },
+    "description": {
+      "en": "Crease-resistant trousers with a little stretch for days on the move.",
+      "pt": "Calças que não amarrotam, com ligeira elasticidade, para dias em movimento."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p077",
+    "slug": "travel-trousers-moss",
+    "lineId": "travel-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 99,
+    "compareAtPrice": null,
+    "color": {
+      "id": "moss",
+      "hex": "#6E7B6A",
+      "name": {
+        "en": "Moss",
+        "pt": "Musgo"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Stretch-Cotton Travel Trousers",
+      "pt": "Calças de Viagem em Algodão Elástico"
+    },
+    "description": {
+      "en": "Crease-resistant trousers with a little stretch for days on the move.",
+      "pt": "Calças que não amarrotam, com ligeira elasticidade, para dias em movimento."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p078",
+    "slug": "travel-trousers-stone",
+    "lineId": "travel-trousers",
+    "category": "trousers",
+    "shape": "trousers",
+    "price": 99,
+    "compareAtPrice": null,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "44",
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Stretch-Cotton Travel Trousers",
+      "pt": "Calças de Viagem em Algodão Elástico"
+    },
+    "description": {
+      "en": "Crease-resistant trousers with a little stretch for days on the move.",
+      "pt": "Calças que não amarrotam, com ligeira elasticidade, para dias em movimento."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p079",
+    "slug": "unstructured-blazer-navy",
+    "lineId": "unstructured-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 249,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Unstructured Blazer",
+      "pt": "Blazer Desestruturado"
+    },
+    "description": {
+      "en": "A soft, unlined blazer that dresses up jeans without any stiffness.",
+      "pt": "Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "wool",
+      "season": "all",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p080",
+    "slug": "unstructured-blazer-stone",
+    "lineId": "unstructured-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 249,
+    "compareAtPrice": null,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Unstructured Blazer",
+      "pt": "Blazer Desestruturado"
+    },
+    "description": {
+      "en": "A soft, unlined blazer that dresses up jeans without any stiffness.",
+      "pt": "Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "wool",
+      "season": "all",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p081",
+    "slug": "unstructured-blazer-forest",
+    "lineId": "unstructured-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 249,
+    "compareAtPrice": null,
+    "color": {
+      "id": "forest",
+      "hex": "#2F4A3C",
+      "name": {
+        "en": "Forest",
+        "pt": "Verde-floresta"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Unstructured Blazer",
+      "pt": "Blazer Desestruturado"
+    },
+    "description": {
+      "en": "A soft, unlined blazer that dresses up jeans without any stiffness.",
+      "pt": "Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "wool",
+      "season": "all",
+      "formality": 4,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p082",
+    "slug": "waxed-field-jacket-olive",
+    "lineId": "waxed-field-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 289,
+    "compareAtPrice": null,
+    "color": {
+      "id": "olive",
+      "hex": "#5B5A3F",
+      "name": {
+        "en": "Olive",
+        "pt": "Azeitona"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Waxed Field Jacket",
+      "pt": "Casaco de Campo Encerado"
+    },
+    "description": {
+      "en": "A weatherproof country jacket with bellows pockets and a corduroy collar.",
+      "pt": "Casaco de campo impermeável, com bolsos de fole e gola de bombazina."
+    },
+    "details": {
+      "en": [
+        "Waxed cotton canvas"
+      ],
+      "pt": [
+        "Lona de algodão encerada"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "waxed",
+      "season": "cold",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p083",
+    "slug": "waxed-field-jacket-navy",
+    "lineId": "waxed-field-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 289,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Waxed Field Jacket",
+      "pt": "Casaco de Campo Encerado"
+    },
+    "description": {
+      "en": "A weatherproof country jacket with bellows pockets and a corduroy collar.",
+      "pt": "Casaco de campo impermeável, com bolsos de fole e gola de bombazina."
+    },
+    "details": {
+      "en": [
+        "Waxed cotton canvas"
+      ],
+      "pt": [
+        "Lona de algodão encerada"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "waxed",
+      "season": "cold",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p084",
+    "slug": "waxed-field-jacket-chestnut",
+    "lineId": "waxed-field-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 289,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Waxed Field Jacket",
+      "pt": "Casaco de Campo Encerado"
+    },
+    "description": {
+      "en": "A weatherproof country jacket with bellows pockets and a corduroy collar.",
+      "pt": "Casaco de campo impermeável, com bolsos de fole e gola de bombazina."
+    },
+    "details": {
+      "en": [
+        "Waxed cotton canvas"
+      ],
+      "pt": [
+        "Lona de algodão encerada"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "waxed",
+      "season": "cold",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p085",
+    "slug": "wool-overcoat-charcoal",
+    "lineId": "wool-overcoat",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 345,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Wool Overcoat",
+      "pt": "Sobretudo de Lã"
+    },
+    "description": {
+      "en": "A long, clean overcoat in heavy melton wool for formal winter days.",
+      "pt": "Sobretudo comprido e limpo, em lã melton pesada, para dias formais de inverno."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "cold",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p086",
+    "slug": "wool-overcoat-camel",
+    "lineId": "wool-overcoat",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 345,
+    "compareAtPrice": null,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Wool Overcoat",
+      "pt": "Sobretudo de Lã"
+    },
+    "description": {
+      "en": "A long, clean overcoat in heavy melton wool for formal winter days.",
+      "pt": "Sobretudo comprido e limpo, em lã melton pesada, para dias formais de inverno."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "cold",
+      "formality": 5,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p087",
+    "slug": "wool-overcoat-navy",
+    "lineId": "wool-overcoat",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 259,
+    "compareAtPrice": 345,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Wool Overcoat",
+      "pt": "Sobretudo de Lã"
+    },
+    "description": {
+      "en": "A long, clean overcoat in heavy melton wool for formal winter days.",
+      "pt": "Sobretudo comprido e limpo, em lã melton pesada, para dias formais de inverno."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "cold",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p088",
+    "slug": "linen-blazer-sand",
+    "lineId": "linen-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 164,
+    "compareAtPrice": 219,
+    "color": {
+      "id": "sand",
+      "hex": "#E8E0CF",
+      "name": {
+        "en": "Sand",
+        "pt": "Areia"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Linen Summer Blazer",
+      "pt": "Blazer de Verão em Linho"
+    },
+    "description": {
+      "en": "A featherweight blazer for weddings and terraces in the summer heat.",
+      "pt": "Blazer levíssimo para casamentos e esplanadas no calor do verão."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p089",
+    "slug": "linen-blazer-paleblue",
+    "lineId": "linen-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 219,
+    "compareAtPrice": null,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Linen Summer Blazer",
+      "pt": "Blazer de Verão em Linho"
+    },
+    "description": {
+      "en": "A featherweight blazer for weddings and terraces in the summer heat.",
+      "pt": "Blazer levíssimo para casamentos e esplanadas no calor do verão."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p090",
+    "slug": "linen-blazer-ecru",
+    "lineId": "linen-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 219,
+    "compareAtPrice": null,
+    "color": {
+      "id": "ecru",
+      "hex": "#EFE9DC",
+      "name": {
+        "en": "Ecru",
+        "pt": "Cru"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Linen Summer Blazer",
+      "pt": "Blazer de Verão em Linho"
+    },
+    "description": {
+      "en": "A featherweight blazer for weddings and terraces in the summer heat.",
+      "pt": "Blazer levíssimo para casamentos e esplanadas no calor do verão."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p091",
+    "slug": "harrington-jacket-stone",
+    "lineId": "harrington-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 175,
+    "compareAtPrice": null,
+    "color": {
+      "id": "stone",
+      "hex": "#C8B48E",
+      "name": {
+        "en": "Stone",
+        "pt": "Pedra"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Harrington Jacket",
+      "pt": "Casaco Harrington"
+    },
+    "description": {
+      "en": "A lightweight zip jacket with a tartan lining and a clean collar.",
+      "pt": "Casaco leve com fecho, forro em tartã e gola limpa."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p092",
+    "slug": "harrington-jacket-navy",
+    "lineId": "harrington-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 175,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Harrington Jacket",
+      "pt": "Casaco Harrington"
+    },
+    "description": {
+      "en": "A lightweight zip jacket with a tartan lining and a clean collar.",
+      "pt": "Casaco leve com fecho, forro em tartã e gola limpa."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p093",
+    "slug": "harrington-jacket-burgundy",
+    "lineId": "harrington-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 175,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Harrington Jacket",
+      "pt": "Casaco Harrington"
+    },
+    "description": {
+      "en": "A lightweight zip jacket with a tartan lining and a clean collar.",
+      "pt": "Casaco leve com fecho, forro em tartã e gola limpa."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p094",
+    "slug": "chore-jacket-navy",
+    "lineId": "chore-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 159,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Canvas Chore Jacket",
+      "pt": "Casaco de Trabalho em Lona"
+    },
+    "description": {
+      "en": "A boxy French workwear jacket with three patch pockets.",
+      "pt": "Casaco de trabalho francês, de corte quadrado, com três bolsos aplicados."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p095",
+    "slug": "chore-jacket-moss",
+    "lineId": "chore-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 159,
+    "compareAtPrice": null,
+    "color": {
+      "id": "moss",
+      "hex": "#6E7B6A",
+      "name": {
+        "en": "Moss",
+        "pt": "Musgo"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Canvas Chore Jacket",
+      "pt": "Casaco de Trabalho em Lona"
+    },
+    "description": {
+      "en": "A boxy French workwear jacket with three patch pockets.",
+      "pt": "Casaco de trabalho francês, de corte quadrado, com três bolsos aplicados."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p096",
+    "slug": "chore-jacket-rust",
+    "lineId": "chore-jacket",
+    "category": "outerwear",
+    "shape": "jacket",
+    "price": 159,
+    "compareAtPrice": null,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "name": {
+      "en": "Canvas Chore Jacket",
+      "pt": "Casaco de Trabalho em Lona"
+    },
+    "description": {
+      "en": "A boxy French workwear jacket with three patch pockets.",
+      "pt": "Casaco de trabalho francês, de corte quadrado, com três bolsos aplicados."
+    },
+    "details": {
+      "en": [
+        "100% cotton"
+      ],
+      "pt": [
+        "100% algodão"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "cotton",
+      "season": "all",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p097",
+    "slug": "travel-blazer-charcoal",
+    "lineId": "travel-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 279,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Tailored Travel Blazer",
+      "pt": "Blazer de Viagem"
+    },
+    "description": {
+      "en": "A sharply cut blazer in crease-resistant wool for meetings abroad.",
+      "pt": "Blazer de corte preciso, em lã que não amarrota, para reuniões no estrangeiro."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p098",
+    "slug": "travel-blazer-navy",
+    "lineId": "travel-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 279,
+    "compareAtPrice": null,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Tailored Travel Blazer",
+      "pt": "Blazer de Viagem"
+    },
+    "description": {
+      "en": "A sharply cut blazer in crease-resistant wool for meetings abroad.",
+      "pt": "Blazer de corte preciso, em lã que não amarrota, para reuniões no estrangeiro."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "all",
+      "formality": 5,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p099",
+    "slug": "travel-blazer-burgundy",
+    "lineId": "travel-blazer",
+    "category": "outerwear",
+    "shape": "blazer",
+    "price": 209,
+    "compareAtPrice": 279,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "name": {
+      "en": "Tailored Travel Blazer",
+      "pt": "Blazer de Viagem"
+    },
+    "description": {
+      "en": "A sharply cut blazer in crease-resistant wool for meetings abroad.",
+      "pt": "Blazer de corte preciso, em lã que não amarrota, para reuniões no estrangeiro."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "wool",
+      "season": "all",
+      "formality": 5,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p100",
+    "slug": "dress-belt-chestnut",
+    "lineId": "dress-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 55,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Leather Dress Belt",
+      "pt": "Cinto Formal de Pele"
+    },
+    "description": {
+      "en": "A slim polished belt with a brushed buckle for tailored trousers.",
+      "pt": "Cinto fino e polido, com fivela escovada, para calças de alfaiataria."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "leather",
+      "season": "all",
+      "formality": 4,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "id": "p101",
+    "slug": "dress-belt-charcoal",
+    "lineId": "dress-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 55,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Leather Dress Belt",
+      "pt": "Cinto Formal de Pele"
+    },
+    "description": {
+      "en": "A slim polished belt with a brushed buckle for tailored trousers.",
+      "pt": "Cinto fino e polido, com fivela escovada, para calças de alfaiataria."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "leather",
+      "season": "all",
+      "formality": 4,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p102",
+    "slug": "dress-belt-burgundy",
+    "lineId": "dress-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 55,
+    "compareAtPrice": null,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Leather Dress Belt",
+      "pt": "Cinto Formal de Pele"
+    },
+    "description": {
+      "en": "A slim polished belt with a brushed buckle for tailored trousers.",
+      "pt": "Cinto fino e polido, com fivela escovada, para calças de alfaiataria."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "leather",
+      "season": "all",
+      "formality": 4,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p103",
+    "slug": "cashmere-scarf-burgundy",
+    "lineId": "cashmere-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 59,
+    "compareAtPrice": 79,
+    "color": {
+      "id": "burgundy",
+      "hex": "#8C2F39",
+      "name": {
+        "en": "Burgundy",
+        "pt": "Bordeaux"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Cashmere-Blend Scarf",
+      "pt": "Cachecol de Mistura de Caxemira"
+    },
+    "description": {
+      "en": "A soft, finely woven scarf that sits neatly under an overcoat.",
+      "pt": "Cachecol macio e de tecido fino, que assenta bem por baixo do sobretudo."
+    },
+    "details": {
+      "en": [
+        "Soft cashmere"
+      ],
+      "pt": [
+        "Caxemira macia"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cashmere",
+      "season": "cold",
+      "formality": 3,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p104",
+    "slug": "cashmere-scarf-camel",
+    "lineId": "cashmere-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 59,
+    "compareAtPrice": 79,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Cashmere-Blend Scarf",
+      "pt": "Cachecol de Mistura de Caxemira"
+    },
+    "description": {
+      "en": "A soft, finely woven scarf that sits neatly under an overcoat.",
+      "pt": "Cachecol macio e de tecido fino, que assenta bem por baixo do sobretudo."
+    },
+    "details": {
+      "en": [
+        "Soft cashmere"
+      ],
+      "pt": [
+        "Caxemira macia"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cashmere",
+      "season": "cold",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p105",
+    "slug": "cashmere-scarf-charcoal",
+    "lineId": "cashmere-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 79,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Cashmere-Blend Scarf",
+      "pt": "Cachecol de Mistura de Caxemira"
+    },
+    "description": {
+      "en": "A soft, finely woven scarf that sits neatly under an overcoat.",
+      "pt": "Cachecol macio e de tecido fino, que assenta bem por baixo do sobretudo."
+    },
+    "details": {
+      "en": [
+        "Soft cashmere"
+      ],
+      "pt": [
+        "Caxemira macia"
+      ]
+    },
+    "attributes": {
+      "style": "tailored",
+      "material": "cashmere",
+      "season": "cold",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p106",
+    "slug": "suede-belt-camel",
+    "lineId": "suede-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 59,
+    "compareAtPrice": null,
+    "color": {
+      "id": "camel",
+      "hex": "#B9A68A",
+      "name": {
+        "en": "Camel",
+        "pt": "Camelo"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Suede Casual Belt",
+      "pt": "Cinto Casual de Camurça"
+    },
+    "description": {
+      "en": "A soft suede belt that finishes chinos and jeans without fuss.",
+      "pt": "Cinto de camurça macia, que completa chinos e jeans sem esforço."
+    },
+    "details": {
+      "en": [
+        "Calf suede"
+      ],
+      "pt": [
+        "Camurça de vitela"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "suede",
+      "season": "all",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p107",
+    "slug": "suede-belt-chestnut",
+    "lineId": "suede-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 59,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Suede Casual Belt",
+      "pt": "Cinto Casual de Camurça"
+    },
+    "description": {
+      "en": "A soft suede belt that finishes chinos and jeans without fuss.",
+      "pt": "Cinto de camurça macia, que completa chinos e jeans sem esforço."
+    },
+    "details": {
+      "en": [
+        "Calf suede"
+      ],
+      "pt": [
+        "Camurça de vitela"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "suede",
+      "season": "all",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-12T00:00:00.000Z"
+  },
+  {
+    "id": "p108",
+    "slug": "suede-belt-navy",
+    "lineId": "suede-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 44,
+    "compareAtPrice": 59,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Suede Casual Belt",
+      "pt": "Cinto Casual de Camurça"
+    },
+    "description": {
+      "en": "A soft suede belt that finishes chinos and jeans without fuss.",
+      "pt": "Cinto de camurça macia, que completa chinos e jeans sem esforço."
+    },
+    "details": {
+      "en": [
+        "Calf suede"
+      ],
+      "pt": [
+        "Camurça de vitela"
+      ]
+    },
+    "attributes": {
+      "style": "smart_casual",
+      "material": "suede",
+      "season": "all",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p109",
+    "slug": "braided-belt-sand",
+    "lineId": "braided-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 49,
+    "compareAtPrice": null,
+    "color": {
+      "id": "sand",
+      "hex": "#E8E0CF",
+      "name": {
+        "en": "Sand",
+        "pt": "Areia"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Braided Leather Belt",
+      "pt": "Cinto de Pele Entrançada"
+    },
+    "description": {
+      "en": "A woven summer belt with natural give and no fixed holes.",
+      "pt": "Cinto entrançado de verão, com elasticidade natural e sem furos fixos."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "leather",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p110",
+    "slug": "braided-belt-chestnut",
+    "lineId": "braided-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 49,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Braided Leather Belt",
+      "pt": "Cinto de Pele Entrançada"
+    },
+    "description": {
+      "en": "A woven summer belt with natural give and no fixed holes.",
+      "pt": "Cinto entrançado de verão, com elasticidade natural e sem furos fixos."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "leather",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p111",
+    "slug": "braided-belt-navy",
+    "lineId": "braided-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 37,
+    "compareAtPrice": 49,
+    "color": {
+      "id": "navy",
+      "hex": "#22304A",
+      "name": {
+        "en": "Navy",
+        "pt": "Azul-marinho"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Braided Leather Belt",
+      "pt": "Cinto de Pele Entrançada"
+    },
+    "description": {
+      "en": "A woven summer belt with natural give and no fixed holes.",
+      "pt": "Cinto entrançado de verão, com elasticidade natural e sem furos fixos."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "leather",
+      "season": "warm",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p112",
+    "slug": "lambswool-scarf-forest",
+    "lineId": "lambswool-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 65,
+    "compareAtPrice": null,
+    "color": {
+      "id": "forest",
+      "hex": "#2F4A3C",
+      "name": {
+        "en": "Forest",
+        "pt": "Verde-floresta"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Lambswool Scarf",
+      "pt": "Cachecol de Lambswool"
+    },
+    "description": {
+      "en": "A thick, warm scarf woven in Scotland with a lightly fringed edge.",
+      "pt": "Cachecol grosso e quente, tecido na Escócia, com remate ligeiramente franjado."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p113",
+    "slug": "lambswool-scarf-rust",
+    "lineId": "lambswool-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 65,
+    "compareAtPrice": null,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Lambswool Scarf",
+      "pt": "Cachecol de Lambswool"
+    },
+    "description": {
+      "en": "A thick, warm scarf woven in Scotland with a lightly fringed edge.",
+      "pt": "Cachecol grosso e quente, tecido na Escócia, com remate ligeiramente franjado."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p114",
+    "slug": "lambswool-scarf-charcoal",
+    "lineId": "lambswool-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 65,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Lambswool Scarf",
+      "pt": "Cachecol de Lambswool"
+    },
+    "description": {
+      "en": "A thick, warm scarf woven in Scotland with a lightly fringed edge.",
+      "pt": "Cachecol grosso e quente, tecido na Escócia, com remate ligeiramente franjado."
+    },
+    "details": {
+      "en": [
+        "Pure new wool"
+      ],
+      "pt": [
+        "Pura lã virgem"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "wool",
+      "season": "cold",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p115",
+    "slug": "linen-scarf-sand",
+    "lineId": "linen-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 55,
+    "compareAtPrice": null,
+    "color": {
+      "id": "sand",
+      "hex": "#E8E0CF",
+      "name": {
+        "en": "Sand",
+        "pt": "Areia"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Linen Scarf",
+      "pt": "Lenço de Linho"
+    },
+    "description": {
+      "en": "A light, loosely woven scarf for breezy evenings near the water.",
+      "pt": "Lenço leve, de tecelagem solta, para noites frescas junto à água."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p116",
+    "slug": "linen-scarf-paleblue",
+    "lineId": "linen-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 55,
+    "compareAtPrice": null,
+    "color": {
+      "id": "paleblue",
+      "hex": "#DCE3EC",
+      "name": {
+        "en": "Pale blue",
+        "pt": "Azul-claro"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Linen Scarf",
+      "pt": "Lenço de Linho"
+    },
+    "description": {
+      "en": "A light, loosely woven scarf for breezy evenings near the water.",
+      "pt": "Lenço leve, de tecelagem solta, para noites frescas junto à água."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p117",
+    "slug": "linen-scarf-rust",
+    "lineId": "linen-scarf",
+    "category": "accessories",
+    "shape": "scarf",
+    "price": 55,
+    "compareAtPrice": null,
+    "color": {
+      "id": "rust",
+      "hex": "#A4553A",
+      "name": {
+        "en": "Rust",
+        "pt": "Ferrugem"
+      }
+    },
+    "sizes": [
+      "ONE"
+    ],
+    "name": {
+      "en": "Linen Scarf",
+      "pt": "Lenço de Linho"
+    },
+    "description": {
+      "en": "A light, loosely woven scarf for breezy evenings near the water.",
+      "pt": "Lenço leve, de tecelagem solta, para noites frescas junto à água."
+    },
+    "details": {
+      "en": [
+        "100% linen"
+      ],
+      "pt": [
+        "100% linho"
+      ]
+    },
+    "attributes": {
+      "style": "coastal",
+      "material": "linen",
+      "season": "warm",
+      "formality": 2,
+      "palette": "rich"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p118",
+    "slug": "bridle-belt-chestnut",
+    "lineId": "bridle-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 75,
+    "compareAtPrice": null,
+    "color": {
+      "id": "chestnut",
+      "hex": "#6B4A35",
+      "name": {
+        "en": "Chestnut",
+        "pt": "Castanho"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Bridle Leather Belt",
+      "pt": "Cinto de Pele de Sela"
+    },
+    "description": {
+      "en": "A thick saddle-leather belt with a solid brass buckle that lasts for decades.",
+      "pt": "Cinto grosso de pele de sela, com fivela de latão maciço, feito para durar décadas."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "leather",
+      "season": "all",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "p119",
+    "slug": "bridle-belt-olive",
+    "lineId": "bridle-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 75,
+    "compareAtPrice": null,
+    "color": {
+      "id": "olive",
+      "hex": "#5B5A3F",
+      "name": {
+        "en": "Olive",
+        "pt": "Azeitona"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Bridle Leather Belt",
+      "pt": "Cinto de Pele de Sela"
+    },
+    "description": {
+      "en": "A thick saddle-leather belt with a solid brass buckle that lasts for decades.",
+      "pt": "Cinto grosso de pele de sela, com fivela de latão maciço, feito para durar décadas."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "leather",
+      "season": "all",
+      "formality": 3,
+      "palette": "earth"
+    },
+    "releasedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p120",
+    "slug": "bridle-belt-charcoal",
+    "lineId": "bridle-belt",
+    "category": "accessories",
+    "shape": "belt",
+    "price": 75,
+    "compareAtPrice": null,
+    "color": {
+      "id": "charcoal",
+      "hex": "#4A4A4F",
+      "name": {
+        "en": "Charcoal",
+        "pt": "Antracite"
+      }
+    },
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "name": {
+      "en": "Bridle Leather Belt",
+      "pt": "Cinto de Pele de Sela"
+    },
+    "description": {
+      "en": "A thick saddle-leather belt with a solid brass buckle that lasts for decades.",
+      "pt": "Cinto grosso de pele de sela, com fivela de latão maciço, feito para durar décadas."
+    },
+    "details": {
+      "en": [
+        "Full-grain leather"
+      ],
+      "pt": [
+        "Pele de flor integral"
+      ]
+    },
+    "attributes": {
+      "style": "heritage",
+      "material": "leather",
+      "season": "all",
+      "formality": 3,
+      "palette": "neutral"
+    },
+    "releasedAt": "2026-04-01T00:00:00.000Z"
+  }
+]
