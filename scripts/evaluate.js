@@ -34,8 +34,9 @@ const {
 } = require('./evaluation/metrics');
 
 const OUTPUT = path.join(__dirname, '..', 'data', 'evaluation.json');
-const TEST_SEEDS = Array.from({ length: 10 }, (_, i) => 20270201 + i);
+const TEST_SEEDS = Array.from({ length: 10 }, (_, i) => 20270301 + i);
 const lineById = new Map(products.map((p) => [p.id, p.lineId]));
+const marginById = new Map(products.map((p) => [p.id, p.margin]));
 // Products the store never suggests are not counted as targets.
 const lineOf = EXCLUDE_SEEN_LINES ? (id) => lineById.get(id) : undefined;
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -44,11 +45,15 @@ const TEST_START = new Date(ANCHOR - 14 * DAY_MS).toISOString();
 const TEST_END = new Date(ANCHOR + DAY_MS).toISOString();
 const SHOWN = 4; // Products shown on the page.
 const WEIGHT_STEPS = 10;
-const DIVERSITY_GRID = [0, 0.1, 0.2, 0.3, 0.4, 0.5];
+const DIVERSITY_GRID = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8];
+const DISCOUNT_GRID = [0.2, 0.4, 0.6, 0.8, 1];
+const PRICE_GRID = [0, 0.25, 0.5, 1];
+const SEASON_GRID = [0, 0.25, 0.5, 0.75, 1, 1.5, 2];
+const MARGIN_GRID = [0, 0.5, 1, 2, 3];
 // A product seen by fewer training visitors than this counts as "new".
 const COLD_VISITORS = 30;
-// Diversity costs a little accuracy by design: accept up to this share of the best score.
-const ACCEPTED_LOSS = 0.02;
+// Reach, diversity and margin cost a little accuracy by design: each may give up this share of the score.
+const ACCEPTED_LOSS = 0.01;
 const NDCG = `ndcg@${LIST_SIZE}`;
 const RECALL = `recall@${SHOWN}`;
 const COMPARED_WITH = ['same_category', 'same_category_popular', 'content', 'collaborative'];
@@ -65,36 +70,65 @@ function weightGrid() {
 
 const score = (rank, cases, k = LIST_SIZE) => mean(cases.map((c) => ndcgAtK(rank(c), c.targets, k)));
 
-/** Grid search on the validation window of the tuning dataset. */
+/**
+ * Search on the validation window of the tuning dataset, one group of settings
+ * at a time. The blend takes its best value. Price and season take the smallest
+ * value within ACCEPTED_LOSS of their best, because each one pulls away from the
+ * visitor's taste. Reach for new products, diversity and margin then take the
+ * highest value that gives up no more than ACCEPTED_LOSS of the score.
+ */
 function tune(events) {
   const { train } = temporalSplit(events, VALIDATION_START);
   const cases = buildCases(events, { from: VALIDATION_START, to: TEST_START, lineOf });
   const model = buildModel({ products, events: train });
   const recommender = createRecommender(model, products);
-  const rankWith = (config) => (c) =>
-    recommender
-      .recommend({
-        history: c.history,
-        contextProductId: c.contextProductId,
-        k: LIST_SIZE,
-        excludeSeenLines: EXCLUDE_SEEN_LINES,
-        ...config,
-      })
-      .map((r) => r.productId);
+  let trials = 0;
+  const ndcgWith = (config) => {
+    trials += 1;
+    const rank = (c) =>
+      recommender
+        .recommend({
+          history: c.history,
+          contextProductId: c.contextProductId,
+          k: LIST_SIZE,
+          excludeSeenLines: EXCLUDE_SEEN_LINES,
+          ...config,
+        })
+        .map((r) => r.productId);
+    return score(rank, cases);
+  };
+  const bestOf = (options) =>
+    options.map((config) => ({ config, ndcg: ndcgWith(config) })).sort((a, b) => b.ndcg - a.ndcg);
 
-  const trials = weightGrid().flatMap((weights) =>
-    DIVERSITY_GRID.map((diversity) => {
-      const config = { weights, diversity };
-      return { ...config, ndcg: score(rankWith(config), cases) };
-    }),
+  const base = { diversity: 0, priceWeight: 0, seasonWeight: 0, marginWeight: 0 };
+  const blends = weightGrid().flatMap((weights) =>
+    DISCOUNT_GRID.map((unprovenDiscount) => ({ ...base, weights, unprovenDiscount })),
   );
-  trials.sort((a, b) => b.ndcg - a.ndcg);
-  const best = trials[0];
-  // Among near-best settings, prefer the most diverse lists; then the best score.
-  const accepted = trials
-    .filter((t) => t.ndcg >= best.ndcg * (1 - ACCEPTED_LOSS))
-    .sort((a, b) => b.diversity - a.diversity || b.ndcg - a.ndcg);
-  return { cases: cases.length, trials: trials.length, best, chosen: accepted[0] };
+  let chosen = bestOf(blends)[0].config;
+  const lowestAccepted = (key, grid) => {
+    const tried = grid.map((value) => ({ value, ndcg: ndcgWith({ ...chosen, [key]: value }) }));
+    const floor = Math.max(...tried.map((t) => t.ndcg)) * (1 - ACCEPTED_LOSS);
+    chosen = { ...chosen, [key]: Math.min(...tried.filter((t) => t.ndcg >= floor).map((t) => t.value)) };
+  };
+  lowestAccepted('priceWeight', PRICE_GRID);
+  lowestAccepted('seasonWeight', SEASON_GRID);
+  const accurateNdcg = ndcgWith(chosen);
+
+  const highestAccepted = (key, grid) => {
+    const floor = ndcgWith(chosen) * (1 - ACCEPTED_LOSS);
+    const accepted = grid.filter((value) => ndcgWith({ ...chosen, [key]: value }) >= floor);
+    chosen = { ...chosen, [key]: Math.max(...accepted) };
+  };
+  highestAccepted('unprovenDiscount', DISCOUNT_GRID);
+  highestAccepted('diversity', DIVERSITY_GRID);
+  highestAccepted('marginWeight', MARGIN_GRID);
+
+  return {
+    cases: cases.length,
+    trials,
+    bestNdcg: accurateNdcg,
+    chosen: { ...chosen, ndcg: ndcgWith(chosen) },
+  };
 }
 
 /** Mean and 95% interval of a per-case value, resampling whole visitors. */
@@ -212,6 +246,7 @@ function aggregate(datasets) {
             ),
           ),
           [`diversity@${SHOWN}`]: mean(top.map((list) => listDiversity(list, similarityOf))),
+          [`margin@${SHOWN}`]: mean(top.flat().map((id) => marginById.get(id))),
           ndcgRange: rangeOf(datasets.map((d) => ndcgOf(d.lists[name], d.cases))),
         },
       ];
@@ -232,7 +267,10 @@ function aggregate(datasets) {
     };
   };
   const improvements = Object.fromEntries(
-    [...COMPARED_WITH, 'hybrid_no_fallback', 'hybrid_with_colours'].map((name) => [name, compare(name)]),
+    [...COMPARED_WITH, 'hybrid_no_fallback', 'hybrid_accuracy_only', 'hybrid_with_colours'].map((name) => [
+      name,
+      compare(name),
+    ]),
   );
 
   // The same lists, scored as if views of other colours were hits.
@@ -299,11 +337,8 @@ function aggregate(datasets) {
 
 function run() {
   const tuning = tune(generateInteractions({ products }).events);
-  const hybrid = {
-    weights: tuning.chosen.weights,
-    diversity: tuning.chosen.diversity,
-    excludeSeenLines: EXCLUDE_SEEN_LINES,
-  };
+  const hybrid = { ...tuning.chosen, excludeSeenLines: EXCLUDE_SEEN_LINES };
+  delete hybrid.ndcg;
   const datasets = TEST_SEEDS.map((seed) => runDataset(seed, hybrid));
   const { testCases, testVisitors, ...findings } = aggregate(datasets);
 
@@ -345,6 +380,7 @@ function printReport(report) {
         max: Number(r.ndcgRange.max.toFixed(3)),
         coverage: Number(r[`coverage@${SHOWN}`].toFixed(3)),
         diversity: Number(r[`diversity@${SHOWN}`].toFixed(3)),
+        margin: Number(r[`margin@${SHOWN}`].toFixed(3)),
       },
     ]),
   );
@@ -368,4 +404,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { weightGrid, shuffleProducts, tune };
+module.exports = { weightGrid, shuffleProducts, tune, interval };

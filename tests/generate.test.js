@@ -4,6 +4,7 @@ const { createRandom } = require('../scripts/data/random');
 
 const byId = new Map(products.map((p) => [p.id, p]));
 const dataset = generateInteractions({ products });
+const visitorsById = new Map(dataset.visitors.map((v) => [v.id, v]));
 
 const eventsByVisitor = new Map();
 dataset.events.forEach((event) => {
@@ -120,6 +121,27 @@ describe('interaction generator', () => {
     const outfit = mean(pairs.filter(isOutfit).map(([a, b]) => lift(a, b)));
     const other = mean(pairs.filter((p) => !isOutfit(p)).map(([a, b]) => lift(a, b)));
     expect(outfit).toBeGreaterThan(other + 0.2);
+  });
+
+  test('visitors follow traits that no product attribute reveals', () => {
+    const matches = dataset.events
+      .filter((e) => e.type === 'view_product')
+      .map((e) => {
+        const visitor = visitorsById.get(e.visitorId);
+        const factors = dataset.lineFactors[byId.get(e.properties.productId).lineId];
+        return visitor.hidden.reduce((sum, value, i) => sum + value * factors[i], 0);
+      });
+    expect(matches.reduce((sum, m) => sum + m, 0) / matches.length).toBeGreaterThan(0.3);
+  });
+
+  test('demand moves from warm to cold products over the period', () => {
+    const middle = dataset.events[Math.floor(dataset.events.length / 2)].timestamp;
+    const coldShare = (events) =>
+      events.filter((e) => byId.get(e.properties.productId).attributes.season === 'cold').length /
+      events.length;
+    const early = dataset.events.filter((e) => e.timestamp < middle);
+    const late = dataset.events.filter((e) => e.timestamp >= middle);
+    expect(coldShare(late)).toBeGreaterThan(coldShare(early) + 0.1);
   });
 
   test('popularity has a long tail', () => {

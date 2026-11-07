@@ -11,17 +11,24 @@ import {
   renderHistoryPanel,
   showError,
   showLoading,
+  swatchHTML,
 } from '../components.js';
 
 const slug = new URLSearchParams(window.location.search).get('slug');
 
 function coloursHTML(product, products) {
-  const others = products.filter((p) => p.lineId === product.lineId && p.id !== product.id);
-  if (others.length === 0) return '';
-  const links = others
-    .map((p) => `<a href="/product?slug=${p.slug}">${localized(p.color.name)}</a>`)
-    .join(', ');
-  return `<p class="product__colours">${t('product.colours')} ${links}</p>`;
+  const colours = products.filter((p) => p.lineId === product.lineId);
+  const links = colours
+    .map((p) => {
+      const name = localized(p.color.name);
+      const current = p.id === product.id;
+      return `<a class="swatch" href="/product?slug=${p.slug}" aria-label="${name}" title="${name}"
+        ${current ? 'aria-current="true"' : ''}>${swatchHTML(p, 'swatch__dot')}</a>`;
+    })
+    .join('');
+  return `
+    <p class="product__colour">${t('product.colour')}: ${localized(product.color.name)}</p>
+    <div class="swatches">${links}</div>`;
 }
 
 function detailHTML(product, products, added) {
@@ -39,7 +46,6 @@ function detailHTML(product, products, added) {
       <div class="product__info">
         <h1 class="product__title">${productName(product)}</h1>
         <p class="product__price">${priceHTML(product)}</p>
-        <p class="muted product__colour">${localized(product.color.name)}</p>
         ${coloursHTML(product, products)}
         <p>${localized(product.description)}</p>
         <dl class="facts">

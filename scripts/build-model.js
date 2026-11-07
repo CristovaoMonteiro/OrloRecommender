@@ -24,6 +24,9 @@ function buildPublishedModel() {
     collaborative: roundMatrix(model.collaborative),
     complements: roundMatrix(model.complements),
     popularity: model.popularity.map(round),
+    seasonTrend: Object.fromEntries(
+      Object.entries(model.seasonTrend).map(([season, trend]) => [season, round(trend)]),
+    ),
   };
 }
 

@@ -21,14 +21,26 @@ module.exports = {
   COLLABORATIVE_CONFIDENCE_VISITORS: 30,
   // Share of the weight moved to content that a product with no behavioural data keeps.
   UNPROVEN_DISCOUNT: 0.4,
+  // How many similar products lend their behaviour to a product with little of its own.
+  NEIGHBOURS: 5,
+  // Final-score adjustments, each 0 when off, kept only as far as they cost under 1% of
+  // accuracy on the tuning data.
+  PRICE_FIT_WEIGHT: 0.25,
+  SEASON_WEIGHT: 1,
+  MARGIN_WEIGHT: 0.5,
+  // A season's trend counts for at most this factor, up or down, so that a fast change of
+  // season cannot bury a visitor's taste.
+  SEASON_TREND_LIMIT: 1.5,
+  // Days at the end of the data that define the current season.
+  RECENT_DAYS: 21,
   // Pulls item-pair lift towards 1 when a pair was carted together only a few times.
   LIFT_PRIOR: 5,
 
   // Each older interaction in the history counts this much of the next one.
   RECENCY_DECAY: 0.8,
-  DEFAULT_WEIGHTS: { collaborative: 0.6, content: 0.4 },
+  DEFAULT_WEIGHTS: { collaborative: 0.8, content: 0.2 },
   // MMR trade-off: 0 ranks by score alone, 1 by difference from the items already picked.
-  DEFAULT_DIVERSITY: 0.5,
+  DEFAULT_DIVERSITY: 0.4,
   // Product rule: another colour of something already seen is not a discovery. The product
   // page links to other colours instead. This costs some offline score, on purpose.
   EXCLUDE_SEEN_LINES: true,

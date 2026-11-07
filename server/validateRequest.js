@@ -1,8 +1,8 @@
 /** Validates the body of POST /api/recommendations. Unknown fields are rejected. */
 const { DEFAULT_WEIGHTS, EVENT_WEIGHTS } = require('./recommender/config');
 
-const LIMITS = { history: 50, k: 12 };
-const ALLOWED_FIELDS = ['history', 'contextProductId', 'k', 'weights', 'diversity'];
+const LIMITS = { history: 50, k: 12, marginWeight: 3 };
+const ALLOWED_FIELDS = ['history', 'contextProductId', 'k', 'weights', 'diversity', 'marginWeight'];
 const WEIGHT_KEYS = Object.keys(DEFAULT_WEIGHTS);
 
 const isRatio = (value) => typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= 1;
@@ -21,7 +21,7 @@ function validateRecommendationRequest(body, productIds) {
     .filter((key) => !ALLOWED_FIELDS.includes(key))
     .forEach((key) => errors.push(`Unknown field: ${key}`));
 
-  const { history, contextProductId, k, weights, diversity } = body;
+  const { history, contextProductId, k, weights, diversity, marginWeight } = body;
 
   if (history !== undefined) {
     if (!Array.isArray(history)) {
@@ -47,6 +47,12 @@ function validateRecommendationRequest(body, productIds) {
     errors.push(`k must be an integer from 1 to ${LIMITS.k}`);
   }
   if (diversity !== undefined && !isRatio(diversity)) errors.push('diversity must be from 0 to 1');
+  if (
+    marginWeight !== undefined &&
+    !(typeof marginWeight === 'number' && marginWeight >= 0 && marginWeight <= LIMITS.marginWeight)
+  ) {
+    errors.push(`marginWeight must be from 0 to ${LIMITS.marginWeight}`);
+  }
 
   if (weights !== undefined) {
     const complete =

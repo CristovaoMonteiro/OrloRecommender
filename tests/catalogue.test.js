@@ -38,6 +38,13 @@ describe('catalogue', () => {
     onSale.forEach((p) => expect(p.price).toBeLessThan(p.compareAtPrice));
   });
 
+  test('every product has a plausible margin', () => {
+    products.forEach((p) => {
+      expect(p.margin).toBeGreaterThan(0);
+      expect(p.margin).toBeLessThan(1);
+    });
+  });
+
   test('contains recent releases for the cold start', () => {
     const recent = products.filter((p) => p.releasedAt >= '2026-09-01');
     expect(recent).toHaveLength(12);

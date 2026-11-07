@@ -201,7 +201,7 @@ const LINES = [
   {
     slug: 'rugby-shirt',
     category: 'polos',
-    shape: 'polo',
+    shape: 'rugby',
     style: 'heritage',
     material: 'cotton',
     season: 'cold',
@@ -356,7 +356,7 @@ const LINES = [
   {
     slug: 'linen-knit',
     category: 'knitwear',
-    shape: 'knit',
+    shape: 'tee',
     style: 'coastal',
     material: 'linen',
     season: 'warm',

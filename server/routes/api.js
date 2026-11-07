@@ -3,8 +3,9 @@ const express = require('express');
 const products = require('../../data/products.json');
 const model = require('../../data/model.json');
 const evaluation = require('../../data/evaluation.json');
+const realEvaluation = require('../../data/evaluation-real.json');
 const { createRecommender } = require('../recommender/recommend');
-const { DEFAULT_WEIGHTS, DEFAULT_DIVERSITY } = require('../recommender/config');
+const { DEFAULT_WEIGHTS, DEFAULT_DIVERSITY, MARGIN_WEIGHT } = require('../recommender/config');
 const { validateRecommendationRequest, LIMITS } = require('../validateRequest');
 
 const productIds = new Set(products.map((p) => p.id));
@@ -14,11 +15,12 @@ const round = (value) => Number(value.toFixed(4));
 const roundComponents = (components) =>
   Object.fromEntries(Object.entries(components).map(([key, value]) => [key, round(value)]));
 
-function presentItem({ productId, score, components, reasons }) {
+function presentItem({ productId, score, components, reasons, trending }) {
   return {
     productId,
     score: round(score),
     ...(components ? { components: roundComponents(components) } : {}),
+    ...(trending ? { trending } : {}),
     reasons: reasons.map(({ share, ...reason }) => ({
       ...reason,
       ...(share === undefined ? {} : { share: round(share) }),
@@ -42,12 +44,17 @@ function createApiRouter({ rateLimit }) {
   });
 
   router.get('/settings', (req, res) => {
-    res.json({ weights: DEFAULT_WEIGHTS, diversity: DEFAULT_DIVERSITY, maxResults: LIMITS.k });
+    res.json({
+      weights: DEFAULT_WEIGHTS,
+      diversity: DEFAULT_DIVERSITY,
+      marginWeight: MARGIN_WEIGHT,
+      maxResults: LIMITS.k,
+    });
   });
 
   router.get('/evaluation', (req, res) => {
     res.set('Cache-Control', 'public, max-age=300');
-    res.json(evaluation);
+    res.json({ ...evaluation, real: realEvaluation });
   });
 
   // POST keeps the visitor's history out of URLs and access logs. Nothing is stored.
@@ -56,13 +63,14 @@ function createApiRouter({ rateLimit }) {
     const errors = validateRecommendationRequest(req.body, productIds);
     if (errors.length > 0) return res.status(400).json({ error: 'Invalid request', details: errors });
 
-    const { history = [], contextProductId = null, k = 4, weights, diversity } = req.body;
+    const { history = [], contextProductId = null, k = 4, weights, diversity, marginWeight } = req.body;
     const items = recommender.recommend({
       history,
       contextProductId,
       k,
       ...(weights ? { weights } : {}),
       ...(diversity === undefined ? {} : { diversity }),
+      ...(marginWeight === undefined ? {} : { marginWeight }),
     });
     const strategy = history.length > 0 || contextProductId ? 'personalised' : 'popular';
     return res.json({ strategy, items: items.map(presentItem) });

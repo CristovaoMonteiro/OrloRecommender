@@ -1,9 +1,11 @@
 /**
  * Deterministic interaction dataset: same seed => same visitors and events.
  *
- * Each visitor has hidden tastes (style, palette, budget). Tastes shape which
- * products get viewed, carted and bought, which is the signal a recommender
- * can learn. They are returned for tests only: the models see events alone.
+ * Each visitor has hidden tastes (style, palette, budget), and hidden factors
+ * that match unnamed traits of each garment line. Those traits appear in no
+ * product attribute, so only behaviour can reveal them, as with real taste.
+ * Demand also moves from warm-weather to cold-weather products over the period.
+ * Tastes are returned for tests only: the models see events alone.
  *
  * Events use the same field names as the Visitor Journey tracker, limited to
  * the three types that matter here: view_product, add_to_cart and purchase.
@@ -19,11 +21,20 @@ const STYLES = ['tailored', 'smart_casual', 'heritage', 'coastal'];
 const PALETTES = ['neutral', 'earth', 'rich'];
 
 // How strongly each hidden factor drives a visitor's choices.
-const UTILITY = { style: 3.2, palette: 1.6, budget: 1.4, popularity: 0.7, noise: 0.4 };
+const UTILITY = {
+  style: 1.6,
+  palette: 0.8,
+  hidden: 2.5,
+  season: 1.5,
+  budget: 1.4,
+  popularity: 0.7,
+  noise: 0.4,
+};
+const HIDDEN_FACTORS = 6;
 // Popularity follows a long tail: rank r gets weight 1 / r^POPULARITY_EXPONENT.
 const POPULARITY_EXPONENT = 0.8;
 // Add-to-cart probability is a logistic curve of utility, centred on this value.
-const CART_MIDPOINT = 12;
+const CART_MIDPOINT = 8;
 const PURCHASE_RATE = 0.55;
 const OUTFIT_RATE = 0.6;
 const SAME_CATEGORY_RATE = 0.7;
@@ -45,9 +56,12 @@ function tasteWeights(rng, keys) {
   return Object.fromEntries(keys.map((key, i) => [key, raw[i] / total]));
 }
 
+const randomFactors = (rng) => Array.from({ length: HIDDEN_FACTORS }, () => rng.float(-1, 1));
+
 function createVisitor(rng) {
   return {
     id: rng.uuid(),
+    hidden: randomFactors(rng),
     device: rng.chance(0.62) ? 'mobile' : 'desktop',
     style: tasteWeights(rng, STYLES),
     palette: tasteWeights(rng, PALETTES),
@@ -58,19 +72,30 @@ function createVisitor(rng) {
   };
 }
 
+/** +1 at the start of the period and -1 at the end for warm-weather products; the reverse for cold. */
+function seasonShift(season, progress) {
+  if (season === 'warm') return 1 - 2 * progress;
+  if (season === 'cold') return 2 * progress - 1;
+  return 0;
+}
+
 /** The hidden reward a visitor gets from a product, before random noise. */
-function utility(visitor, product, popularity) {
-  const { style, palette } = product.attributes;
+function utility(visitor, product, world, progress) {
+  const { style, palette, season } = product.attributes;
+  const factors = world.lineFactors[product.lineId];
+  const match = visitor.hidden.reduce((sum, value, i) => sum + value * factors[i], 0);
   return (
     UTILITY.style * visitor.style[style] * STYLES.length +
-    UTILITY.palette * visitor.palette[palette] * PALETTES.length -
+    UTILITY.palette * visitor.palette[palette] * PALETTES.length +
+    UTILITY.hidden * match +
+    UTILITY.season * seasonShift(season, progress) -
     UTILITY.budget * Math.abs(Math.log(product.price / visitor.budget)) +
-    UTILITY.popularity * Math.log(popularity[product.id])
+    UTILITY.popularity * Math.log(world.popularity[product.id])
   );
 }
 
-function pickProduct(rng, candidates, visitor, popularity) {
-  const weights = candidates.map((p) => Math.exp(utility(visitor, p, popularity)));
+function pickProduct(rng, candidates, visitor, world, progress) {
+  const weights = candidates.map((p) => Math.exp(utility(visitor, p, world, progress)));
   return candidates[rng.weightedIndex(weights)];
 }
 
@@ -83,6 +108,12 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
     popularity[product.id] = 1 / (rank + 1) ** POPULARITY_EXPONENT;
   });
 
+  const lineFactors = {};
+  products.forEach(({ lineId }) => {
+    lineFactors[lineId] ??= randomFactors(rng);
+  });
+  const world = { popularity, lineFactors };
+
   const visitors = Array.from({ length: visitorCount }, () => createVisitor(rng));
   const events = [];
 
@@ -93,6 +124,7 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
 
     sessionStarts.forEach((sessionStart) => {
       const sessionId = rng.uuid();
+      const progress = (sessionStart - start) / (ANCHOR - start);
       let t = sessionStart;
       const emit = (type, product) => {
         t += rng.int(15, 240) * 1000;
@@ -115,14 +147,14 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
       const available = products.filter((p) => Date.parse(p.releasedAt) <= sessionStart);
       const browse = (product, cart) => {
         emit('view_product', product);
-        const reward = utility(visitor, product, popularity) + UTILITY.noise * (rng.next() - 0.5);
+        const reward = utility(visitor, product, world, progress) + UTILITY.noise * (rng.next() - 0.5);
         if (rng.chance(1 / (1 + Math.exp(CART_MIDPOINT - reward)))) {
           emit('add_to_cart', product);
           cart.push(product);
         }
       };
 
-      const anchorProduct = pickProduct(rng, available, visitor, popularity);
+      const anchorProduct = pickProduct(rng, available, visitor, world, progress);
       const sameCategory = available.filter((p) => p.category === anchorProduct.category);
       const cart = [];
       browse(anchorProduct, cart);
@@ -130,7 +162,7 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
       const views = rng.int(1, 6);
       for (let i = 0; i < views; i += 1) {
         const pool = rng.chance(SAME_CATEGORY_RATE) ? sameCategory : available;
-        browse(pickProduct(rng, pool, visitor, popularity), cart);
+        browse(pickProduct(rng, pool, visitor, world, progress), cart);
       }
 
       // Buyers often finish the outfit: a piece from a matching category.
@@ -139,7 +171,7 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
         const style = cart[0].attributes.style;
         const matches = available.filter((p) => paired.includes(p.category) && p.attributes.style === style);
         if (matches.length > 0) {
-          const match = pickProduct(rng, matches, visitor, popularity);
+          const match = pickProduct(rng, matches, visitor, world, progress);
           emit('view_product', match);
           emit('add_to_cart', match);
           cart.push(match);
@@ -154,7 +186,7 @@ function generateInteractions({ products, seed = DEFAULT_SEED, visitors: visitor
   });
 
   events.sort((a, b) => a.timestamp.localeCompare(b.timestamp) || a.eventId.localeCompare(b.eventId));
-  return { visitors, events };
+  return { visitors, events, lineFactors };
 }
 
 module.exports = { generateInteractions, OUTFIT_PAIRS, STYLES, DEFAULT_SEED };

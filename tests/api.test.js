@@ -34,6 +34,7 @@ describe('catalogue routes', () => {
     expect(settings.body.weights).toEqual(DEFAULT_WEIGHTS);
     const evaluation = await request(app).get('/api/evaluation');
     expect(evaluation.body.results.hybrid).toBeDefined();
+    expect(evaluation.body.real.results.hybrid).toBeDefined();
   });
 });
 
@@ -60,6 +61,7 @@ describe('POST /api/recommendations', () => {
         content: expect.any(Number),
       },
       reasons: expect.any(Array),
+      ...(first.trending ? { trending: true } : {}),
     });
     expect(['p001', 'p010']).toContain(first.reasons[0].productId);
   });
@@ -75,6 +77,16 @@ describe('POST /api/recommendations', () => {
     const base = await post({ history, k: 6, weights: { collaborative: 1, content: 0 } });
     const other = await post({ history, k: 6, weights: { collaborative: 0, content: 1 } });
     expect(base.body.items.map((i) => i.productId)).not.toEqual(other.body.items.map((i) => i.productId));
+  });
+
+  test('a margin weight raises the margin of the suggestions', async () => {
+    const margins = new Map(products.map((p) => [p.id, p.margin]));
+    const history = [view('p001'), view('p040')];
+    const mean = (res) =>
+      res.body.items.reduce((sum, i) => sum + margins.get(i.productId), 0) / res.body.items.length;
+    const off = await post({ history, k: 8 });
+    const on = await post({ history, k: 8, marginWeight: 3 });
+    expect(mean(on)).toBeGreaterThan(mean(off));
   });
 
   test('tells caches not to keep personal requests', async () => {
@@ -99,6 +111,8 @@ describe('POST /api/recommendations', () => {
     ['negative weights', { weights: { collaborative: -1, content: 1 } }],
     ['all-zero weights', { weights: { collaborative: 0, content: 0 } }],
     ['diversity above 1', { diversity: 2 }],
+    ['too much margin weight', { marginWeight: 4 }],
+    ['non-numeric margin weight', { marginWeight: 'high' }],
   ])('rejects %s', async (_, body) => {
     const res = await post(body);
     expect(res.status).toBe(400);

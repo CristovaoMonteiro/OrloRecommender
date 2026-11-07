@@ -62,10 +62,21 @@ const SHAPES = {
     <path d="M158 168 L158 232"/>
     <g class="fill"><circle cx="90" cy="200" r="3"/><circle cx="70" cy="200" r="3"/><circle cx="110" cy="200" r="3"/></g>`,
   scarf: `
-    <path d="M112 62 L188 62 L176 330 L146 330 L150 118 L128 330 L98 330 Z"/>
-    <path d="M98 330 L98 352 M106 330 L106 352 M114 330 L114 352 M122 330 L122 352 M128 330 L128 352"/>
-    <path d="M146 330 L146 352 M154 330 L154 352 M162 330 L162 352 M170 330 L170 352 M176 330 L176 352"/>
-    <path d="M118 62 L112 130"/><path d="M182 62 L170 200"/>`,
+    <path d="M118 60 Q150 44 182 60 L190 118 Q150 142 110 118 Z"/>
+    <path d="M126 76 Q150 66 174 76 L178 104 Q150 120 122 104 Z"/>
+    <path d="M128 124 L176 118 L168 318 L120 318 Z"/>
+    <path d="M124 174 L172 168 M122 226 L170 220 M121 276 L169 270"/>
+    <path d="M122 318 L122 346 M131 318 L131 346 M140 318 L140 346 M149 318 L149 346 M158 318 L158 346 M166 318 L166 346"/>`,
+  tee: `
+    <path d="${SHORT_SLEEVE}"/>
+    <path d="M128 76 Q150 96 172 76"/>
+    <path d="M222 145 L240 137"/><path d="M78 145 L60 137"/>`,
+  rugby: `
+    <path d="${LONG_SLEEVE}"/>
+    <path d="M126 76 L142 100 L150 92 L158 100 L174 76"/>
+    <path d="M150 92 L150 140"/>
+    <path d="M105 170 L195 170 M105 205 L195 205"/>
+    <path d="M218 238 L238 236"/><path d="M82 238 L62 236"/>`,
 };
 
 /** Relative luminance (sRGB) used to choose a readable stroke colour. */

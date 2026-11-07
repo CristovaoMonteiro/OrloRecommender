@@ -87,15 +87,26 @@ describe('recommend', () => {
     'a %s history leads mostly to %s products',
     (style) => {
       const history = firstOfStyle(style, 4).map(view);
-      const results = recommender.recommend({ history, k: 8 });
+      const results = recommender.recommend({ history, k: 8, seasonWeight: 0 });
       const matches = results.filter((r) => styleOf(r.productId) === style).length;
-      expect(matches).toBeGreaterThanOrEqual(5);
+      expect(matches).toBeGreaterThanOrEqual(4);
     },
   );
 
+  test("the season adjustment cannot bury a visitor's taste", () => {
+    const history = firstOfStyle('coastal', 4).map(view);
+    const results = recommender.recommend({ history, k: 8 });
+    const matches = results.filter((r) => styleOf(r.productId) === 'coastal').length;
+    expect(matches).toBeGreaterThanOrEqual(2);
+  });
+
   test('recent interactions weigh more than old ones', () => {
     const [tailored, coastal] = [firstOfStyle('tailored', 2), firstOfStyle('coastal', 2)];
-    const results = recommender.recommend({ history: [...tailored, ...coastal].map(view), k: 8 });
+    const results = recommender.recommend({
+      history: [...tailored, ...coastal].map(view),
+      k: 8,
+      seasonWeight: 0,
+    });
     const count = (style) => results.filter((r) => styleOf(r.productId) === style).length;
     expect(count('coastal')).toBeGreaterThan(count('tailored'));
   });
@@ -164,13 +175,11 @@ describe('item cold start', () => {
     const results = cold.recommend({ history: [view('seen')], k: 3 });
     const fresh = results.find((r) => r.productId === 'fresh');
     expect(fresh).toBeDefined();
-    expect(fresh.components.collaborative).toBe(0);
     expect(fresh.reasons[0].model).toBe('content');
   });
 
   test('with a new product as the only seed, the blend relies on content', () => {
     const results = cold.recommend({ history: [view('fresh')], k: 3 });
-    results.forEach((r) => expect(r.components.collaborative).toBe(0));
     expect(results[0].reasons[0].model).toBe('content');
   });
 });

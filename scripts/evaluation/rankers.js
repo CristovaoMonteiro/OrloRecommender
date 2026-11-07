@@ -34,9 +34,13 @@ function createRankers({ model, products, hybrid }) {
           weights,
           diversity: 0,
           excludeSeenLines: hybrid.excludeSeenLines,
+          priceWeight: 0,
+          seasonWeight: 0,
+          marginWeight: 0,
           ...options,
         })
         .map((result) => result.productId);
+  const { weights: blend, ...settings } = hybrid;
 
   const popularityOf = new Map(model.productIds.map((id, i) => [id, model.popularity[i]]));
 
@@ -66,13 +70,12 @@ function createRankers({ model, products, hybrid }) {
     },
     content: usingModels({ collaborative: 0, content: 1 }),
     collaborative: usingModels({ collaborative: 1, content: 0 }, { fallback: false }),
-    hybrid_no_fallback: usingModels(hybrid.weights, { diversity: hybrid.diversity, fallback: false }),
-    hybrid: usingModels(hybrid.weights, { diversity: hybrid.diversity }),
+    hybrid_no_fallback: usingModels(blend, { ...settings, fallback: false }),
+    hybrid: usingModels(blend, settings),
+    // The same blend with no diversity or margin rules: what those rules cost in accuracy.
+    hybrid_accuracy_only: usingModels(blend, { ...settings, diversity: 0, marginWeight: 0 }),
     // What the rule against other colours costs on this metric.
-    hybrid_with_colours: usingModels(hybrid.weights, {
-      diversity: hybrid.diversity,
-      excludeSeenLines: false,
-    }),
+    hybrid_with_colours: usingModels(blend, { ...settings, excludeSeenLines: false }),
   };
 }
 

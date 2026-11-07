@@ -10,6 +10,8 @@
     "catalogue": "node scripts/build-catalogue.js",
     "data": "node scripts/generate-data.js",
     "evaluate": "node scripts/evaluate.js",
+    "evaluate:real": "node scripts/evaluate-real.js",
+    "test:e2e": "node e2e/run.js",
     "model": "node scripts/build-model.js",
     "test": "jest",
     "lint": "eslint .",
@@ -32,11 +34,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
+    "axe-core": "^4.14.0",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.13.0",
     "jest": "^30.5.2",
     "prettier": "^3.9.10",
+    "puppeteer-core": "^25.16.0",
     "supertest": "^7.3.1"
   }
 }

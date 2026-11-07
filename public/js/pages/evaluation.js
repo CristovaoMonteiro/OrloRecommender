@@ -135,6 +135,55 @@ function controlBars(control) {
     </ul>`;
 }
 
+function realSection(real) {
+  if (!real?.results) return '';
+  const names = ['random', 'popularity', 'content', 'collaborative', 'hybrid'];
+  const rows = names
+    .map((name) => {
+      const row = real.results[name];
+      return `
+      <tr class="${name === 'hybrid' ? 'is-highlight' : ''}">
+        <th scope="row">${t(`eval.ranker.${name}`)}</th>
+        <td>${formatDecimal(row['recall@4'].mean)}</td>
+        <td>${formatDecimal(row['ndcg@10'].mean)}</td>
+      </tr>`;
+    })
+    .join('');
+  return `
+    <section class="section">
+      <h2 class="section__title" data-real-title>${t('eval.realTitle')}</h2>
+      <p>${t('eval.realText', {
+        orders: formatNumber(real.dataset.orders),
+        customers: formatNumber(real.dataset.customers),
+      })}</p>
+      <div class="table-wrap">
+        <table class="data-table data-table--compact">
+          <thead>
+            <tr>
+              <th scope="col">${t('eval.ranker')}</th>
+              <th scope="col">${t('eval.recall')}</th>
+              <th scope="col">${t('eval.ndcg')}</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <p class="fine-print">${t('eval.realLists', {
+        cases: formatNumber(real.testCases),
+        products: formatNumber(real.products),
+      })}</p>
+      <p>${t('eval.realFinding', {
+        hybrid: formatDecimal(real.results.hybrid['ndcg@10'].mean),
+        behaviour: formatDecimal(real.results.collaborative['ndcg@10'].mean),
+        popularity: formatDecimal(real.results.popularity['ndcg@10'].mean),
+        gain: formatDecimal(real.improvementOverNdcg10.collaborative.mean),
+        low: formatDecimal(real.improvementOverNdcg10.collaborative.low),
+        high: formatDecimal(real.improvementOverNdcg10.collaborative.high),
+        shuffled: formatDecimal(real.control.collaborative_shuffled),
+      })}</p>
+    </section>`;
+}
+
 function pageHTML(report) {
   const { protocol, results, improvementOverNdcg10, control, completeTheLook, slicesRecall10 } = report;
   const { headline, experiment } = report;
@@ -189,6 +238,16 @@ function pageHTML(report) {
       </section>
     </div>
 
+    ${realSection(report.real)}
+
+    <section class="section">
+      <h2 class="section__title">${t('eval.business')}</h2>
+      <p>${t('eval.businessText', {
+        with: formatPercent(results.hybrid['margin@4'], 1),
+        without: formatPercent(results.hybrid_accuracy_only['margin@4'], 1),
+      })}</p>
+    </section>
+
     <section class="section">
       <h2 class="section__title">${t('eval.look')}</h2>
       <p>${t('eval.lookText', {
@@ -213,7 +272,7 @@ function pageHTML(report) {
           <li>${t('eval.limit.1')}</li>
           <li>${t('eval.limit.2', {
             hybrid: formatDecimal(newProducts.hybrid, 2),
-            content: formatDecimal(newProducts.content, 2),
+            rule: formatDecimal(newProducts.same_category, 2),
           })}</li>
           <li>${t('eval.limit.3')}</li>
         </ul>

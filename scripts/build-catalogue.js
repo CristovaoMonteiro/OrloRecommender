@@ -18,6 +18,8 @@ const NEW_ARRIVAL_WINDOW_DAYS = 21;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const SALE_SHARE = 1 / 6;
 const SALE_FACTOR = 0.75;
+// Fictional gross margin of each garment line at full price.
+const MARGIN_RANGE = [0.35, 0.7];
 
 function buildCatalogue() {
   const rng = createRandom(CATALOGUE_SEED);
@@ -59,6 +61,12 @@ function buildCatalogue() {
   rng.sample(products, NEW_ARRIVALS).forEach((product) => {
     const daysAgo = rng.int(1, NEW_ARRIVAL_WINDOW_DAYS);
     product.releasedAt = new Date(ANCHOR - daysAgo * DAY_MS).toISOString();
+  });
+
+  const lineMargin = new Map(LINES.map((line) => [line.slug, rng.float(...MARGIN_RANGE)]));
+  products.forEach((product) => {
+    const cost = (product.compareAtPrice ?? product.price) * (1 - lineMargin.get(product.lineId));
+    product.margin = Number(((product.price - cost) / product.price).toFixed(2));
   });
 
   return products.map((product, index) => ({ id: `p${String(index + 1).padStart(3, '0')}`, ...product }));

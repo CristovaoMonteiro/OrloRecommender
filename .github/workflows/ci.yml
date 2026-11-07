@@ -18,3 +18,5 @@ jobs:
       - run: npm run lint
       - run: npm run format:check
       - run: npm test
+      # Browser and accessibility checks use the Chrome already on the runner.
+      - run: npm run test:e2e

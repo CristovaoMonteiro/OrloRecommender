@@ -33,7 +33,7 @@ const STRINGS = {
     'home.personalHintOne': 'Based on the product you opened.',
     'home.personalHint': 'Based on the {count} products you opened.',
     'home.catalogue': 'The collection',
-    'home.count': '{count} products',
+    'home.count': '{count} products, in three colours each',
 
     'category.all': 'All',
     'category.shirts': 'Shirts',
@@ -136,7 +136,7 @@ const STRINGS = {
     'eval.fact.datasets': 'test datasets',
     'eval.reach': 'What the hybrid adds',
     'eval.reachText':
-      'Against behaviour alone, the hybrid does not rank better: the difference is within the margin of error. What it adds is reach.',
+      'Against behaviour alone, the hybrid ranks better, with more varied lists and more new products reached. Its coverage is lower, because it follows price and season.',
     'eval.reach.metric': 'Measure',
     'eval.reach.new': 'Recall@10 on new products',
     'eval.reach.coverage': 'Catalogue coverage',
@@ -165,12 +165,28 @@ const STRINGS = {
     'eval.method.3': 'Intervals come from a bootstrap that resamples whole visitors.',
     'eval.limits': 'What these numbers do not show',
     'eval.limit.1':
-      'The data is synthetic. The generator contains the tastes and outfit pairs these models recover, so the results show the system and the comparison work. They do not predict sales in a real store.',
-    'eval.limit.2': 'New products remain weak: recall@10 of {hybrid}, against {content} for similarity only.',
+      'The main results use synthetic data that I generated, so they show the system and the comparison work. They do not predict sales in a real store. The real purchases come from a different kind of shop.',
+    'eval.limit.2':
+      'New products remain weak: recall@10 of {hybrid}, against {rule} for showing the same category first.',
     'eval.limit.3': 'The measure is the next view, not purchases or revenue.',
 
     'error.load': 'Could not load this. Please try again in a moment.',
     'error.retry': 'Try again',
+    'why.also': 'Also:',
+    'why.inSeason': 'in season',
+    'product.colour': 'Colour',
+    'lab.margin': 'Margin priority',
+    'lab.marginHint': 'Favours higher-margin products. A small weight is on by default.',
+    'lab.marginValue': 'Margin {margin}',
+    'eval.realTitle': 'Test on real purchases',
+    'eval.realText':
+      'The same models also ran on {orders} real orders from {customers} customers of a UK online gift retailer (Online Retail II, CC BY 4.0). They predict the rest of an order from its first product and the customer history, without the diversity, season or margin rules. This is not a fashion store, so the result shows whether the method works on real behaviour, not what Orlo would achieve.',
+    'eval.realFinding':
+      'The hybrid also came first here: NDCG@10 of {hybrid}, against {behaviour} for behaviour alone (gain of {gain}, interval {low} to {high}) and {popularity} for popularity. The control test held too: with shuffled orders, behaviour fell to {shuffled}.',
+    'eval.realLists': '{cases} test orders, {products} products',
+    'eval.business': 'Price, season and margin',
+    'eval.businessText':
+      'Suggestions favour the visitor’s usual price level, what is in season and, slightly, products with a higher margin. Each adjustment was kept only as far as it cost under 1% of accuracy on the tuning data. Average margin of the four shown: {with}, against {without} with no diversity or margin rules.',
     'state.loading': 'Loading…',
   },
   pt: {
@@ -203,7 +219,7 @@ const STRINGS = {
     'home.personalHintOne': 'Com base no produto que abriste.',
     'home.personalHint': 'Com base nos {count} produtos que abriste.',
     'home.catalogue': 'A coleção',
-    'home.count': '{count} produtos',
+    'home.count': '{count} produtos, em três cores cada',
 
     'category.all': 'Tudo',
     'category.shirts': 'Camisas',
@@ -306,7 +322,7 @@ const STRINGS = {
     'eval.fact.datasets': 'conjuntos de teste',
     'eval.reach': 'O que o híbrido acrescenta',
     'eval.reachText':
-      'Contra o comportamento sozinho, o híbrido não ordena melhor: a diferença está dentro da margem de erro. O que acrescenta é alcance.',
+      'Contra o comportamento sozinho, o híbrido ordena melhor, com listas mais variadas e mais produtos novos alcançados. A cobertura é menor, porque segue o preço e a estação.',
     'eval.reach.metric': 'Medida',
     'eval.reach.new': 'Recall@10 em produtos novos',
     'eval.reach.coverage': 'Cobertura do catálogo',
@@ -335,13 +351,28 @@ const STRINGS = {
     'eval.method.3': 'Os intervalos vêm de um bootstrap que reamostra visitantes inteiros.',
     'eval.limits': 'O que estes números não mostram',
     'eval.limit.1':
-      'Os dados são sintéticos. O gerador contém os gostos e as combinações que estes modelos recuperam, por isso os resultados mostram que o sistema e a comparação funcionam, mas não preveem vendas numa loja real.',
+      'Os resultados principais usam dados sintéticos gerados por mim, por isso mostram que o sistema e a comparação funcionam, mas não preveem vendas numa loja real. As compras reais vêm de outro tipo de loja.',
     'eval.limit.2':
-      'Os produtos novos continuam fracos: recall@10 de {hybrid}, contra {content} só com semelhança.',
+      'Os produtos novos continuam fracos: recall@10 de {hybrid}, contra {rule} ao mostrar primeiro a mesma categoria.',
     'eval.limit.3': 'A medida é a visualização seguinte, não compras nem receita.',
 
     'error.load': 'Não foi possível carregar. Tenta novamente daqui a pouco.',
     'error.retry': 'Tentar novamente',
+    'why.also': 'Também:',
+    'why.inSeason': 'da estação',
+    'product.colour': 'Cor',
+    'lab.margin': 'Prioridade à margem',
+    'lab.marginHint': 'Favorece produtos com mais margem. Um peso pequeno está ligado por omissão.',
+    'lab.marginValue': 'Margem {margin}',
+    'eval.realTitle': 'Teste com compras reais',
+    'eval.realText':
+      'Os mesmos modelos correram também em {orders} encomendas reais de {customers} clientes de um retalhista online britânico de presentes (Online Retail II, CC BY 4.0). Preveem o resto de uma encomenda a partir do primeiro produto e do histórico do cliente, sem as regras de diversidade, estação ou margem. Não é uma loja de moda, por isso o resultado mostra se o método funciona com comportamento real, não o que a Orlo alcançaria.',
+    'eval.realFinding':
+      'O híbrido ficou também em primeiro: NDCG@10 de {hybrid}, contra {behaviour} só com comportamento (ganho de {gain}, intervalo de {low} a {high}) e {popularity} com popularidade. O teste de controlo também se confirmou: com encomendas baralhadas, o comportamento caiu para {shuffled}.',
+    'eval.realLists': '{cases} encomendas de teste, {products} produtos',
+    'eval.business': 'Preço, estação e margem',
+    'eval.businessText':
+      'As sugestões favorecem o nível de preço habitual do visitante, o que é da estação e, ligeiramente, produtos com mais margem. Cada ajuste só foi mantido enquanto custasse menos de 1% de precisão nos dados de afinação. Margem média dos quatro mostrados: {with}, contra {without} sem regras de diversidade ou margem.',
     'state.loading': 'A carregar…',
   },
 };
@@ -382,7 +413,14 @@ function storedLang() {
   }
 }
 
-let lang = LANGS.includes(storedLang()) ? storedLang() : 'en';
+/** A stored choice wins; otherwise Portuguese browsers get Portuguese. */
+function initialLang() {
+  const stored = storedLang();
+  if (LANGS.includes(stored)) return stored;
+  return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+}
+
+let lang = initialLang();
 
 export const getLang = () => lang;
 

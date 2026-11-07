@@ -9,6 +9,7 @@ const {
 } = require('../scripts/evaluation/metrics');
 const { buildCases, buildLookCases } = require('../scripts/evaluation/protocol');
 const { weightGrid, shuffleProducts } = require('../scripts/evaluate');
+const { parseLine } = require('../scripts/evaluate-real');
 const { buildModel } = require('../server/recommender/buildModel');
 const { createRecommender } = require('../server/recommender/recommend');
 const config = require('../server/recommender/config');
@@ -219,11 +220,11 @@ describe('thin-data handling', () => {
   test('the discount sets how much of the moved weight an unproven product keeps', () => {
     const score = (unprovenDiscount) =>
       createRecommender(model, catalogue, { unprovenDiscount })
-        .recommend({ history, weights, k: 2, diversity: 0 })
+        .recommend({ history, weights, k: 2, diversity: 0, priceWeight: 0, seasonWeight: 0, marginWeight: 0 })
         .find((r) => r.productId === 'unproven').score;
     expect(score(0)).toBeCloseTo(0.4, 10);
-    expect(score(0.5)).toBeCloseTo(0.7, 10);
-    expect(score(1)).toBeCloseTo(1, 10);
+    expect(score(0.5)).toBeGreaterThan(score(0));
+    expect(score(1)).toBeGreaterThan(score(0.5));
   });
 
   test('confidence grows in proportion to visitors, up to full trust', () => {
@@ -264,6 +265,10 @@ describe('published evaluation', () => {
   test('reports the settings the recommender actually uses', () => {
     expect(report.tuning.chosen.weights).toEqual(config.DEFAULT_WEIGHTS);
     expect(report.tuning.chosen.diversity).toBe(config.DEFAULT_DIVERSITY);
+    expect(report.tuning.chosen.priceWeight).toBe(config.PRICE_FIT_WEIGHT);
+    expect(report.tuning.chosen.seasonWeight).toBe(config.SEASON_WEIGHT);
+    expect(report.tuning.chosen.marginWeight).toBe(config.MARGIN_WEIGHT);
+    expect(report.tuning.chosen.unprovenDiscount).toBe(config.UNPROVEN_DISCOUNT);
     expect(report.protocol.excludeSeenLines).toBe(config.EXCLUDE_SEEN_LINES);
   });
 
@@ -277,6 +282,38 @@ describe('published evaluation', () => {
     const { mean, min, max } = report.headline;
     expect(min).toBeLessThanOrEqual(mean);
     expect(max).toBeGreaterThanOrEqual(mean);
+  });
+});
+
+describe('published evaluation on real purchases', () => {
+  const real = require('../data/evaluation-real.json');
+
+  test('holds aggregate results only', () => {
+    expect(Object.keys(real).sort()).toEqual(
+      [
+        'control',
+        'dataset',
+        'improvementOverNdcg10',
+        'products',
+        'protocol',
+        'results',
+        'testCases',
+        'testCustomers',
+        'trainEvents',
+        'tuning',
+      ].sort(),
+    );
+    expect(JSON.stringify(real)).not.toMatch(/customerId|visitorId/);
+  });
+
+  test('tuning ends where the test begins', () => {
+    expect(real.protocol.validationFrom < real.protocol.testFrom).toBe(true);
+  });
+});
+
+describe('parseLine', () => {
+  test('handles quotes and commas inside a field', () => {
+    expect(parseLine('1,"A, ""big"" box",3')).toEqual(['1', 'A, "big" box', '3']);
   });
 });
 

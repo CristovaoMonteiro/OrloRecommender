@@ -18,7 +18,14 @@ let selectedCategory = 'all';
 function renderCatalogue(products) {
   const filters = document.querySelector('[data-filters]');
   const grid = document.querySelector('[data-catalogue]');
-  const visible = products.filter((p) => selectedCategory === 'all' || p.category === selectedCategory);
+  const lines = new Map();
+  products.forEach((product) => {
+    if (!lines.has(product.lineId)) lines.set(product.lineId, []);
+    lines.get(product.lineId).push(product);
+  });
+  const visible = [...lines.values()].filter(
+    ([{ category }]) => selectedCategory === 'all' || category === selectedCategory,
+  );
 
   filters.innerHTML = CATEGORIES.map(
     (category) =>
@@ -34,7 +41,7 @@ function renderCatalogue(products) {
   document.querySelector('[data-count]').textContent = t('home.count', {
     count: formatNumber(visible.length),
   });
-  grid.innerHTML = visible.map((product) => productCardHTML(product)).join('');
+  grid.innerHTML = visible.map((colours) => productCardHTML(colours[0], { colours })).join('');
   applyWidths(grid);
 }
 

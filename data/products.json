@@ -46,7 +46,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p002",
@@ -95,7 +96,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p003",
@@ -144,7 +146,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p004",
@@ -193,7 +196,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-21T00:00:00.000Z"
+    "releasedAt": "2026-09-21T00:00:00.000Z",
+    "margin": 0.5
   },
   {
     "id": "p005",
@@ -242,7 +246,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.5
   },
   {
     "id": "p006",
@@ -291,7 +296,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.34
   },
   {
     "id": "p007",
@@ -340,7 +346,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.19
   },
   {
     "id": "p008",
@@ -389,7 +396,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.19
   },
   {
     "id": "p009",
@@ -438,7 +446,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p010",
@@ -487,7 +496,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-11T00:00:00.000Z"
+    "releasedAt": "2026-09-11T00:00:00.000Z",
+    "margin": 0.36
   },
   {
     "id": "p011",
@@ -536,7 +546,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.36
   },
   {
     "id": "p012",
@@ -585,7 +596,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.36
   },
   {
     "id": "p013",
@@ -634,7 +646,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p014",
@@ -683,7 +696,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.68
   },
   {
     "id": "p015",
@@ -732,7 +746,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.68
   },
   {
     "id": "p016",
@@ -781,7 +796,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p017",
@@ -830,7 +846,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.2
   },
   {
     "id": "p018",
@@ -879,7 +896,8 @@
       "formality": 3,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p019",
@@ -928,7 +946,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.28
   },
   {
     "id": "p020",
@@ -977,7 +996,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-09-12T00:00:00.000Z"
+    "releasedAt": "2026-09-12T00:00:00.000Z",
+    "margin": 0.46
   },
   {
     "id": "p021",
@@ -1026,7 +1046,8 @@
       "formality": 3,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.46
   },
   {
     "id": "p022",
@@ -1075,7 +1096,8 @@
       "formality": 4,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-11T00:00:00.000Z"
+    "releasedAt": "2026-09-11T00:00:00.000Z",
+    "margin": 0.55
   },
   {
     "id": "p023",
@@ -1124,7 +1146,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.55
   },
   {
     "id": "p024",
@@ -1173,7 +1196,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.55
   },
   {
     "id": "p025",
@@ -1222,7 +1246,8 @@
       "formality": 1,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.2
   },
   {
     "id": "p026",
@@ -1271,7 +1296,8 @@
       "formality": 1,
       "palette": "rich"
     },
-    "releasedAt": "2026-09-09T00:00:00.000Z"
+    "releasedAt": "2026-09-09T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p027",
@@ -1320,14 +1346,15 @@
       "formality": 1,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p028",
     "slug": "rugby-shirt-forest",
     "lineId": "rugby-shirt",
     "category": "polos",
-    "shape": "polo",
+    "shape": "rugby",
     "price": 85,
     "compareAtPrice": null,
     "color": {
@@ -1369,14 +1396,15 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p029",
     "slug": "rugby-shirt-burgundy",
     "lineId": "rugby-shirt",
     "category": "polos",
-    "shape": "polo",
+    "shape": "rugby",
     "price": 85,
     "compareAtPrice": null,
     "color": {
@@ -1418,14 +1446,15 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p030",
     "slug": "rugby-shirt-navy",
     "lineId": "rugby-shirt",
     "category": "polos",
-    "shape": "polo",
+    "shape": "rugby",
     "price": 85,
     "compareAtPrice": null,
     "color": {
@@ -1467,7 +1496,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p031",
@@ -1516,7 +1546,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.61
   },
   {
     "id": "p032",
@@ -1565,7 +1596,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.61
   },
   {
     "id": "p033",
@@ -1614,7 +1646,8 @@
       "formality": 4,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.61
   },
   {
     "id": "p034",
@@ -1663,7 +1696,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.3
   },
   {
     "id": "p035",
@@ -1712,7 +1746,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.48
   },
   {
     "id": "p036",
@@ -1761,7 +1796,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.48
   },
   {
     "id": "p037",
@@ -1810,7 +1846,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p038",
@@ -1859,7 +1896,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p039",
@@ -1908,7 +1946,8 @@
       "formality": 3,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p040",
@@ -1957,7 +1996,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p041",
@@ -2006,7 +2046,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-12T00:00:00.000Z"
+    "releasedAt": "2026-09-12T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p042",
@@ -2055,7 +2096,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.4
   },
   {
     "id": "p043",
@@ -2104,7 +2146,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.61
   },
   {
     "id": "p044",
@@ -2153,7 +2196,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.61
   },
   {
     "id": "p045",
@@ -2202,7 +2246,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.48
   },
   {
     "id": "p046",
@@ -2251,7 +2296,8 @@
       "formality": 4,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p047",
@@ -2300,7 +2346,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p048",
@@ -2349,7 +2396,8 @@
       "formality": 4,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p049",
@@ -2398,7 +2446,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p050",
@@ -2447,7 +2496,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.69
   },
   {
     "id": "p051",
@@ -2496,7 +2546,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p052",
@@ -2545,7 +2596,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p053",
@@ -2594,7 +2646,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p054",
@@ -2643,14 +2696,15 @@
       "formality": 3,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p055",
     "slug": "linen-knit-sand",
     "lineId": "linen-knit",
     "category": "knitwear",
-    "shape": "knit",
+    "shape": "tee",
     "price": 79,
     "compareAtPrice": null,
     "color": {
@@ -2692,14 +2746,15 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.53
   },
   {
     "id": "p056",
     "slug": "linen-knit-paleblue",
     "lineId": "linen-knit",
     "category": "knitwear",
-    "shape": "knit",
+    "shape": "tee",
     "price": 79,
     "compareAtPrice": null,
     "color": {
@@ -2741,14 +2796,15 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.53
   },
   {
     "id": "p057",
     "slug": "linen-knit-moss",
     "lineId": "linen-knit",
     "category": "knitwear",
-    "shape": "knit",
+    "shape": "tee",
     "price": 79,
     "compareAtPrice": null,
     "color": {
@@ -2790,7 +2846,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.53
   },
   {
     "id": "p058",
@@ -2839,7 +2896,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p059",
@@ -2888,7 +2946,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p060",
@@ -2937,7 +2996,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p061",
@@ -2986,7 +3046,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.36
   },
   {
     "id": "p062",
@@ -3035,7 +3096,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-09-18T00:00:00.000Z"
+    "releasedAt": "2026-09-18T00:00:00.000Z",
+    "margin": 0.52
   },
   {
     "id": "p063",
@@ -3084,7 +3146,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.36
   },
   {
     "id": "p064",
@@ -3133,7 +3196,8 @@
       "formality": 1,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p065",
@@ -3182,7 +3246,8 @@
       "formality": 1,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p066",
@@ -3231,7 +3296,8 @@
       "formality": 1,
       "palette": "neutral"
     },
-    "releasedAt": "2026-09-25T00:00:00.000Z"
+    "releasedAt": "2026-09-25T00:00:00.000Z",
+    "margin": 0.57
   },
   {
     "id": "p067",
@@ -3280,7 +3346,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p068",
@@ -3329,7 +3396,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p069",
@@ -3378,7 +3446,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p070",
@@ -3427,7 +3496,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p071",
@@ -3476,7 +3546,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p072",
@@ -3525,7 +3596,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p073",
@@ -3574,7 +3646,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-09-14T00:00:00.000Z"
+    "releasedAt": "2026-09-14T00:00:00.000Z",
+    "margin": 0.52
   },
   {
     "id": "p074",
@@ -3623,7 +3696,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.52
   },
   {
     "id": "p075",
@@ -3672,7 +3746,8 @@
       "formality": 5,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.52
   },
   {
     "id": "p076",
@@ -3721,7 +3796,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.49
   },
   {
     "id": "p077",
@@ -3770,7 +3846,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.49
   },
   {
     "id": "p078",
@@ -3819,7 +3896,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.49
   },
   {
     "id": "p079",
@@ -3867,7 +3945,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.41
   },
   {
     "id": "p080",
@@ -3915,7 +3994,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.41
   },
   {
     "id": "p081",
@@ -3963,7 +4043,8 @@
       "formality": 4,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.41
   },
   {
     "id": "p082",
@@ -4012,7 +4093,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p083",
@@ -4061,7 +4143,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p084",
@@ -4110,7 +4193,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p085",
@@ -4158,7 +4242,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p086",
@@ -4206,7 +4291,8 @@
       "formality": 5,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p087",
@@ -4254,7 +4340,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.34
   },
   {
     "id": "p088",
@@ -4302,7 +4389,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.28
   },
   {
     "id": "p089",
@@ -4350,7 +4438,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.46
   },
   {
     "id": "p090",
@@ -4398,7 +4487,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.46
   },
   {
     "id": "p091",
@@ -4447,7 +4537,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.6
   },
   {
     "id": "p092",
@@ -4496,7 +4587,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.6
   },
   {
     "id": "p093",
@@ -4545,7 +4637,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.6
   },
   {
     "id": "p094",
@@ -4594,7 +4687,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p095",
@@ -4643,7 +4737,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p096",
@@ -4692,7 +4787,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.39
   },
   {
     "id": "p097",
@@ -4740,7 +4836,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p098",
@@ -4788,7 +4885,8 @@
       "formality": 5,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.51
   },
   {
     "id": "p099",
@@ -4836,7 +4934,8 @@
       "formality": 5,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.35
   },
   {
     "id": "p100",
@@ -4884,7 +4983,8 @@
       "formality": 4,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-14T00:00:00.000Z"
+    "releasedAt": "2026-09-14T00:00:00.000Z",
+    "margin": 0.65
   },
   {
     "id": "p101",
@@ -4932,7 +5032,8 @@
       "formality": 4,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.65
   },
   {
     "id": "p102",
@@ -4980,7 +5081,8 @@
       "formality": 4,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.65
   },
   {
     "id": "p103",
@@ -5024,7 +5126,8 @@
       "formality": 3,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.29
   },
   {
     "id": "p104",
@@ -5068,7 +5171,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.29
   },
   {
     "id": "p105",
@@ -5112,7 +5216,8 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.47
   },
   {
     "id": "p106",
@@ -5160,7 +5265,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p107",
@@ -5208,7 +5314,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-12T00:00:00.000Z"
+    "releasedAt": "2026-09-12T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p108",
@@ -5256,7 +5363,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p109",
@@ -5304,7 +5412,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p110",
@@ -5352,7 +5461,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.7
   },
   {
     "id": "p111",
@@ -5400,7 +5510,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.6
   },
   {
     "id": "p112",
@@ -5444,7 +5555,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p113",
@@ -5488,7 +5600,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p114",
@@ -5532,7 +5645,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.59
   },
   {
     "id": "p115",
@@ -5576,7 +5690,8 @@
       "formality": 2,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.37
   },
   {
     "id": "p116",
@@ -5620,7 +5735,8 @@
       "formality": 2,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.37
   },
   {
     "id": "p117",
@@ -5664,7 +5780,8 @@
       "formality": 2,
       "palette": "rich"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.37
   },
   {
     "id": "p118",
@@ -5712,7 +5829,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.5
   },
   {
     "id": "p119",
@@ -5760,7 +5878,8 @@
       "formality": 3,
       "palette": "earth"
     },
-    "releasedAt": "2026-09-24T00:00:00.000Z"
+    "releasedAt": "2026-09-24T00:00:00.000Z",
+    "margin": 0.5
   },
   {
     "id": "p120",
@@ -5808,6 +5927,7 @@
       "formality": 3,
       "palette": "neutral"
     },
-    "releasedAt": "2026-04-01T00:00:00.000Z"
+    "releasedAt": "2026-04-01T00:00:00.000Z",
+    "margin": 0.5
   }
 ]

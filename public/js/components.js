@@ -1,5 +1,5 @@
 import { productSVG } from './placeholder.js';
-import { t, localized, formatPrice, formatPercent, joinList } from './i18n.js';
+import { t, localized, formatPrice, formatPercent, joinList, attributeValue } from './i18n.js';
 import { getHistory, clearHistory } from './history.js';
 
 const NEW_SINCE = '2026-09-01';
@@ -19,14 +19,21 @@ function badgeHTML(product) {
   return '';
 }
 
-export function productCardHTML(product, { footer = '' } = {}) {
+/** A small colour dot: an SVG, because the content security policy blocks inline styles. */
+export function swatchHTML(product, className = 'card-swatch') {
+  return `<svg class="${className}" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="${product.color.hex}"/></svg>`;
+}
+
+export function productCardHTML(product, { footer = '', colours = [] } = {}) {
   const name = productName(product);
   return `
     <article class="product-card">
       <a href="${productUrl(product)}" class="product-card__link">
         <div class="product-card__media">${productSVG(product, { label: name })}${badgeHTML(product)}</div>
         <h3 class="product-card__name">${name}</h3>
-        <p class="product-card__meta">${localized(product.color.name)}</p>
+        <p class="product-card__meta">${
+          colours.length ? colours.map((p) => swatchHTML(p)).join('') : localized(product.color.name)
+        }</p>
         <p class="product-card__price">${priceHTML(product)}</p>
       </a>
       ${footer}
@@ -68,12 +75,23 @@ function shareBarHTML(components, score) {
     </div>`;
 }
 
-/** The "why" under a recommended product. */
+/** The attributes a suggestion shares with the visitor's products, in plain words. */
+function sharedValues(item, reason, byId) {
+  const product = byId.get(item.productId);
+  return (reason?.shared ?? []).map((key) =>
+    key === 'material' ? localized(product.details)[0] : attributeValue(product.attributes[key]),
+  );
+}
+
+/** The "why" under a recommended product: the main reason, then what else supports it. */
 export function explanationHTML(item, byId) {
-  const [mainReason] = item.reasons;
+  const [mainReason, secondReason] = item.reasons;
+  const notes = mainReason?.model === 'collaborative' ? sharedValues(item, secondReason, byId) : [];
+  if (item.trending) notes.push(t('why.inSeason'));
   return `
     <div class="why">
       <p class="why__reason">${mainReason ? reasonText(mainReason, byId) : ''}</p>
+      ${notes.length ? `<p class="why__notes">${t('why.also')} ${notes.join(', ')}</p>` : ''}
       ${item.components ? shareBarHTML(item.components, item.score) : ''}
     </div>`;
 }
