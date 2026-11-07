@@ -84,8 +84,17 @@ export function recommendationGridHTML(items, byId) {
     .join('');
 }
 
+/** Placeholder cards while a list loads. Lists that already have content are left alone. */
+export function showLoading(root, count) {
+  if (root.children.length > 0) return;
+  root.setAttribute('aria-busy', 'true');
+  root.innerHTML =
+    `<div class="skeleton" aria-hidden="true"><div class="product-card__media"></div></div>`.repeat(count);
+}
+
 /** Bar widths are set here because the content security policy blocks inline style attributes. */
 export function applyWidths(root) {
+  root.removeAttribute('aria-busy');
   root.querySelectorAll('[data-width]').forEach((element) => {
     element.style.width = `${Number(element.dataset.width) * 100}%`;
   });
@@ -100,6 +109,7 @@ export function errorHTML() {
 }
 
 export function showError(root, retry) {
+  root.removeAttribute('aria-busy');
   root.innerHTML = errorHTML();
   root.querySelector('[data-retry]').addEventListener('click', retry);
 }

@@ -5,6 +5,7 @@ const published = require('../data/model.json');
 const { buildPublishedModel } = require('../scripts/build-model');
 const { createApp } = require('../server/app');
 const { createRateLimiter } = require('../server/middleware/rateLimit');
+const { DEFAULT_WEIGHTS } = require('../server/recommender/config');
 
 const app = createApp();
 const view = (productId) => ({ productId, type: 'view_product' });
@@ -30,7 +31,7 @@ describe('catalogue routes', () => {
 
   test('GET /api/settings and /api/evaluation describe the live model', async () => {
     const settings = await request(app).get('/api/settings');
-    expect(settings.body.weights).toEqual({ collaborative: 0.6, content: 0.4, popularity: 0 });
+    expect(settings.body.weights).toEqual(DEFAULT_WEIGHTS);
     const evaluation = await request(app).get('/api/evaluation');
     expect(evaluation.body.results.hybrid).toBeDefined();
   });
@@ -57,7 +58,6 @@ describe('POST /api/recommendations', () => {
       components: {
         collaborative: expect.any(Number),
         content: expect.any(Number),
-        popularity: expect.any(Number),
       },
       reasons: expect.any(Array),
     });
@@ -72,8 +72,8 @@ describe('POST /api/recommendations', () => {
 
   test('weights and diversity change the result', async () => {
     const history = [view('p001'), view('p040')];
-    const base = await post({ history, k: 6, weights: { collaborative: 1, content: 0, popularity: 0 } });
-    const other = await post({ history, k: 6, weights: { collaborative: 0, content: 1, popularity: 0 } });
+    const base = await post({ history, k: 6, weights: { collaborative: 1, content: 0 } });
+    const other = await post({ history, k: 6, weights: { collaborative: 0, content: 1 } });
     expect(base.body.items.map((i) => i.productId)).not.toEqual(other.body.items.map((i) => i.productId));
   });
 
@@ -95,8 +95,9 @@ describe('POST /api/recommendations', () => {
     ['k above the limit', { k: 13 }],
     ['a fractional k', { k: 1.5 }],
     ['partial weights', { weights: { collaborative: 1 } }],
-    ['negative weights', { weights: { collaborative: -1, content: 1, popularity: 0 } }],
-    ['all-zero weights', { weights: { collaborative: 0, content: 0, popularity: 0 } }],
+    ['an unknown weight', { weights: { collaborative: 1, content: 0, popularity: 1 } }],
+    ['negative weights', { weights: { collaborative: -1, content: 1 } }],
+    ['all-zero weights', { weights: { collaborative: 0, content: 0 } }],
     ['diversity above 1', { diversity: 2 }],
   ])('rejects %s', async (_, body) => {
     const res = await post(body);

@@ -8,6 +8,7 @@ import {
   recommendationGridHTML,
   renderHistoryPanel,
   showError,
+  showLoading,
 } from '../components.js';
 
 const CATEGORIES = ['all', 'shirts', 'polos', 'knitwear', 'trousers', 'outerwear', 'accessories'];
@@ -34,6 +35,7 @@ function renderCatalogue(products) {
     count: formatNumber(visible.length),
   });
   grid.innerHTML = visible.map((product) => productCardHTML(product)).join('');
+  applyWidths(grid);
 }
 
 async function renderForYou(byId) {
@@ -57,6 +59,8 @@ async function renderForYou(byId) {
 }
 
 async function render() {
+  showLoading(document.querySelector('[data-for-you]'), 4);
+  showLoading(document.querySelector('[data-catalogue]'), 8);
   try {
     const products = await getProducts();
     const byId = new Map(products.map((p) => [p.id, p]));

@@ -140,7 +140,7 @@ function createRecommender(model, products, options = {}) {
    * @param {{ productId: string, type: string }[]} [request.history] oldest first
    * @param {string} [request.contextProductId] the product on screen
    * @param {number} [request.k] how many products to return
-   * @param {object} [request.weights] { collaborative, content, popularity }
+   * @param {object} [request.weights] { collaborative, content }
    * @param {number} [request.diversity] MMR trade-off from 0 to 1
    * @param {boolean} [request.excludeSeenLines] skip other colours of products already seen
    * @param {boolean} [request.fallback] move weight to content when data is thin; off only to
@@ -166,7 +166,7 @@ function createRecommender(model, products, options = {}) {
       const ranked = candidates
         .map((item) => {
           const popularity = model.popularity[item];
-          return { item, score: popularity, components: { collaborative: 0, content: 0, popularity } };
+          return { item, score: popularity, components: { popularity } };
         })
         .sort((a, b) => b.score - a.score);
       return diversify(ranked, k, diversity).map((entry) => toResult(entry, seeds));
@@ -176,29 +176,22 @@ function createRecommender(model, products, options = {}) {
     const collaborative = scaleToOne(scoreFromSeeds(model.collaborative, seeds, candidates));
     const content = scaleToOne(scoreFromSeeds(model.content, seeds, candidates));
 
-    // Collaborative scores deserve trust only when both ends have data, and popularity
-    // means little for a product that just launched. The weight they cannot use moves
-    // to content, which keeps new products reachable, at a discount so that an unproven
-    // product does not outrank a proven one that matches equally well.
+    // Collaborative scores deserve trust only when both ends have data. The weight they
+    // cannot use moves to content, which keeps new products reachable, at a discount so
+    // that an unproven product does not outrank a proven one that matches equally well.
     const seedTotal = [...seeds.values()].reduce((sum, w) => sum + w, 0);
     const seedConfidence = [...seeds].reduce((sum, [seed, w]) => sum + w * confidence[seed], 0) / seedTotal;
 
     const ranked = candidates
       .map((item) => {
         const collaborativeWeight = blend.collaborative * (fallback ? confidence[item] * seedConfidence : 1);
-        const popularityWeight = blend.popularity * (fallback ? confidence[item] : 1);
-        const movedWeight = blend.collaborative + blend.popularity - collaborativeWeight - popularityWeight;
+        const movedWeight = blend.collaborative - collaborativeWeight;
         const contentWeight = blend.content + movedWeight * unprovenDiscount;
         const components = {
           collaborative: collaborativeWeight * collaborative.get(item),
           content: contentWeight * content.get(item),
-          popularity: popularityWeight * model.popularity[item],
         };
-        return {
-          item,
-          components,
-          score: components.collaborative + components.content + components.popularity,
-        };
+        return { item, components, score: components.collaborative + components.content };
       })
       .sort((a, b) => b.score - a.score);
 

@@ -617,6 +617,14 @@ input {
   margin-bottom: var(--space-1);
 }
 
+.product__colour {
+  margin-bottom: 0;
+}
+
+.product__colours {
+  font-size: 0.875rem;
+}
+
 .facts {
   border-block: 1px solid var(--color-line);
   display: grid;
@@ -719,6 +727,10 @@ input {
   vertical-align: middle;
 }
 
+.data-table--compact {
+  min-width: 0;
+}
+
 .data-table thead th {
   color: var(--color-muted);
   font-size: 0.8125rem;
@@ -817,6 +829,16 @@ input {
 }
 
 /* States */
+.skeleton .product-card__media {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+
 .notice {
   background: var(--color-sand);
   grid-column: 1 / -1;
@@ -868,5 +890,9 @@ input {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .skeleton .product-card__media {
+    animation: none;
   }
 }

@@ -20,17 +20,16 @@ const firstOfStyle = (style, count) =>
 
 describe('normaliseWeights', () => {
   test('scales weights to sum to 1', () => {
-    expect(normaliseWeights({ collaborative: 2, content: 1, popularity: 1 })).toEqual({
-      collaborative: 0.5,
+    expect(normaliseWeights({ collaborative: 3, content: 1 })).toEqual({
+      collaborative: 0.75,
       content: 0.25,
-      popularity: 0.25,
     });
   });
 
   test('falls back to defaults on zero, negative or invalid input', () => {
-    expect(normaliseWeights({ collaborative: 0, content: 0, popularity: 0 })).toEqual(DEFAULT_WEIGHTS);
-    expect(normaliseWeights({ collaborative: -1, content: 2, popularity: 0 })).toEqual(DEFAULT_WEIGHTS);
-    expect(normaliseWeights({ collaborative: 'x', content: 1, popularity: 0 })).toEqual(DEFAULT_WEIGHTS);
+    expect(normaliseWeights({ collaborative: 0, content: 0 })).toEqual(DEFAULT_WEIGHTS);
+    expect(normaliseWeights({ collaborative: -1, content: 2 })).toEqual(DEFAULT_WEIGHTS);
+    expect(normaliseWeights({ collaborative: 'x', content: 1 })).toEqual(DEFAULT_WEIGHTS);
     expect(normaliseWeights(undefined)).toEqual(DEFAULT_WEIGHTS);
   });
 });
@@ -68,10 +67,20 @@ describe('recommend', () => {
     expect(new Set(lines).size).toBe(lines.length);
   });
 
+  test('hides other colours of anything already seen, unless asked not to', () => {
+    const history = [view('p001')];
+    const line = (id) => byId.get(id).lineId;
+    const hidden = recommender.recommend({ history, k: 12 }).map((r) => line(r.productId));
+    expect(hidden).not.toContain(line('p001'));
+
+    const shown = recommender.recommend({ history, k: 12, excludeSeenLines: false, diversity: 0 });
+    expect(shown.map((r) => line(r.productId))).toContain(line('p001'));
+  });
+
   test('components add up to the score', () => {
     const [first] = recommender.recommend({ history: [view('p001')], k: 1 });
-    const { collaborative, content, popularity } = first.components;
-    expect(collaborative + content + popularity).toBeCloseTo(first.score, 10);
+    const { collaborative, content } = first.components;
+    expect(collaborative + content).toBeCloseTo(first.score, 10);
   });
 
   test.each(['tailored', 'smart_casual', 'heritage', 'coastal'])(
@@ -96,12 +105,12 @@ describe('recommend', () => {
     const onlyContent = recommender.recommend({
       history,
       k: 1,
-      weights: { collaborative: 0, content: 1, popularity: 0 },
+      weights: { collaborative: 0, content: 1 },
     });
     const onlyCollaborative = recommender.recommend({
       history,
       k: 1,
-      weights: { collaborative: 1, content: 0, popularity: 0 },
+      weights: { collaborative: 1, content: 0 },
     });
     expect(onlyContent[0].reasons[0].model).toBe('content');
     expect(onlyCollaborative[0].reasons[0].model).toBe('collaborative');

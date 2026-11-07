@@ -10,11 +10,21 @@ import {
   recommendationGridHTML,
   renderHistoryPanel,
   showError,
+  showLoading,
 } from '../components.js';
 
 const slug = new URLSearchParams(window.location.search).get('slug');
 
-function detailHTML(product, added) {
+function coloursHTML(product, products) {
+  const others = products.filter((p) => p.lineId === product.lineId && p.id !== product.id);
+  if (others.length === 0) return '';
+  const links = others
+    .map((p) => `<a href="/product?slug=${p.slug}">${localized(p.color.name)}</a>`)
+    .join(', ');
+  return `<p class="product__colours">${t('product.colours')} ${links}</p>`;
+}
+
+function detailHTML(product, products, added) {
   const { attributes } = product;
   const facts = [
     ['product.style', attributeValue(attributes.style)],
@@ -29,7 +39,8 @@ function detailHTML(product, added) {
       <div class="product__info">
         <h1 class="product__title">${productName(product)}</h1>
         <p class="product__price">${priceHTML(product)}</p>
-        <p class="muted">${localized(product.color.name)}</p>
+        <p class="muted product__colour">${localized(product.color.name)}</p>
+        ${coloursHTML(product, products)}
         <p>${localized(product.description)}</p>
         <dl class="facts">
           ${facts.map(([key, value]) => `<div><dt>${t(key)}</dt><dd>${value}</dd></div>`).join('')}
@@ -56,6 +67,7 @@ async function renderLook(product, byId) {
   try {
     const { items } = await getLook(product.id);
     list.innerHTML = recommendationGridHTML(items, byId);
+    applyWidths(list);
   } catch {
     showError(list, () => renderLook(product, byId));
   }
@@ -64,14 +76,17 @@ async function renderLook(product, byId) {
 async function render(added = false) {
   const root = document.querySelector('[data-product]');
   const sections = document.querySelector('[data-sections]');
+  if (!root.firstChild) root.innerHTML = `<p class="muted">${t('state.loading')}</p>`;
   try {
     const [product, products] = await Promise.all([getProduct(slug), getProducts()]);
     const byId = new Map(products.map((p) => [p.id, p]));
     document.title = `${productName(product)} | Orlo Recommender`;
     recordInteraction(product.id, 'view_product');
 
-    root.innerHTML = detailHTML(product, added);
+    root.innerHTML = detailHTML(product, products, added);
     sections.hidden = false;
+    showLoading(document.querySelector('[data-similar]'), 4);
+    showLoading(document.querySelector('[data-look]'), 4);
     root.querySelector('[data-add]').addEventListener('click', () => {
       recordInteraction(product.id, 'add_to_cart');
       render(true);

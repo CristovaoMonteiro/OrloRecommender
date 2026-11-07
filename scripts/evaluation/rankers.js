@@ -11,6 +11,8 @@ const LIST_SIZE = 10;
 const seenIds = ({ history, contextProductId }) =>
   new Set([...history.map((entry) => entry.productId), contextProductId]);
 
+const byPopularity = (popularityOf) => (a, b) => popularityOf.get(b.id) - popularityOf.get(a.id);
+
 function createRankers({ model, products, hybrid }) {
   const recommender = createRecommender(model, products);
   const byId = new Map(products.map((p) => [p.id, p]));
@@ -18,7 +20,8 @@ function createRankers({ model, products, hybrid }) {
 
   const unseen = (testCase) => {
     const seen = seenIds(testCase);
-    return products.filter((p) => !seen.has(p.id));
+    const lines = new Set([...seen].map((id) => byId.get(id).lineId));
+    return products.filter((p) => !seen.has(p.id) && !(hybrid.excludeSeenLines && lines.has(p.lineId)));
   };
   const usingModels =
     (weights, options = {}) =>
@@ -30,6 +33,7 @@ function createRankers({ model, products, hybrid }) {
           k: LIST_SIZE,
           weights,
           diversity: 0,
+          excludeSeenLines: hybrid.excludeSeenLines,
           ...options,
         })
         .map((result) => result.productId);
@@ -40,7 +44,7 @@ function createRankers({ model, products, hybrid }) {
     random: (testCase) => rng.sample(unseen(testCase), LIST_SIZE).map((p) => p.id),
     popularity: (testCase) =>
       unseen(testCase)
-        .sort((a, b) => popularityOf.get(b.id) - popularityOf.get(a.id))
+        .sort(byPopularity(popularityOf))
         .slice(0, LIST_SIZE)
         .map((p) => p.id),
     // The rule the Visitor Journey store uses today: same category first, in catalogue order.
@@ -51,16 +55,23 @@ function createRankers({ model, products, hybrid }) {
         .slice(0, LIST_SIZE)
         .map((p) => p.id);
     },
-    content: usingModels({ collaborative: 0, content: 1, popularity: 0 }),
-    collaborative: usingModels({ collaborative: 1, content: 0, popularity: 0 }, { fallback: false }),
-    hybrid_no_fallback: usingModels(hybrid.weights, {
+    // The same rule at its strongest: within the category, best sellers come first.
+    same_category_popular: (testCase) => {
+      const { category } = byId.get(testCase.contextProductId);
+      const popular = byPopularity(popularityOf);
+      return unseen(testCase)
+        .sort((a, b) => Number(b.category === category) - Number(a.category === category) || popular(a, b))
+        .slice(0, LIST_SIZE)
+        .map((p) => p.id);
+    },
+    content: usingModels({ collaborative: 0, content: 1 }),
+    collaborative: usingModels({ collaborative: 1, content: 0 }, { fallback: false }),
+    hybrid_no_fallback: usingModels(hybrid.weights, { diversity: hybrid.diversity, fallback: false }),
+    hybrid: usingModels(hybrid.weights, { diversity: hybrid.diversity }),
+    // What the rule against other colours costs on this metric.
+    hybrid_with_colours: usingModels(hybrid.weights, {
       diversity: hybrid.diversity,
-      excludeSeenLines: hybrid.excludeSeenLines,
-      fallback: false,
-    }),
-    hybrid: usingModels(hybrid.weights, {
-      diversity: hybrid.diversity,
-      excludeSeenLines: hybrid.excludeSeenLines,
+      excludeSeenLines: false,
     }),
   };
 }

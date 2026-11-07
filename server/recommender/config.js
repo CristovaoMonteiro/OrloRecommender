@@ -26,11 +26,12 @@ module.exports = {
 
   // Each older interaction in the history counts this much of the next one.
   RECENCY_DECAY: 0.8,
-  DEFAULT_WEIGHTS: { collaborative: 0.6, content: 0.4, popularity: 0 },
+  DEFAULT_WEIGHTS: { collaborative: 0.6, content: 0.4 },
   // MMR trade-off: 0 ranks by score alone, 1 by difference from the items already picked.
-  DEFAULT_DIVERSITY: 0.4,
-  // Whether other colours of a product the visitor already saw are left out.
-  EXCLUDE_SEEN_LINES: false,
+  DEFAULT_DIVERSITY: 0.5,
+  // Product rule: another colour of something already seen is not a discovery. The product
+  // page links to other colours instead. This costs some offline score, on purpose.
+  EXCLUDE_SEEN_LINES: true,
   // "Complete the look" shows at most this many pieces of one category.
   MAX_LOOK_PER_CATEGORY: 2,
 };

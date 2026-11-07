@@ -3,8 +3,19 @@ import { t, formatDecimal, formatNumber, formatPercent } from '../i18n.js';
 import { getEvaluation } from '../api.js';
 import { applyWidths, showError } from '../components.js';
 
-const RANKERS = ['random', 'popularity', 'same_category', 'content', 'collaborative', 'hybrid'];
-const LIFTS = ['same_category', 'content', 'collaborative'];
+const PLAN_URL = 'https://github.com/CristovaoMonteiro/OrloRecommender/blob/main/docs/experiment-plan.md';
+const RANKERS = [
+  'random',
+  'popularity',
+  'same_category',
+  'same_category_popular',
+  'content',
+  'collaborative',
+  'hybrid',
+];
+const LIFTS = ['same_category_popular', 'content', 'collaborative'];
+
+const signed = (value) => `${value >= 0 ? '+' : ''}${formatDecimal(value)}`;
 
 function rankingTable(results) {
   const best = Math.max(...RANKERS.map((name) => results[name]['recall@4'].mean));
@@ -28,9 +39,9 @@ function rankingTable(results) {
         <thead>
           <tr>
             <th scope="col">${t('eval.ranker')}</th>
-            <th scope="col" abbr="${t('eval.recallHint')}">${t('eval.recall')}</th>
-            <th scope="col" abbr="${t('eval.ndcgHint')}">${t('eval.ndcg')}</th>
-            <th scope="col" abbr="${t('eval.coverageHint')}">${t('eval.coverage')}</th>
+            <th scope="col">${t('eval.recall')}</th>
+            <th scope="col">${t('eval.ndcg')}</th>
+            <th scope="col">${t('eval.coverage')}</th>
           </tr>
         </thead>
         <tbody>${rows}</tbody>
@@ -43,19 +54,64 @@ function rankingTable(results) {
     </dl>`;
 }
 
-function liftList(improvements) {
+function liftList(improvements, total) {
   return `
     <ul class="lift-list">
       ${LIFTS.map((name) => {
-        const { mean, low, high } = improvements[name];
+        const { mean, low, high, datasetsAhead } = improvements[name];
+        const tie = low <= 0 && high >= 0;
         return `
           <li>
             <span>${t(`eval.ranker.${name}`)}</span>
-            <strong>+${formatDecimal(mean)}</strong>
-            <span class="muted">${t('eval.liftInterval', { low: formatDecimal(low), high: formatDecimal(high) })}</span>
+            <strong>${tie ? t('eval.tie') : signed(mean)}</strong>
+            <span class="muted">
+              ${tie ? `${signed(mean)}, ` : ''}${t('eval.liftInterval', { low: formatDecimal(low), high: formatDecimal(high) })},
+              ${t('eval.liftAhead', { count: datasetsAhead, total })}
+            </span>
           </li>`;
       }).join('')}
     </ul>`;
+}
+
+function reachTable({ results, slicesRecall10 }) {
+  const { collaborative, hybrid } = results;
+  const rows = [
+    [
+      'eval.reach.new',
+      formatDecimal(slicesRecall10.new_products_only.collaborative, 2),
+      formatDecimal(slicesRecall10.new_products_only.hybrid, 2),
+    ],
+    [
+      'eval.reach.coverage',
+      formatPercent(collaborative['coverage@4'], 1),
+      formatPercent(hybrid['coverage@4'], 1),
+    ],
+    [
+      'eval.reach.diversity',
+      formatDecimal(collaborative['diversity@4'], 2),
+      formatDecimal(hybrid['diversity@4'], 2),
+    ],
+  ];
+  return `
+    <div class="table-wrap">
+      <table class="data-table data-table--compact">
+        <thead>
+          <tr>
+            <th scope="col">${t('eval.reach.metric')}</th>
+            <th scope="col">${t('eval.ranker.collaborative')}</th>
+            <th scope="col">${t('eval.ranker.hybrid')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows
+            .map(
+              ([key, before, after]) =>
+                `<tr><th scope="row">${t(key)}</th><td>${before}</td><td>${after}</td></tr>`,
+            )
+            .join('')}
+        </tbody>
+      </table>
+    </div>`;
 }
 
 function controlBars(control) {
@@ -81,15 +137,23 @@ function controlBars(control) {
 
 function pageHTML(report) {
   const { protocol, results, improvementOverNdcg10, control, completeTheLook, slicesRecall10 } = report;
-  const ratio = results.hybrid['recall@4'].mean / results.same_category['recall@4'].mean;
+  const { headline, experiment } = report;
   const newProducts = slicesRecall10.new_products_only;
+  const datasets = protocol.testSeeds.length;
+  const tenPercent = experiment.perGroup.find(({ lift }) => lift === 0.1);
 
   return `
-    <p class="headline">${t('eval.headline', { ratio: formatDecimal(ratio, 1) })}</p>
+    <p class="headline">${t('eval.headline', {
+      datasets,
+      ratio: formatDecimal(headline.mean, 1),
+      min: formatDecimal(headline.min, 1),
+      max: formatDecimal(headline.max, 1),
+    })}</p>
     <ul class="facts-row">
+      <li><strong>${formatNumber(datasets)}</strong> ${t('eval.fact.datasets')}</li>
       <li><strong>${formatNumber(protocol.testCases)}</strong> ${t('eval.fact.lists')}</li>
       <li><strong>${formatNumber(protocol.testVisitors)}</strong> ${t('eval.fact.visitors')}</li>
-      <li><strong>${formatNumber(protocol.trainEvents)}</strong> ${t('eval.fact.events')}</li>
+      <li><strong>${formatNumber(protocol.trainEventsPerDataset)}</strong> ${t('eval.fact.events')}</li>
     </ul>
 
     <section class="section">
@@ -101,12 +165,27 @@ function pageHTML(report) {
       <section class="section">
         <h2 class="section__title">${t('eval.lift')}</h2>
         <p>${t('eval.liftText')}</p>
-        ${liftList(improvementOverNdcg10)}
+        ${liftList(improvementOverNdcg10, datasets)}
       </section>
+      <section class="section">
+        <h2 class="section__title">${t('eval.reach')}</h2>
+        <p>${t('eval.reachText')}</p>
+        ${reachTable(report)}
+      </section>
+    </div>
+
+    <div class="two-columns">
       <section class="section">
         <h2 class="section__title">${t('eval.control')}</h2>
         <p>${t('eval.controlText')}</p>
         ${controlBars(control)}
+      </section>
+      <section class="section">
+        <h2 class="section__title">${t('eval.colours')}</h2>
+        <p>${t('eval.coloursText', {
+          with: formatDecimal(results.hybrid_with_colours['ndcg@10'].mean),
+          without: formatDecimal(results.hybrid['ndcg@10'].mean),
+        })}</p>
       </section>
     </div>
 
@@ -139,11 +218,21 @@ function pageHTML(report) {
           <li>${t('eval.limit.3')}</li>
         </ul>
       </section>
-    </div>`;
+    </div>
+
+    <section class="section">
+      <h2 class="section__title">${t('eval.next')}</h2>
+      <p>${t('eval.nextText', {
+        baseline: formatPercent(experiment.baseline),
+        visitors: formatNumber(tenPercent.visitors),
+      })}</p>
+      <a class="btn btn--secondary btn--small" href="${PLAN_URL}">${t('eval.nextLink')}</a>
+    </section>`;
 }
 
 async function render() {
   const root = document.querySelector('[data-report]');
+  if (!root.firstChild) root.innerHTML = `<p class="muted">${t('state.loading')}</p>`;
   try {
     root.innerHTML = pageHTML(await getEvaluation());
     applyWidths(root);

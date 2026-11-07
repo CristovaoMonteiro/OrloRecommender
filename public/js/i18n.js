@@ -17,7 +17,7 @@ const STRINGS = {
     'brand.tag': 'Recommender',
 
     'footer.note': 'Fictional store and synthetic data. Built as a portfolio project; nothing is sold.',
-    'footer.privacy': 'Your browsing stays in this tab. The server stores nothing about you.',
+    'footer.privacy': 'Your browsing stays in this tab. This app stores nothing about you.',
     'footer.code': 'Source code',
     'footer.journey': 'Visitor Journey Dashboard',
 
@@ -63,8 +63,9 @@ const STRINGS = {
     'product.material': 'Material',
     'product.season': 'Season',
     'product.palette': 'Palette',
+    'product.colours': 'Also available in',
 
-    'reason.collaborative': 'Visitors interested in {product} also looked at this',
+    'reason.collaborative': 'Simulated visitors interested in {product} also looked at this',
     'reason.content': 'Shares {attributes} with {product}',
     'reason.contentPlain': 'Similar to {product}',
     'reason.popularity': 'Popular in the store',
@@ -84,7 +85,7 @@ const STRINGS = {
     'lab.eyebrow': 'Lab',
     'lab.title': 'Change the model, see the list change.',
     'lab.text':
-      'Move the weights or start from a sample visitor. The list updates straight away, using the same model as the store.',
+      'Move the weights or start from a sample visitor. The list updates straight away, using the same model as the store. Popularity only serves visitors with no history.',
     'lab.visitors': 'Sample visitors',
     'lab.visitor.new': 'New visitor',
     'lab.visitor.heritage': 'Heritage',
@@ -95,12 +96,10 @@ const STRINGS = {
     'lab.collaborativeHint': 'What people with similar interests looked at',
     'lab.content': 'Similarity',
     'lab.contentHint': 'Shared style, material, season and palette',
-    'lab.popularity': 'Popularity',
-    'lab.popularityHint': 'What sells most overall',
     'lab.diversity': 'Diversity',
     'lab.diversityHint': 'Trades relevance for more varied suggestions',
     'lab.reset': 'Reset to tuned values',
-    'lab.tuned': 'Tuned values: {collaborative} behaviour, {content} similarity, {popularity} popularity.',
+    'lab.tuned': 'Tuned values: {collaborative} behaviour, {content} similarity.',
     'lab.results': 'Suggestions',
     'lab.zero': 'At least one weight must be above 0.',
     'lab.score': 'Score {score}',
@@ -111,9 +110,9 @@ const STRINGS = {
       'The task: a visitor opens a product. Predict the other products they look at in that session, from what they did before.',
     'eval.fact.lists': 'test lists',
     'eval.fact.visitors': 'visitors',
-    'eval.fact.events': 'training events',
+    'eval.fact.events': 'training events per dataset',
     'eval.headline':
-      'The hybrid finds {ratio}× more of what visitors view next than the rule used in the Visitor Journey store.',
+      'Across {datasets} simulated datasets, the hybrid found about {ratio}× more of what visitors view next than best sellers from the same category ({min}× to {max}×).',
     'eval.comparison': 'How each approach compares',
     'eval.ranker': 'Approach',
     'eval.recall': 'Recall@4',
@@ -125,12 +124,30 @@ const STRINGS = {
     'eval.ranker.random': 'Random',
     'eval.ranker.popularity': 'Popularity',
     'eval.ranker.same_category': 'Same category first (Visitor Journey rule)',
+    'eval.ranker.same_category_popular': 'Same category, best sellers first',
     'eval.ranker.content': 'Similarity only',
     'eval.ranker.collaborative': 'Behaviour only',
     'eval.ranker.hybrid': 'Hybrid',
     'eval.lift': 'Is the difference real?',
     'eval.liftText': 'NDCG@10 gain of the hybrid on the same lists, with a 95% confidence interval.',
     'eval.liftInterval': '{low} to {high}',
+    'eval.liftAhead': 'ahead in {count} of {total} datasets',
+    'eval.tie': 'Tie',
+    'eval.fact.datasets': 'test datasets',
+    'eval.reach': 'What the hybrid adds',
+    'eval.reachText':
+      'Against behaviour alone, the hybrid does not rank better: the difference is within the margin of error. What it adds is reach.',
+    'eval.reach.metric': 'Measure',
+    'eval.reach.new': 'Recall@10 on new products',
+    'eval.reach.coverage': 'Catalogue coverage',
+    'eval.reach.diversity': 'Diversity of the four shown',
+    'eval.colours': 'The cost of hiding other colours',
+    'eval.coloursText':
+      'Suggestions leave out other colours of anything already seen, because the same jacket in brown is a poor suggestion. Simulated visitors do view other colours often, so this rule lowers NDCG@10 from {with} to {without}. It is a product decision that only a live test can confirm.',
+    'eval.next': 'Next step: a live test',
+    'eval.nextText':
+      'Offline results cannot show that visitors prefer these suggestions. Assuming an {baseline} add-to-bag rate, detecting a 10% lift needs about {visitors} visitors per group.',
+    'eval.nextLink': 'Read the experiment plan',
     'eval.control': 'Control test',
     'eval.controlText':
       'Shuffling the training data keeps popularity but destroys who liked what. If the behaviour model is learning something real, its score must fall to the level of popularity.',
@@ -142,19 +159,19 @@ const STRINGS = {
       'At least one of the four suggestions matched the rest of the basket in {complements} of {cases} baskets, against {popular} for popular products from other categories.',
     'eval.method': 'How it was tested',
     'eval.method.1':
-      'Weights were tuned on one dataset. These results come from a second dataset, with a different seed, evaluated once after tuning ended.',
+      'Weights were tuned on one dataset. These results come from ten others, with their own seeds, evaluated once after tuning ended.',
     'eval.method.2':
       'The model trains only on events before a single cutoff, so it never sees anyone’s future.',
     'eval.method.3': 'Intervals come from a bootstrap that resamples whole visitors.',
     'eval.limits': 'What these numbers do not show',
     'eval.limit.1':
       'The data is synthetic. The generator contains the tastes and outfit pairs these models recover, so the results show the system and the comparison work. They do not predict sales in a real store.',
-    'eval.limit.2':
-      'New products remain a trade-off: recall@10 of {hybrid}, against {content} for similarity only. Giving them more weight lowered overall quality.',
+    'eval.limit.2': 'New products remain weak: recall@10 of {hybrid}, against {content} for similarity only.',
     'eval.limit.3': 'The measure is the next view, not purchases or revenue.',
 
     'error.load': 'Could not load this. Please try again in a moment.',
     'error.retry': 'Try again',
+    'state.loading': 'Loading…',
   },
   pt: {
     'meta.store': 'Loja',
@@ -170,7 +187,7 @@ const STRINGS = {
     'brand.tag': 'Recommender',
 
     'footer.note': 'Loja fictícia e dados sintéticos. Projeto de portfólio: nada é vendido.',
-    'footer.privacy': 'A tua navegação fica neste separador. O servidor não guarda nada sobre ti.',
+    'footer.privacy': 'A tua navegação fica neste separador. Esta aplicação não guarda nada sobre ti.',
     'footer.code': 'Código-fonte',
     'footer.journey': 'Visitor Journey Dashboard',
 
@@ -216,8 +233,9 @@ const STRINGS = {
     'product.material': 'Material',
     'product.season': 'Estação',
     'product.palette': 'Paleta',
+    'product.colours': 'Também disponível em',
 
-    'reason.collaborative': 'Quem se interessou por {product} também viu isto',
+    'reason.collaborative': 'Visitantes simulados interessados em {product} também viram isto',
     'reason.content': 'Partilha {attributes} com {product}',
     'reason.contentPlain': 'Semelhante a {product}',
     'reason.popularity': 'Popular na loja',
@@ -237,7 +255,7 @@ const STRINGS = {
     'lab.eyebrow': 'Laboratório',
     'lab.title': 'Muda o modelo e vê a lista mudar.',
     'lab.text':
-      'Ajusta os pesos ou começa por um visitante de exemplo. A lista atualiza logo, com o mesmo modelo da loja.',
+      'Ajusta os pesos ou começa por um visitante de exemplo. A lista atualiza logo, com o mesmo modelo da loja. A popularidade só serve quem ainda não tem histórico.',
     'lab.visitors': 'Visitantes de exemplo',
     'lab.visitor.new': 'Visitante novo',
     'lab.visitor.heritage': 'Heritage',
@@ -248,13 +266,10 @@ const STRINGS = {
     'lab.collaborativeHint': 'O que viram pessoas com interesses parecidos',
     'lab.content': 'Semelhança',
     'lab.contentHint': 'Estilo, material, estação e paleta em comum',
-    'lab.popularity': 'Popularidade',
-    'lab.popularityHint': 'O que mais se vende no geral',
     'lab.diversity': 'Diversidade',
     'lab.diversityHint': 'Troca relevância por sugestões mais variadas',
     'lab.reset': 'Repor valores afinados',
-    'lab.tuned':
-      'Valores afinados: {collaborative} comportamento, {content} semelhança, {popularity} popularidade.',
+    'lab.tuned': 'Valores afinados: {collaborative} comportamento, {content} semelhança.',
     'lab.results': 'Sugestões',
     'lab.zero': 'Pelo menos um peso tem de ser superior a 0.',
     'lab.score': 'Pontuação {score}',
@@ -265,9 +280,9 @@ const STRINGS = {
       'A tarefa: um visitante abre um produto. Prever que outros produtos vê nessa sessão, a partir do que fez antes.',
     'eval.fact.lists': 'listas de teste',
     'eval.fact.visitors': 'visitantes',
-    'eval.fact.events': 'eventos de treino',
+    'eval.fact.events': 'eventos de treino por conjunto',
     'eval.headline':
-      'O híbrido encontra {ratio}× mais do que os visitantes veem a seguir do que a regra usada na loja do Visitor Journey.',
+      'Em {datasets} conjuntos de dados simulados, o híbrido encontrou cerca de {ratio}× mais do que os visitantes veem a seguir do que os mais vendidos da mesma categoria (entre {min}× e {max}×).',
     'eval.comparison': 'Como se compara cada abordagem',
     'eval.ranker': 'Abordagem',
     'eval.recall': 'Recall@4',
@@ -279,12 +294,30 @@ const STRINGS = {
     'eval.ranker.random': 'Aleatório',
     'eval.ranker.popularity': 'Popularidade',
     'eval.ranker.same_category': 'Mesma categoria primeiro (regra do Visitor Journey)',
+    'eval.ranker.same_category_popular': 'Mesma categoria, mais vendidos primeiro',
     'eval.ranker.content': 'Só semelhança',
     'eval.ranker.collaborative': 'Só comportamento',
     'eval.ranker.hybrid': 'Híbrido',
     'eval.lift': 'A diferença é real?',
     'eval.liftText': 'Ganho de NDCG@10 do híbrido nas mesmas listas, com intervalo de confiança de 95%.',
     'eval.liftInterval': '{low} a {high}',
+    'eval.liftAhead': 'à frente em {count} de {total} conjuntos',
+    'eval.tie': 'Empate',
+    'eval.fact.datasets': 'conjuntos de teste',
+    'eval.reach': 'O que o híbrido acrescenta',
+    'eval.reachText':
+      'Contra o comportamento sozinho, o híbrido não ordena melhor: a diferença está dentro da margem de erro. O que acrescenta é alcance.',
+    'eval.reach.metric': 'Medida',
+    'eval.reach.new': 'Recall@10 em produtos novos',
+    'eval.reach.coverage': 'Cobertura do catálogo',
+    'eval.reach.diversity': 'Diversidade dos quatro mostrados',
+    'eval.colours': 'O custo de esconder outras cores',
+    'eval.coloursText':
+      'As sugestões deixam de fora outras cores do que já foi visto, porque o mesmo casaco em castanho é uma má sugestão. Os visitantes simulados veem muitas vezes outras cores, por isso esta regra baixa o NDCG@10 de {with} para {without}. É uma decisão de produto que só um teste real pode confirmar.',
+    'eval.next': 'Próximo passo: um teste real',
+    'eval.nextText':
+      'Os resultados offline não mostram que os visitantes preferem estas sugestões. Assumindo uma taxa de {baseline} de adição ao saco, detetar uma subida de 10% exige cerca de {visitors} visitantes por grupo.',
+    'eval.nextLink': 'Ler o plano de experiência',
     'eval.control': 'Teste de controlo',
     'eval.controlText':
       'Baralhar os dados de treino mantém a popularidade, mas destrói quem gostou de quê. Se o modelo de comportamento aprende algo real, a pontuação tem de cair para o nível da popularidade.',
@@ -296,7 +329,7 @@ const STRINGS = {
       'Pelo menos uma das quatro sugestões coincidiu com o resto do cesto em {complements} de {cases} cestos, contra {popular} das peças populares de outras categorias.',
     'eval.method': 'Como foi testado',
     'eval.method.1':
-      'Os pesos foram afinados num conjunto de dados. Estes resultados vêm de um segundo conjunto, com outra seed, avaliado uma vez depois de terminada a afinação.',
+      'Os pesos foram afinados num conjunto de dados. Estes resultados vêm de outros dez, com seeds próprias, avaliados uma vez depois de terminada a afinação.',
     'eval.method.2':
       'O modelo treina só com eventos anteriores a um único corte, por isso nunca vê o futuro de ninguém.',
     'eval.method.3': 'Os intervalos vêm de um bootstrap que reamostra visitantes inteiros.',
@@ -304,11 +337,12 @@ const STRINGS = {
     'eval.limit.1':
       'Os dados são sintéticos. O gerador contém os gostos e as combinações que estes modelos recuperam, por isso os resultados mostram que o sistema e a comparação funcionam, mas não preveem vendas numa loja real.',
     'eval.limit.2':
-      'Os produtos novos continuam a ser um compromisso: recall@10 de {hybrid}, contra {content} só com semelhança. Dar-lhes mais peso baixou a qualidade geral.',
+      'Os produtos novos continuam fracos: recall@10 de {hybrid}, contra {content} só com semelhança.',
     'eval.limit.3': 'A medida é a visualização seguinte, não compras nem receita.',
 
     'error.load': 'Não foi possível carregar. Tenta novamente daqui a pouco.',
     'error.retry': 'Tentar novamente',
+    'state.loading': 'A carregar…',
   },
 };
 

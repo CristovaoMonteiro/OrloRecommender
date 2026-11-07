@@ -1,3 +1,4 @@
+const { sampleSizePerGroup } = require('../scripts/evaluation/sampleSize');
 const {
   recallAtK,
   hitRateAtK,
@@ -155,12 +156,10 @@ describe('buildLookCases', () => {
 });
 
 describe('evaluation helpers', () => {
-  test('weightGrid covers the simplex in steps of 0.2', () => {
+  test('weightGrid covers every mix in steps of 0.1', () => {
     const grid = weightGrid();
-    expect(grid).toHaveLength(21);
-    grid.forEach(({ collaborative, content, popularity }) => {
-      expect(collaborative + content + popularity).toBeCloseTo(1, 10);
-    });
+    expect(grid).toHaveLength(11);
+    grid.forEach(({ collaborative, content }) => expect(collaborative + content).toBeCloseTo(1, 10));
   });
 
   test('shuffleProducts keeps each product count but changes who touched what', () => {
@@ -193,7 +192,7 @@ describe('thin-data handling', () => {
   for (let i = 0; i < 40; i += 1) events.push(makeEvent(`v${i}`, 'seed'), makeEvent(`v${i}`, 'proven'));
   const model = buildModel({ products: catalogue, events });
   const history = [{ productId: 'seed', type: 'view_product' }];
-  const weights = { collaborative: 0.6, content: 0.4, popularity: 0 };
+  const weights = { collaborative: 0.6, content: 0.4 };
 
   test('a proven product outranks an unproven one with the same content', () => {
     const results = createRecommender(model, catalogue).recommend({ history, weights, k: 2, diversity: 0 });
@@ -225,7 +224,7 @@ describe('thin-data handling', () => {
   test('with the fallback off, each model stands alone', () => {
     const [first] = createRecommender(model, catalogue).recommend({
       history,
-      weights: { collaborative: 1, content: 0, popularity: 0 },
+      weights: { collaborative: 1, content: 0 },
       fallback: false,
       k: 1,
       diversity: 0,
@@ -237,8 +236,8 @@ describe('thin-data handling', () => {
   test('tunable settings keep their documented range', () => {
     expect(config.UNPROVEN_DISCOUNT).toBeGreaterThanOrEqual(0);
     expect(config.UNPROVEN_DISCOUNT).toBeLessThanOrEqual(1);
-    const { collaborative, content, popularity } = config.DEFAULT_WEIGHTS;
-    expect(collaborative + content + popularity).toBeCloseTo(1, 10);
+    const { collaborative, content } = config.DEFAULT_WEIGHTS;
+    expect(collaborative + content).toBeCloseTo(1, 10);
   });
 });
 
@@ -248,10 +247,29 @@ describe('published evaluation', () => {
   test('reports the settings the recommender actually uses', () => {
     expect(report.tuning.chosen.weights).toEqual(config.DEFAULT_WEIGHTS);
     expect(report.tuning.chosen.diversity).toBe(config.DEFAULT_DIVERSITY);
-    expect(report.tuning.chosen.excludeSeenLines).toBe(config.EXCLUDE_SEEN_LINES);
+    expect(report.protocol.excludeSeenLines).toBe(config.EXCLUDE_SEEN_LINES);
   });
 
-  test('the test data comes from a different seed than the tuning data', () => {
-    expect(report.protocol.testSeed).not.toBe(report.protocol.tuningSeed);
+  test('the test datasets differ from the tuning dataset and from each other', () => {
+    const { tuningSeed, testSeeds } = report.protocol;
+    expect(testSeeds).toHaveLength(10);
+    expect(new Set([tuningSeed, ...testSeeds]).size).toBe(11);
+  });
+
+  test('the headline range holds its mean', () => {
+    const { mean, min, max } = report.headline;
+    expect(min).toBeLessThanOrEqual(mean);
+    expect(max).toBeGreaterThanOrEqual(mean);
+  });
+});
+
+describe('sampleSizePerGroup', () => {
+  test('matches a value computed by hand', () => {
+    // 8% to 8.8%: 7.849 * (0.0736 + 0.08026) / 0.008^2 = about 18,870.
+    expect(sampleSizePerGroup(0.08, 0.1)).toBe(18869);
+  });
+
+  test('a smaller lift needs more visitors', () => {
+    expect(sampleSizePerGroup(0.08, 0.05)).toBeGreaterThan(sampleSizePerGroup(0.08, 0.2));
   });
 });

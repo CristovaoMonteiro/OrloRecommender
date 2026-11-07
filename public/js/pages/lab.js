@@ -8,11 +8,12 @@ import {
   productCardHTML,
   renderHistoryPanel,
   showError,
+  showLoading,
 } from '../components.js';
 
 const RESULTS = 8;
 const DEBOUNCE_MS = 150;
-const WEIGHTS = ['collaborative', 'content', 'popularity'];
+const WEIGHTS = ['collaborative', 'content'];
 
 // Three products that define each sample visitor, oldest first.
 const SAMPLE_VISITORS = {
@@ -46,7 +47,6 @@ function renderControls(run) {
     <p class="fine-print">${t('lab.tuned', {
       collaborative: formatPercent(state.tuned.weights.collaborative),
       content: formatPercent(state.tuned.weights.content),
-      popularity: formatPercent(state.tuned.weights.popularity),
     })}</p>`;
 
   root.querySelectorAll('[data-slider]').forEach((input) =>
@@ -123,6 +123,7 @@ function renderVisitors(slugToId, run) {
 }
 
 async function render() {
+  showLoading(document.querySelector('[data-results]'), RESULTS);
   try {
     const [products, settings] = await Promise.all([getProducts(), getSettings()]);
     state.tuned ??= settings;
