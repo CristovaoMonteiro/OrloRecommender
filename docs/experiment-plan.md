@@ -4,7 +4,7 @@ This is a plan, not a result. The test has not been run, because Orlo is a ficti
 
 ## Why a live test is needed
 
-The offline evaluation shows that the system works on simulated visitors. It cannot show that real people prefer these suggestions, or that they add revenue. It also leaves a product question open: hiding other colours lowers the offline score, and only real behaviour can show whether that rule is right.
+The offline evaluation shows that the system works on simulated visitors. It cannot show that real people prefer these suggestions, or that they add revenue. It also cannot confirm the rule that hides other colours of products already seen, which was a product decision and not a result of the evaluation.
 
 ## Hypothesis
 
@@ -61,4 +61,4 @@ With the +10% target, a store with 5,000 eligible visitors a week would need abo
 | No significant change               | Keep the simpler current rule                |
 | Primary falls                       | Keep the current rule and review the model   |
 
-If the test is positive, a follow-up test should compare showing and hiding other colours.
+If the test is positive, a follow-up test could check the rule on other colours.

@@ -107,7 +107,7 @@ const STRINGS = {
     'eval.eyebrow': 'Evaluation',
     'eval.title': 'Does it work, and how do we know?',
     'eval.text':
-      'The task: a visitor opens a product. Predict the other products they look at in that session, from what they did before.',
+      'The task: a visitor opens a product. Predict which different products they look at next in that session, from what they did before.',
     'eval.fact.lists': 'test lists',
     'eval.fact.visitors': 'visitors',
     'eval.fact.events': 'training events per dataset',
@@ -141,9 +141,9 @@ const STRINGS = {
     'eval.reach.new': 'Recall@10 on new products',
     'eval.reach.coverage': 'Catalogue coverage',
     'eval.reach.diversity': 'Diversity of the four shown',
-    'eval.colours': 'The cost of hiding other colours',
+    'eval.colours': 'The rule on other colours',
     'eval.coloursText':
-      'Suggestions leave out other colours of anything already seen, because the same jacket in brown is a poor suggestion. Simulated visitors do view other colours often, so this rule lowers NDCG@10 from {with} to {without}. It is a product decision that only a live test can confirm.',
+      'Suggestions leave out other colours of anything already seen, because the same jacket in brown is a poor suggestion. Since those products are never shown, these results do not count them as hits. If they did, hiding them would lower NDCG@10 from {with} to {without}.',
     'eval.next': 'Next step: a live test',
     'eval.nextText':
       'Offline results cannot show that visitors prefer these suggestions. Assuming an {baseline} add-to-bag rate, detecting a 10% lift needs about {visitors} visitors per group.',
@@ -277,7 +277,7 @@ const STRINGS = {
     'eval.eyebrow': 'Avaliação',
     'eval.title': 'Funciona? E como sabemos?',
     'eval.text':
-      'A tarefa: um visitante abre um produto. Prever que outros produtos vê nessa sessão, a partir do que fez antes.',
+      'A tarefa: um visitante abre um produto. Prever que outros produtos, diferentes, vê a seguir nessa sessão, a partir do que fez antes.',
     'eval.fact.lists': 'listas de teste',
     'eval.fact.visitors': 'visitantes',
     'eval.fact.events': 'eventos de treino por conjunto',
@@ -311,9 +311,9 @@ const STRINGS = {
     'eval.reach.new': 'Recall@10 em produtos novos',
     'eval.reach.coverage': 'Cobertura do catálogo',
     'eval.reach.diversity': 'Diversidade dos quatro mostrados',
-    'eval.colours': 'O custo de esconder outras cores',
+    'eval.colours': 'A regra das outras cores',
     'eval.coloursText':
-      'As sugestões deixam de fora outras cores do que já foi visto, porque o mesmo casaco em castanho é uma má sugestão. Os visitantes simulados veem muitas vezes outras cores, por isso esta regra baixa o NDCG@10 de {with} para {without}. É uma decisão de produto que só um teste real pode confirmar.',
+      'As sugestões deixam de fora outras cores do que já foi visto, porque o mesmo casaco em castanho é uma má sugestão. Como esses produtos nunca são mostrados, estes resultados não os contam como acertos. Se contassem, escondê-los baixaria o NDCG@10 de {with} para {without}.',
     'eval.next': 'Próximo passo: um teste real',
     'eval.nextText':
       'Os resultados offline não mostram que os visitantes preferem estas sugestões. Assumindo uma taxa de {baseline} de adição ao saco, detetar uma subida de 10% exige cerca de {visitors} visitantes por grupo.',
@@ -369,7 +369,7 @@ const ATTRIBUTE_VALUES = {
     warm: 'Tempo quente',
     cold: 'Tempo frio',
     neutral: 'Neutros',
-    earth: 'Tons terra',
+    earth: 'Tons de terra',
     rich: 'Tons intensos',
   },
 };

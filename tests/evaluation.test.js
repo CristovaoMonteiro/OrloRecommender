@@ -117,6 +117,23 @@ describe('buildCases', () => {
     expect(buildCases(events, window)).toEqual([]);
   });
 
+  test('with lineOf, other colours of seen products stop being targets', () => {
+    const events = [
+      at('v', 's', 'jacket-olive', 12),
+      at('v', 's', 'jacket-navy', 12),
+      at('v', 's', 'belt', 12),
+    ];
+    const lineOf = (id) => id.split('-')[0];
+    const [testCase] = buildCases(events, { ...window, lineOf });
+    expect([...testCase.targets]).toEqual(['belt']);
+    expect([...testCase.allTargets]).toEqual(['jacket-navy', 'belt']);
+  });
+
+  test('a session that only moved between colours of one line is skipped', () => {
+    const events = [at('v', 's', 'jacket-olive', 12), at('v', 's', 'jacket-navy', 12)];
+    expect(buildCases(events, { ...window, lineOf: (id) => id.split('-')[0] })).toEqual([]);
+  });
+
   test('a second session in the window sees the first one as history', () => {
     const events = [
       at('v', 's1', 'a', 11),

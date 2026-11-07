@@ -34,7 +34,10 @@ const {
 } = require('./evaluation/metrics');
 
 const OUTPUT = path.join(__dirname, '..', 'data', 'evaluation.json');
-const TEST_SEEDS = Array.from({ length: 10 }, (_, i) => 20270101 + i);
+const TEST_SEEDS = Array.from({ length: 10 }, (_, i) => 20270201 + i);
+const lineById = new Map(products.map((p) => [p.id, p.lineId]));
+// Products the store never suggests are not counted as targets.
+const lineOf = EXCLUDE_SEEN_LINES ? (id) => lineById.get(id) : undefined;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const VALIDATION_START = new Date(ANCHOR - 28 * DAY_MS).toISOString();
 const TEST_START = new Date(ANCHOR - 14 * DAY_MS).toISOString();
@@ -65,7 +68,7 @@ const score = (rank, cases, k = LIST_SIZE) => mean(cases.map((c) => ndcgAtK(rank
 /** Grid search on the validation window of the tuning dataset. */
 function tune(events) {
   const { train } = temporalSplit(events, VALIDATION_START);
-  const cases = buildCases(events, { from: VALIDATION_START, to: TEST_START });
+  const cases = buildCases(events, { from: VALIDATION_START, to: TEST_START, lineOf });
   const model = buildModel({ products, events: train });
   const recommender = createRecommender(model, products);
   const rankWith = (config) => (c) =>
@@ -140,7 +143,7 @@ function runDataset(seed, hybrid) {
   const rankers = createRankers({ model, products, hybrid });
 
   const coldProducts = new Set(model.productIds.filter((_, i) => model.visitors[i] < COLD_VISITORS));
-  const cases = buildCases(events, { from: TEST_START, to: TEST_END }).map((c) => ({
+  const cases = buildCases(events, { from: TEST_START, to: TEST_END, lineOf }).map((c) => ({
     ...c,
     newTargets: new Set([...c.targets].filter((id) => coldProducts.has(id))),
   }));
@@ -232,6 +235,10 @@ function aggregate(datasets) {
     [...COMPARED_WITH, 'hybrid_no_fallback', 'hybrid_with_colours'].map((name) => [name, compare(name)]),
   );
 
+  // The same lists, scored as if views of other colours were hits.
+  const ndcgCountingColours = (ranked) =>
+    mean(cases.map((c, i) => ndcgAtK(ranked[i], c.allTargets, LIST_SIZE)));
+
   const ratios = datasets.map(
     (d) => recallOf(d.lists.hybrid, d.cases) / recallOf(d.lists.same_category_popular, d.cases),
   );
@@ -279,6 +286,12 @@ function aggregate(datasets) {
       random: results.random[NDCG].mean,
     },
     completeTheLook: look,
+    colourRule: {
+      targetsExclude: results.hybrid[NDCG].mean,
+      targetsInclude: ndcgCountingColours(lists.hybrid),
+      targetsIncludeIfShown: ndcgCountingColours(lists.hybrid_with_colours),
+      targetsExcludeIfShown: results.hybrid_with_colours[NDCG].mean,
+    },
     testCases: cases.length,
     testVisitors: new Set(cases.map((c) => c.visitorId)).size,
   };
@@ -341,6 +354,7 @@ function printReport(report) {
   console.table(report.slicesRecall10);
   console.log('control', report.control);
   console.log('look', JSON.stringify(report.completeTheLook));
+  console.log('colour rule', report.colourRule);
   console.log('experiment', JSON.stringify(report.experiment));
 }
 

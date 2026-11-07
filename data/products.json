@@ -208,7 +208,7 @@
       "hex": "#6E7B6A",
       "name": {
         "en": "Moss",
-        "pt": "Musgo"
+        "pt": "Verde-musgo"
       }
     },
     "sizes": [
@@ -453,7 +453,7 @@
       "hex": "#5B5A3F",
       "name": {
         "en": "Olive",
-        "pt": "Azeitona"
+        "pt": "Verde-azeitona"
       }
     },
     "sizes": [
@@ -760,7 +760,7 @@
     ],
     "name": {
       "en": "Linen Band-Collar Shirt",
-      "pt": "Camisa de Linho de Gola Mao"
+      "pt": "Camisa de Linho de Gola Mandarim"
     },
     "description": {
       "en": "A clean collarless linen shirt for long lunches by the sea.",
@@ -809,7 +809,7 @@
     ],
     "name": {
       "en": "Linen Band-Collar Shirt",
-      "pt": "Camisa de Linho de Gola Mao"
+      "pt": "Camisa de Linho de Gola Mandarim"
     },
     "description": {
       "en": "A clean collarless linen shirt for long lunches by the sea.",
@@ -858,7 +858,7 @@
     ],
     "name": {
       "en": "Linen Band-Collar Shirt",
-      "pt": "Camisa de Linho de Gola Mao"
+      "pt": "Camisa de Linho de Gola Mandarim"
     },
     "description": {
       "en": "A clean collarless linen shirt for long lunches by the sea.",
@@ -1041,7 +1041,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -1678,7 +1678,7 @@
       "hex": "#6E7B6A",
       "name": {
         "en": "Moss",
-        "pt": "Musgo"
+        "pt": "Verde-musgo"
       }
     },
     "sizes": [
@@ -1776,7 +1776,7 @@
       "hex": "#6E7B6A",
       "name": {
         "en": "Moss",
-        "pt": "Musgo"
+        "pt": "Verde-musgo"
       }
     },
     "sizes": [
@@ -1972,7 +1972,7 @@
       "hex": "#5B5A3F",
       "name": {
         "en": "Olive",
-        "pt": "Azeitona"
+        "pt": "Verde-azeitona"
       }
     },
     "sizes": [
@@ -2217,7 +2217,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -2560,7 +2560,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -2756,7 +2756,7 @@
       "hex": "#6E7B6A",
       "name": {
         "en": "Moss",
-        "pt": "Musgo"
+        "pt": "Verde-musgo"
       }
     },
     "sizes": [
@@ -2969,7 +2969,7 @@
     },
     "description": {
       "en": "Everyday chinos with a lived-in colour and a clean, straight leg.",
-      "pt": "Chinos de todos os dias, com cor usada e perna direita."
+      "pt": "Chinos de todos os dias, com cor de aspeto usado e perna direita."
     },
     "details": {
       "en": [
@@ -3018,7 +3018,7 @@
     },
     "description": {
       "en": "Everyday chinos with a lived-in colour and a clean, straight leg.",
-      "pt": "Chinos de todos os dias, com cor usada e perna direita."
+      "pt": "Chinos de todos os dias, com cor de aspeto usado e perna direita."
     },
     "details": {
       "en": [
@@ -3050,7 +3050,7 @@
       "hex": "#5B5A3F",
       "name": {
         "en": "Olive",
-        "pt": "Azeitona"
+        "pt": "Verde-azeitona"
       }
     },
     "sizes": [
@@ -3067,7 +3067,7 @@
     },
     "description": {
       "en": "Everyday chinos with a lived-in colour and a clean, straight leg.",
-      "pt": "Chinos de todos os dias, com cor usada e perna direita."
+      "pt": "Chinos de todos os dias, com cor de aspeto usado e perna direita."
     },
     "details": {
       "en": [
@@ -3442,7 +3442,7 @@
       "hex": "#5B5A3F",
       "name": {
         "en": "Olive",
-        "pt": "Azeitona"
+        "pt": "Verde-azeitona"
       }
     },
     "sizes": [
@@ -3638,7 +3638,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -3736,7 +3736,7 @@
       "hex": "#6E7B6A",
       "name": {
         "en": "Moss",
-        "pt": "Musgo"
+        "pt": "Verde-musgo"
       }
     },
     "sizes": [
@@ -3850,7 +3850,7 @@
     },
     "description": {
       "en": "A soft, unlined blazer that dresses up jeans without any stiffness.",
-      "pt": "Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez."
+      "pt": "Blazer macio e sem forro, que dá um ar mais cuidado a umas calças de ganga, sem qualquer rigidez."
     },
     "details": {
       "en": [
@@ -3898,7 +3898,7 @@
     },
     "description": {
       "en": "A soft, unlined blazer that dresses up jeans without any stiffness.",
-      "pt": "Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez."
+      "pt": "Blazer macio e sem forro, que dá um ar mais cuidado a umas calças de ganga, sem qualquer rigidez."
     },
     "details": {
       "en": [
@@ -3946,7 +3946,7 @@
     },
     "description": {
       "en": "A soft, unlined blazer that dresses up jeans without any stiffness.",
-      "pt": "Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez."
+      "pt": "Blazer macio e sem forro, que dá um ar mais cuidado a umas calças de ganga, sem qualquer rigidez."
     },
     "details": {
       "en": [
@@ -3978,7 +3978,7 @@
       "hex": "#5B5A3F",
       "name": {
         "en": "Olive",
-        "pt": "Azeitona"
+        "pt": "Verde-azeitona"
       }
     },
     "sizes": [
@@ -4173,7 +4173,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -4609,7 +4609,7 @@
       "hex": "#6E7B6A",
       "name": {
         "en": "Moss",
-        "pt": "Musgo"
+        "pt": "Verde-musgo"
       }
     },
     "sizes": [
@@ -5039,7 +5039,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -5127,7 +5127,7 @@
       "hex": "#B9A68A",
       "name": {
         "en": "Camel",
-        "pt": "Camelo"
+        "pt": "Camel"
       }
     },
     "sizes": [
@@ -5727,7 +5727,7 @@
       "hex": "#5B5A3F",
       "name": {
         "en": "Olive",
-        "pt": "Azeitona"
+        "pt": "Verde-azeitona"
       }
     },
     "sizes": [

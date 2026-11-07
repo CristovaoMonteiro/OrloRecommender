@@ -42,49 +42,53 @@ There is no database, account, cookie or tracker. Your browsing stays in `sessio
 
 `npm run evaluate` reproduces every number below and writes them to [data/evaluation.json](data/evaluation.json).
 
-**Task:** a visitor opens a product. Given that product and their earlier history, predict the other products they look at in the same session.
+**Task:** a visitor opens a product. Given that product and their earlier history, predict which different products they look at next in the same session. Other colours of products already seen are never suggested, so they are not counted as hits.
 
 **Protocol:** settings were tuned on one synthetic dataset. The results below come from ten other datasets, each with its own seed, evaluated once after tuning ended. The model trains only on events before a single cutoff, so it never sees anyone's future. Intervals are 95% bootstrap, resampling whole visitors.
 
 | Ranker                                                 | Recall@4  | NDCG@10   | Coverage@4 |
 | ------------------------------------------------------ | --------- | --------- | ---------- |
-| Random                                                 | 0.024     | 0.032     | 100%       |
-| Popularity                                             | 0.051     | 0.062     | 9.3%       |
-| Same category first (the Visitor Journey store's rule) | 0.084     | 0.104     | 58.9%      |
-| Same category, best sellers first                      | 0.104     | 0.121     | 56.3%      |
-| Content only                                           | 0.181     | 0.194     | 99.3%      |
-| Collaborative only                                     | 0.224     | 0.230     | 94.0%      |
-| **Hybrid**                                             | **0.225** | **0.231** | **98.4%**  |
+| Random                                                 | 0.038     | 0.048     | 100%       |
+| Popularity                                             | 0.078     | 0.092     | 9.1%       |
+| Same category first (the Visitor Journey store's rule) | 0.128     | 0.152     | 54.8%      |
+| Same category, best sellers first                      | 0.156     | 0.179     | 49.7%      |
+| Content only                                           | 0.279     | 0.282     | 98.2%      |
+| Collaborative only                                     | 0.351     | 0.342     | 91.4%      |
+| **Hybrid**                                             | **0.355** | **0.341** | **97.2%**  |
 
-Test set: 11,577 lists from 10,101 simulated visitors. Every ranker follows the same rule on other colours.
+Test set: 8,975 lists from 8,165 simulated visitors. Every ranker follows the same rule on other colours.
 
 Hybrid NDCG@10 minus each alternative, on the same lists:
 
 | Compared with                     | Difference | 95% interval    | Datasets ahead |
 | --------------------------------- | ---------- | --------------- | -------------- |
-| Same category, best sellers first | +0.110     | 0.103 to 0.116  | 10 of 10       |
-| Content only                      | +0.037     | 0.033 to 0.042  | 10 of 10       |
-| Collaborative only                | +0.001     | -0.001 to 0.003 | 6 of 10        |
+| Same category, best sellers first | +0.163     | 0.154 to 0.172  | 10 of 10       |
+| Content only                      | +0.059     | 0.052 to 0.065  | 10 of 10       |
+| Collaborative only                | -0.001     | -0.004 to 0.002 | 4 of 10        |
 
-**The main finding:** the hybrid finds about 2.2× more of what visitors view next than best sellers from the same category (1.9× to 2.6× across datasets). It does not rank better than collaborative filtering alone, as that difference is within the margin of error. What it adds is reach:
+**The main finding:** the hybrid finds about 2.3× more of what visitors view next than best sellers from the same category (1.9× to 2.6× across datasets). It does not rank better than collaborative filtering alone, as that difference is within the margin of error. What it adds is reach:
 
 | Measure                     | Collaborative only | Hybrid |
 | --------------------------- | ------------------ | ------ |
-| Recall@10 on new products   | 0.04               | 0.09   |
-| Catalogue coverage          | 94.0%              | 98.4%  |
-| Diversity of the four shown | 0.67               | 0.75   |
+| Recall@10 on new products   | 0.07               | 0.18   |
+| Catalogue coverage          | 91.4%              | 97.2%  |
+| Diversity of the four shown | 0.66               | 0.74   |
 
-**Control:** when the training events are shuffled, which keeps popularity but destroys who liked what, the collaborative model falls from 0.230 to 0.058, level with popularity at 0.062. Its score therefore comes from the behavioural signal.
+**Control:** when the training events are shuffled, which keeps popularity but destroys who liked what, the collaborative model falls from 0.342 to 0.086, level with popularity at 0.092. Its score therefore comes from the behavioural signal.
 
-**Complete the look:** at least one of the four suggestions matched the rest of the basket in 60% of 3,440 baskets, against 13% for the most popular products from other categories.
+**Complete the look:** at least one of the four suggestions matched the rest of the basket in 60% of 3,422 baskets, against 11% for the most popular products from other categories.
 
-**How this evaluation changed:** the first run exposed two flaws: the collaborative baseline was still falling back on content, and new products were outranking proven ones. A later review found that nearly 40% of the suggestions were other colours of something already seen, and that a single test dataset overstated the headline. After those fixes, settings were retuned on the tuning dataset, and these numbers come from datasets not used before. The earlier claim that the hybrid beat collaborative filtering did not survive this test.
+**How this evaluation changed:** each round below used datasets the previous rounds had not seen.
+
+1. The first run exposed two flaws: the collaborative baseline was still falling back on content, and new products were outranking proven ones.
+2. A review then found that nearly 40% of suggestions were other colours of something already seen, and that one test dataset overstated the headline. The earlier claim that the hybrid beat collaborative filtering did not survive the retest.
+3. The current version stops counting other colours as hits. Scores rose from about 0.23 to 0.34 because of this change in what is measured, not because the model improved.
 
 ### Limits
 
 - **The data is synthetic.** I wrote the generator, including the tastes and outfit pairs these models recover. The results show that the pipeline works and that the comparison is sound. They do not predict sales in a real store.
-- **Hiding other colours lowers the score.** NDCG@10 falls from 0.366 to 0.231, because simulated visitors often view other colours. I kept the rule because the same jacket in another colour is a poor suggestion, and each product page links to its colours instead. This is a product decision that the offline metric cannot settle.
-- **New products remain weak.** Hybrid recall@10 on products with fewer than 30 visitors is 0.09, against 0.24 for content only.
+- **The rule on other colours is a product decision.** If those views did count as hits, hiding them would lower NDCG@10 from 0.329 to 0.301. The same jacket in another colour is a poor suggestion, so the rule stays, and each product page links to its colours instead.
+- **New products remain weak.** Hybrid recall@10 on products with fewer than 30 visitors is 0.18, against 0.40 for content only.
 - **The evaluation measures next views,** not purchases or revenue.
 
 **Next step:** [docs/experiment-plan.md](docs/experiment-plan.md) sets out how a live A/B test would decide whether this should ship, with metrics, guardrails, sample size and decision rules. It has not been run.

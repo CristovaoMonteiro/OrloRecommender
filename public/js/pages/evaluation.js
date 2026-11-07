@@ -183,8 +183,8 @@ function pageHTML(report) {
       <section class="section">
         <h2 class="section__title">${t('eval.colours')}</h2>
         <p>${t('eval.coloursText', {
-          with: formatDecimal(results.hybrid_with_colours['ndcg@10'].mean),
-          without: formatDecimal(results.hybrid['ndcg@10'].mean),
+          with: formatDecimal(report.colourRule.targetsIncludeIfShown),
+          without: formatDecimal(report.colourRule.targetsInclude),
         })}</p>
       </section>
     </div>

@@ -21,11 +21,13 @@ const toHistoryEntry = ({ type, properties }) => ({ productId: properties.produc
  * Builds one case per session that starts inside [from, to).
  * The history is everything before the session, plus the opening product; the
  * targets are the other products of that session the visitor had not seen yet.
+ * With `lineOf`, other colours of seen products are not targets either, because the
+ * store never suggests them. `allTargets` keeps them, to report what that choice changes.
  * @param {object[]} events chronological events
  * @returns {{ visitorId: string, history: object[], contextProductId: string,
- *   targets: Set<string>, priorProducts: number }[]}
+ *   targets: Set<string>, allTargets: Set<string>, priorProducts: number }[]}
  */
-function buildCases(events, { from, to }) {
+function buildCases(events, { from, to, lineOf }) {
   const cases = [];
   sessionsByVisitor(events).forEach((sessions, visitorId) => {
     const prior = [];
@@ -34,17 +36,20 @@ function buildCases(events, { from, to }) {
       if (first.timestamp >= from && first.timestamp < to) {
         const seen = new Set(prior.map((entry) => entry.productId));
         const contextProductId = first.properties.productId;
-        const targets = new Set(
+        const allTargets = new Set(
           session
             .map((event) => event.properties.productId)
             .filter((id) => id !== contextProductId && !seen.has(id)),
         );
+        const seenLines = new Set(lineOf ? [...seen, contextProductId].map(lineOf) : []);
+        const targets = new Set([...allTargets].filter((id) => !lineOf || !seenLines.has(lineOf(id))));
         if (targets.size > 0) {
           cases.push({
             visitorId,
             history: [...prior, toHistoryEntry(first)],
             contextProductId,
             targets,
+            allTargets,
             priorProducts: seen.size,
           });
         }

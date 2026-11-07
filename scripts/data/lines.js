@@ -9,9 +9,9 @@ const COLOURS = {
   stone: { hex: '#C8B48E', palette: 'neutral', en: 'Stone', pt: 'Pedra' },
   paleblue: { hex: '#DCE3EC', palette: 'neutral', en: 'Pale blue', pt: 'Azul-claro' },
   sand: { hex: '#E8E0CF', palette: 'earth', en: 'Sand', pt: 'Areia' },
-  olive: { hex: '#5B5A3F', palette: 'earth', en: 'Olive', pt: 'Azeitona' },
-  moss: { hex: '#6E7B6A', palette: 'earth', en: 'Moss', pt: 'Musgo' },
-  camel: { hex: '#B9A68A', palette: 'earth', en: 'Camel', pt: 'Camelo' },
+  olive: { hex: '#5B5A3F', palette: 'earth', en: 'Olive', pt: 'Verde-azeitona' },
+  moss: { hex: '#6E7B6A', palette: 'earth', en: 'Moss', pt: 'Verde-musgo' },
+  camel: { hex: '#B9A68A', palette: 'earth', en: 'Camel', pt: 'Camel' },
   chestnut: { hex: '#6B4A35', palette: 'earth', en: 'Chestnut', pt: 'Castanho' },
   burgundy: { hex: '#8C2F39', palette: 'rich', en: 'Burgundy', pt: 'Bordeaux' },
   forest: { hex: '#2F4A3C', palette: 'rich', en: 'Forest', pt: 'Verde-floresta' },
@@ -139,7 +139,7 @@ const LINES = [
     price: 92,
     sizes: 'tops',
     colours: ['ecru', 'paleblue', 'forest'],
-    name: { en: 'Linen Band-Collar Shirt', pt: 'Camisa de Linho de Gola Mao' },
+    name: { en: 'Linen Band-Collar Shirt', pt: 'Camisa de Linho de Gola Mandarim' },
     description: {
       en: 'A clean collarless linen shirt for long lunches by the sea.',
       pt: 'Camisa de linho de linhas limpas, para almoços longos junto ao mar.',
@@ -403,7 +403,7 @@ const LINES = [
     name: { en: 'Garment-Dyed Chinos', pt: 'Chinos Tingidos em Peça' },
     description: {
       en: 'Everyday chinos with a lived-in colour and a clean, straight leg.',
-      pt: 'Chinos de todos os dias, com cor usada e perna direita.',
+      pt: 'Chinos de todos os dias, com cor de aspeto usado e perna direita.',
     },
   },
   {
@@ -507,7 +507,7 @@ const LINES = [
     name: { en: 'Unstructured Blazer', pt: 'Blazer Desestruturado' },
     description: {
       en: 'A soft, unlined blazer that dresses up jeans without any stiffness.',
-      pt: 'Blazer macio e sem forro, que eleva umas calças de ganga sem qualquer rigidez.',
+      pt: 'Blazer macio e sem forro, que dá um ar mais cuidado a umas calças de ganga, sem qualquer rigidez.',
     },
   },
   {
