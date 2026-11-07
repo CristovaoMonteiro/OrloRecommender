@@ -10,6 +10,7 @@
     "catalogue": "node scripts/build-catalogue.js",
     "data": "node scripts/generate-data.js",
     "evaluate": "node scripts/evaluate.js",
+    "model": "node scripts/build-model.js",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

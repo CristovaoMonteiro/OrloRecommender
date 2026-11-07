@@ -4,3 +4,4 @@ package-lock.json
 data/products.json
 data/generated/
 data/evaluation.json
+data/model.json
